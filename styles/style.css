@@ -1,11 +1,4 @@
-main.Accueuil{
-    width: 95%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);  
 
-}
 
 div>p{    
     color: orangered;
@@ -32,12 +25,12 @@ a:hover{
 
 /* PARTIE PAGE ACCUEIL */
 main.Accueil{
-    width: 95%;
+    width: 100%;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    padding-top: 71%;
+    padding-left: 110%;
     transform: translate(-50%,-50%);  
-
+background-color: gray;
 }
 
 #Accueil-HautPage{
@@ -88,6 +81,14 @@ main.Projets{
     font-size: 160%;
 }
 
+select {
+    font-size: 0.9rem;
+    padding: 2px 5px;
+}
+  
+#outputProjet{
+    font-size: 150%;
+}
 select {
     font-size: 0.9rem;
     padding: 2px 5px;
