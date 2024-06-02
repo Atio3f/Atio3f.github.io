@@ -1,7 +1,8 @@
 const val = {
     "MEGASAE" : `Gros Projet`
-    ,"SAE1.01/02" :    `DESCRIPTIF SAE: 
-      Création en binôme d'un programme java pour réaliser des dictionnaires afin de trouver la catégorie d'un article à partir de 500articles différents.
+    ,"SAE1.01/02" :
+    `DESCRIPTIF SAE: 
+    Création en binôme d'un programme java pour réaliser des dictionnaires afin de trouver la catégorie d'un article à partir de 500articles différents.
     MON TRAVAIL :
     COMPETENCES : Exploitation et création d'un fichier texte avec java, réalisation d'un projet java complexe en binôme.`
     
@@ -16,7 +17,7 @@ const val = {
 
 function updateText() {
     const selectElement = document.getElementById('Projets-list');
-    const outputElement = document.getElementById('outputText');
+    const outputElement = document.getElementById('outputProjet');
     const selectedValue = selectElement.value;
 
     if(selectedValue){
