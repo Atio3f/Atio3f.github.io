@@ -1,6 +1,9 @@
 
+body{
+    background-color: #0d1117;
+}
 
-div>p{    
+div>p.Menu {    
     color: orangered;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
@@ -26,11 +29,9 @@ a:hover{
 /* PARTIE PAGE ACCUEIL */
 main.Accueil{
     width: 100%;
-    position: absolute;
-    padding-top: 71%;
-    padding-left: 110%;
-    transform: translate(-50%,-50%);  
-background-color: gray;
+    position: relative;
+    background-color: #0d1117;
+    margin-top: 12%;
 }
 
 #Accueil-HautPage{
@@ -53,13 +54,14 @@ div.Accueil{
 
 
 /* PARTIE PAGE PROJETS */
+
 main.Projets{
     width: 95%;
-    position: absolute;
-    top: 20%;
-    left: 48%;
-    transform: translate(-50%,-50%);  
-
+    position: relative;
+    background-color: #0d1117;
+    margin-top: 1%;
+    margin-left: 2%;
+    
 }
 
 #Projets-NomAccueil{
@@ -75,10 +77,11 @@ main.Projets{
 
 #Projets-Titre{
     display: flex;
-    color: #000;
+    color: gray;
     justify-content: center;
     align-items: center;
     font-size: 160%;
+    font-size: 1.2em;
 }
 
 select {
@@ -88,9 +91,96 @@ select {
   
 #outputProjet{
     font-size: 150%;
+    color: gray;
 }
-select {
-    font-size: 0.9rem;
-    padding: 2px 5px;
+#Projets-bonus {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
 }
-  
+#Projets-bonus > h2 {
+    display: none;
+    
+}
+
+#SAE1_03, #SAE1_05_06{
+    display: none;
+}
+
+
+/*PAGE COMPETENCES*/
+#Competences{
+    width: 95%;
+    position: relative;
+    background-color: #0d1117;
+    margin-top: 1%;
+    margin-left: 2%;
+}
+
+.CompetencesCadre{
+    display: flex;
+    border: 2px solid blanchedalmond;
+    padding-left: 4px;
+}
+.CompetencesCadre > h1{
+    color: aquamarine;
+    padding-right: 2%
+}
+section.CompetencesCadre > * > p{
+    color: gray;
+    padding-left: 40px;
+    letter-spacing: 0.1vh;
+    line-height: 3vh;
+}
+
+.CompetencesCode{
+    line-height: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 5 colonnes -->crée x colonnes avec 3 p à chaque fois, chacune prenant 1 fraction de l'espace disponible*/
+    
+    box-sizing: border-box;
+    
+}
+
+.CompetencesLangues{
+    line-height: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 5 colonnes -->crée x colonnes avec 3 p à chaque fois, chacune prenant 1 fraction de l'espace disponible*/
+    
+    box-sizing: border-box;
+    
+}
+
+
+
+
+/*FOOTER */
+footer{
+    width: 85%;
+    position: relative;
+    margin: 0 auto;
+}
+footer > hr{
+    width: 100%;
+    justify-content: center;
+}
+
+#Footer-Content{
+    text-align: end;
+}
+#Footer-Content > p{
+    color: orangered;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 380;
+    margin: 0%;
+}
+
+#RESEAUX{
+    display: flex;
+    justify-content: right;
+}
+#RESEAUX > img{
+    margin-top: 0.2%;
+    width: 6%;
+}
