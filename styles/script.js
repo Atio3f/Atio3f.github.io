@@ -1,5 +1,20 @@
 const val = {
-    "MEGASAE" : `Gros Projet`
+    "MEGASAE" : `
+    DESCRIPTIF SAE :
+   	 Mise en place d'un projet pour la réalisation d'une application permettant la gestion d'évènements pour les cirques.
+
+    MON TRAVAIL:
+     EN EQUIPE :
+      Réalisation de diagrammes de classe pour relier les éléments qui composeront notre système,
+      réalisation de personas pour implémenter, création d'un diagramme de cas d'utilisation pour évaluer les attendus
+      à réaliser lors de la phase de développement.
+     INDIVIDUELLEMENT : 
+      Réalisation d'un processus de gestion du projet et participation à la création de l'interface de l'application sur JavaFX(pas encore fini du coup).
+
+    COMPÉTENCES ACQUISES :
+      Déroulé d'un projet avec une phase d'avant-projet pour préciser les attendus, recherche du profil de la clientèle attendue,
+      capacité à concevoir des diagrammes de classe en amont du développement, développement d'une application sur Java avec JavaFX.`
+
     ,"SAE1.01/02" :`
     DESCRIPTIF SAE : 
       Création en binôme d'un programme java pour réaliser des dictionnaires
@@ -29,24 +44,40 @@ const val = {
    	  Création d'un site web fictif pour une entreprise à destination des élèves de 3ème en recherche de stage.
 
     MON TRAVAIL:
-   	  EN EQUIPE : 
-        Recherche d'informations sur l'entreprise en question, rédaction d'un compte rendu et échanges 
-		    avec les clients sur nos choix avant de finir par une présentation orale devant un jury.
-   	  INDIVIDUELLEMENT : 
-        Réalisation de l'une des pages du site(SERVICES) ainsi que sa maquette en accord avec le reste du site.
+   	 EN EQUIPE : 
+      Recherche d'informations sur l'entreprise en question, rédaction d'un compte rendu et échanges 
+		  avec les clients sur nos choix avant de finir par une présentation orale devant un jury.
+   	 INDIVIDUELLEMENT : 
+      Réalisation de l'une des pages du site(SERVICES) ainsi que sa maquette en accord avec le reste du site.
 
     COMPÉTENCES ACQUISES :
 	    Se renseigner sur une entreprise, faire un recueil des besoins, réaliser un wireframe, créer un site internet en collaboration.`
     ,"SAE1.04" :`
-      DESCRIPTIF SAE :
-        Création d'une base de donnée SQL sur le Titanic afin d'arriver à des conclusions sur les 
-        différents facteurs de survie pour ses passagers.
+    DESCRIPTIF SAE :
+      Création d'une base de donnée SQL sur le Titanic afin d'arriver à des conclusions sur les 
+      différents facteurs de survie pour ses passagers.
 
-      MON TRAVAIL :
-        Rédaction de comptes-rendus, création d'un schéma entité association correspondant à la situation et utilisation de requêtes sql pour analyser les données.
+    MON TRAVAIL :
+      Rédaction de comptes-rendus, création d'un schéma entité association correspondant à la situation et utilisation de requêtes sql pour analyser les données.
 
-      COMPÉTENCES ACQUISES	:
-        Création d'un schéma entité-association, mise en place d'une base de données SQL à partir d'un schéma entité-association, capacité à exploiter des données.`
+    COMPÉTENCES ACQUISES	:
+      Création d'un schéma entité-association, mise en place d'une base de données SQL à partir d'un schéma entité-association, capacité à exploiter des données.`
+    ,"SAE2.04" :`
+    DESCRIPTIF SAE :
+      Tri d'une base de données de openfoodfacts sur SQL pour conserver les données des produits en France
+      puis réalisation d'un rapport avec nos conclusions.
+
+    MON TRAVAIL:
+     EN EQUIPE :
+      Trie des données pour retirer les données n'étant pas classé comme de la volaille sur Postgresql puis
+      exportation des données sur R. Puis, réalisation de graphiques pour retirer les dernières données avec des valeurs aberrantes.
+      Enfin, utilisation des graphiques précédents pour produire une conclusion sur les produits à base de volaille.
+     INDIVIDUELLEMENT : 
+      Trie des données pour retirer les données de produits localisés hors de la France sur Postgresql
+
+    COMPÉTENCES ACQUISES :
+      Trier une base de données, créer des vues et des tables temporaires sur PostgreSQL, exportation des données sur R,
+	    manipulation et modélisation des données avec R.`
 
 }
 

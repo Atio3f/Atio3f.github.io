@@ -17,6 +17,7 @@ div>p.Menu {
 a{
     color: red;
     text-decoration: none;
+    font-size: 1.2em;
     transition: font-size 0.1s ease ;
 }
 
@@ -90,7 +91,7 @@ select {
 }
   
 #outputProjet{
-    font-size: 150%;
+    font-size: 1.7em;
     color: gray;
 }
 #Projets-bonus {
@@ -132,6 +133,7 @@ section.CompetencesCadre > * > p{
     padding-left: 40px;
     letter-spacing: 0.1vh;
     line-height: 3vh;
+    
 }
 
 .CompetencesCode{
@@ -165,7 +167,11 @@ footer > hr{
     width: 100%;
     justify-content: center;
 }
-
+#Footer-Global{
+    display: flex;
+    justify-content: space-between; /* Écarte les enfants à gauche et à droite */
+    align-items: center; /* Aligne les enfants verticalement au centre */
+}
 #Footer-Content{
     text-align: end;
 }
@@ -173,6 +179,7 @@ footer > hr{
     color: orangered;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 380;
+    font-size: 1.2em;
     margin: 0%;
 }
 
@@ -180,7 +187,21 @@ footer > hr{
     display: flex;
     justify-content: right;
 }
+
 #RESEAUX > img{
     margin-top: 0.2%;
-    width: 6%;
+    width: 10%;
+    transition: 50ms;
+}
+#RESEAUX > img:hover{
+    margin-top: 0.3%;
+    width: 11%;
+}
+
+#Footer-Mail > p{
+    color: orangered;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 1.2em;
+    margin: 0%;
 }
