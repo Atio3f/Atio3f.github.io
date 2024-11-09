@@ -1,0 +1,50 @@
+MEGASAE :
+	DESCRIPTIF SAE :
+	  Mise en place d'un projet pour une application de gestion d'évènements de cirque en équipe de 5.
+	MON TRAVAIL :
+	  Diagrammes de cas d'utilisation
+	  Réflexion autour de la gestion des risques puis mise en place de solutions de mitigation pour les éviter.
+
+
+SAE1.01/1.02 :
+   	DESCRIPTIF SAE: 
+      Création en binôme d'un programme java pour réaliser des dictionnaires
+      afin de trouver la catégorie d'un article à partir de 500 articles différents.
+    
+    MON TRAVAIL :
+      Création d'une fonction pour permettre la récupération des dépĉhes depuis un fichier txt
+      puis des fonctions pour permettre l'analyse des mots utilisés dans chaque dépêche
+      en fonction de leur catégorie pour faire des dictionnaires
+      puis réalisation des fonctions pour tester nos trieurs sur d'autres dépêches pour vérifier l'efficacité.
+
+    COMPÉTENCES : 
+      Exploitation et création d'un fichier texte avec java, réalisation d'un projet java complexe en binôme.
+
+
+SAE1.03 : 
+	DESCRIPTIF SAE:
+	  Mise en place d'une machine virtuelle sur Linux avec Debian12 puis création une carte mentale sur les étapes de l'installation.
+	MON TRAVAIL :
+	  C'était un travail individuel j'ai donc commencé par installer Debian puis je l'ai configuré avant d'y mettre tous les logiciels textuels(packages) importants dont gedit
+	COMPÉTENCES :
+	  Capacité à synthétiser un guide sur une carte mentale, installation d'une machine virtuelle sur LINUX.
+	
+SAE1.04 :
+	DESCRIPTIF SAE:
+	  Création d'une base de donnée SQL sur le Titanic afin d'arriver à des conclusions sur les 
+	  différents facteurs de survie pour ses passagers.
+	MON TRAVAIL :
+	  Rédaction de comptes-rendus, création d'un schéma entité association correspondant à la situation et utilisation de requêtes sql pour analyser les données.
+	COMPÉTENCES :
+   	
+   	
+SAE1.05/1.06 :
+   DESCRIPTIF SAE:
+   	Création d'un site web fictif pour une entreprise à destination des élèves de 3ème en recherche de stage
+   MON TRAVAIL:
+   	EN EQUIPE : Recherche d'informations sur l'entreprise en question, rédaction d'un compte rendu et échanges avec les professeurs sur nos choix et pour finir présentation orale devant un jury.
+   	INDIVIDUELLEMENT : Réalisation de l'une des pages du site(SERVICES) ainsi que sa maquette en accord avec le reste du site.  
+   COMPETENCES
+   LIEN PROJET :
+   	https://github.com/IUT-INFO-UGA/IUT-INFO-UGA.github.io
+   	

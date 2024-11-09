@@ -1,0 +1,54 @@
+
+#Competences{
+    width: 95%;
+    position: relative;
+    background-color: #0d1117;
+    margin-top: 1%;
+    margin-left: 2%;
+}
+
+.CompetencesCadre{
+    display: flex;
+    border: 2px solid blanchedalmond;
+    padding-left: 4px;
+}
+.CompetencesCadre > h1{
+    color: aquamarine;
+    padding-right: 2%
+}
+section.CompetencesCadre > * > p{
+    
+    padding-left: 2.5em;
+    letter-spacing: 0.1vh;
+    line-height: 3vh;
+    
+}
+
+.CompetencesCode{
+    line-height: 0.65em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 5 colonnes -->crée x colonnes avec 3 p à chaque fois, chacune prenant 1 fraction de l'espace disponible*/
+    
+    box-sizing: border-box;
+    
+}
+
+
+
+h1{
+    display: flex;
+    color: wheat;
+    justify-content: center;
+    align-items: center;
+    overflow-wrap: break-word;
+    font-size: 1.5em;
+}
+
+p{
+    display: flex;
+    color: wheat;
+    justify-content: center;
+    align-items: center;
+    overflow-wrap: break-word;
+    font-size: 1.2em;
+}

@@ -1,12 +1,26 @@
+canvas {
+    position: fixed; /* Le rendre fixe pour qu'il reste en arrière-plan */
+    top: 0;
+    left: 0;
+    z-index: -1; /* Mettre le z-index à -1 pour qu'il soit en arrière-plan */
+
+}
+
 
 body{
     background-color: #0d1117;
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
+    
 
 div>p.Menu {    
     color: orangered;
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 900;
+    font-weight: 800;
+    font-size: 1rem;
     text-shadow: 2.2px 2.2px 0 #000, -0.8px -0.8px 0 #000, 0.8px -0.8px 0 #000, -0.8px 0.8px 0 #000, 0.8px 0.8px 0 #000;
     scale: 240%;  
     margin-left: 8%;
@@ -14,44 +28,36 @@ div>p.Menu {
     margin-bottom: 10%;
 }
 
+div>p.TitreMenu {    
+    color: orangered;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 3.2rem;
+    text-shadow: 2.2px 2.2px 0 #000, -0.8px -0.8px 0 #000, 0.8px -0.8px 0 #000, -0.8px 0.8px 0 #000, 0.8px 0.8px 0 #000;
+     
+    margin-left: 8%;
+    
+    margin-bottom: 10%;
+}
+
+
+
 a{
     color: red;
-    text-decoration: none;
+    
     font-size: 1.2em;
-    transition: font-size 0.1s ease ;
+    transition: font-size 0.2s ease ;
+    text-decoration: underline;
+    overflow: hidden;
 }
 
-a:hover{
-    font-size: 120%;
+div>a:hover{
+    font-size: 1.3em;
     
 }
 
 
-/* PARTIE PAGE ACCUEIL */
-main.Accueil{
-    width: 100%;
-    position: relative;
-    background-color: #0d1117;
-    margin-top: 12%;
-}
 
-#Accueil-HautPage{
-    box-sizing: border-box;       
-       
-}
-
-#Accueil-BasPage{
-    box-sizing: border-box;       
-       
-}
-
-div.Accueil{
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 3em;
-    
-}
 
 
 /* PARTIE PAGE PROJETS */
@@ -78,7 +84,7 @@ main.Projets{
 
 #Projets-Titre{
     display: flex;
-    color: gray;
+    color: wheat;
     justify-content: center;
     align-items: center;
     font-size: 160%;
@@ -88,6 +94,9 @@ main.Projets{
 select {
     font-size: 0.9rem;
     padding: 2px 5px;
+    background-color: #0d1117;
+    color: wheat;
+    border-color: antiquewhite;
 }
   
 #outputProjet{
@@ -110,49 +119,6 @@ select {
 }
 
 
-/*PAGE COMPETENCES*/
-#Competences{
-    width: 95%;
-    position: relative;
-    background-color: #0d1117;
-    margin-top: 1%;
-    margin-left: 2%;
-}
-
-.CompetencesCadre{
-    display: flex;
-    border: 2px solid blanchedalmond;
-    padding-left: 4px;
-}
-.CompetencesCadre > h1{
-    color: aquamarine;
-    padding-right: 2%
-}
-section.CompetencesCadre > * > p{
-    color: gray;
-    padding-left: 40px;
-    letter-spacing: 0.1vh;
-    line-height: 3vh;
-    
-}
-
-.CompetencesCode{
-    line-height: 10px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 5 colonnes -->crée x colonnes avec 3 p à chaque fois, chacune prenant 1 fraction de l'espace disponible*/
-    
-    box-sizing: border-box;
-    
-}
-
-.CompetencesLangues{
-    line-height: 10px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 5 colonnes -->crée x colonnes avec 3 p à chaque fois, chacune prenant 1 fraction de l'espace disponible*/
-    
-    box-sizing: border-box;
-    
-}
 
 
 
@@ -173,11 +139,17 @@ footer > hr{
 #Footer-Global{
     display: flex;
     justify-content: space-between; /* Écarte les enfants à gauche et à droite */
-    align-items: center; /* Aligne les enfants verticalement au centre */
+    align-items: flex-end; /* Aligne les enfants verticalement au centre */
 }
 #Footer-Content{
     text-align: end;
+    
+
 }
+#Footer-Content > a {
+    display: inline-block;
+}
+
 #Footer-Content > p{
     color: orangered;
     font-family: Arial, Helvetica, sans-serif;
@@ -192,12 +164,12 @@ footer > hr{
 }
 
 #RESEAUX > img{
-    margin-top: 0.2%;
+    margin-top: 1%;
     width: 10%;
     transition: 50ms;
 }
 #RESEAUX > img:hover{
-    margin-top: 0.3%;
+    margin-top: 0%;
     width: 11%;
 }
 
@@ -207,4 +179,93 @@ footer > hr{
     font-weight: 400;
     font-size: 1.2em;
     margin: 0%;
+}
+
+
+
+/* POUR LA BARRE DE NAVIGATION */
+header {
+    display: inline-grid;
+    width: 96%;
+    transform: translate(2%, 0%);   /* Place en plein milieu le menu */
+    grid-auto-flow : column; /* Aligne les éléments en ligne horizontale */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    border-color: aquamarine;
+    border: aquamarine 2px solid;
+    padding: 1rem;
+    background-clip: padding-box;
+    /*background-color: #e8824f; A VOIR SI ON CONSERVE*/
+    backdrop-filter: blur(1px);
+}
+.nav-links{
+    width: 100%;
+    display: flex;
+}
+
+.ul:nth-child(n){
+    width: 30%;
+}
+.nav-links li {
+    flex : 1;
+    text-align: center; /* Centre le texte dans chaque <li> */
+}
+.navbar a {
+    color: wheat;
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: color 0.3s;
+    font-weight: 420;
+    font-size: 2em;
+}
+.navbar a:hover {
+    color: #ddd;        /* mettre une animation plutôt */
+    
+}
+
+
+.nav-links {
+    display : inline-grid;
+    list-style : none;
+    grid-auto-flow : column; /* Aligne les éléments en ligne horizontale */
+    justify-content : space-evenly;
+    gap : 1em
+
+}
+
+li.pageActive{
+    background-color: #e8824f;
+
+}
+
+li.pageActive>a:hover {      
+    color: #000;        /* mettre une animation plutôt */
+}
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        display: none;
+    }
+    .navbar.active .nav-links {
+        display: flex;
+    }
+}
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.menu-toggle div {
+    width: 1.5rem;
+    height: 0.3rem;
+    background-color: white;
+    margin: 0.3rem 0;
+}
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
 }

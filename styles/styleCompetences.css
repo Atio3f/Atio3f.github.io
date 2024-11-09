@@ -1,0 +1,87 @@
+/* Contient toutes les modifications qui ne s'appliquent qu'à la page des compétences */
+/*PAGE COMPETENCES*/
+#Competences{
+    width: 95%;
+    position: relative;
+    background-color: #0d1117;
+    margin-top: 1%;
+    margin-left: 2%;
+}
+
+.CompetencesCadre{
+    display: flex;
+    border: 2px solid blanchedalmond;
+    padding-left: 4px;
+}
+.CompetencesCadre > h1{
+    color: aquamarine;
+    padding-right: 2%
+}
+section.CompetencesCadre > * > p{
+    
+    padding-left: 2.5em;
+    letter-spacing: 0.1vh;
+    line-height: 3vh;
+    
+}
+
+.CompetencesCode{
+    line-height: 0.65em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 5 colonnes -->crée x colonnes avec 3 p à chaque fois, chacune prenant 1 fraction de l'espace disponible*/
+    
+    box-sizing: border-box;
+    
+}
+
+.CompetencesLangues{
+    line-height: 0.65em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 5 colonnes -->crée x colonnes avec 3 p à chaque fois, chacune prenant 1 fraction de l'espace disponible*/
+    
+    box-sizing: border-box;
+    
+}
+
+.sousConteneurCompetencesType{
+    border: 0.2em wheat solid;
+    display: grid;
+    place-items: center stretch;
+}
+
+.barreProgressVide{
+    border : aquamarine solid 0.1em;
+    overflow:hidden;
+    border-radius:15px;
+    background-color:#DDDDDD;
+    width: 10em;
+    height: 0.5em;
+}
+
+.barreProgressRemplie{
+    
+    border-radius:0.7em;
+    background-color:#29577A;
+    height: 0.5em;
+    
+}
+
+/* FAUDRA CHANGER POUR QUE ça fasse un effet de conteneur avec le h2 + les p
+correspondants à l'intérieur */
+h2{
+    display: flex;
+    color: wheat;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 1.4em;
+}
+
+p{
+    display: flex;
+    color: wheat;
+    justify-content: center;
+    align-items: center;
+    overflow-wrap: break-word;
+    font-size: 1.2em;
+}

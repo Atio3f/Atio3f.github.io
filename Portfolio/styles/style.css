@@ -1,0 +1,222 @@
+
+body{
+    background-color: #0d1117;
+}
+
+div>p.Menu {    
+    color: orangered;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    text-shadow: 2.2px 2.2px 0 #000, -0.8px -0.8px 0 #000, 0.8px -0.8px 0 #000, -0.8px 0.8px 0 #000, 0.8px 0.8px 0 #000;
+    scale: 240%;  
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-bottom: 10%;
+}
+
+a{
+    color: red;
+    
+    font-size: 1.2em;
+    transition: font-size 0.2s ease ;
+    text-decoration: underline;
+    overflow: hidden;
+}
+
+a:hover{
+    font-size: 1.3em;
+    
+}
+
+
+/* PARTIE PAGE ACCUEIL */
+main.Accueil{
+    width: 100%;
+    position: relative;
+    background-color: #0d1117;
+    margin-top: 12%;
+    overflow: hidden
+}
+
+#Accueil-HautPage{
+    box-sizing: border-box;       
+       
+}
+
+#Accueil-BasPage{
+    box-sizing: border-box;       
+       
+}
+
+div.Accueil{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3em;
+    
+}
+
+
+/* PARTIE PAGE PROJETS */
+
+main.Projets{
+    width: 95%;
+    position: relative;
+    background-color: #0d1117;
+    margin-top: 1%;
+    margin-left: 2%;
+    
+}
+
+#Projets-NomAccueil{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+#Projets-NomAccueil>p{
+    margin-bottom: 1%;
+    
+}
+
+#Projets-Titre{
+    display: flex;
+    color: wheat;
+    justify-content: center;
+    align-items: center;
+    font-size: 160%;
+    font-size: 1.2em;
+}
+
+select {
+    font-size: 0.9rem;
+    padding: 2px 5px;
+    background-color: #0d1117;
+    color: wheat;
+    border-color: antiquewhite;
+}
+  
+#outputProjet{
+    font-size: 1.7em;
+    color: gray;
+}
+#Projets-bonus {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+#Projets-bonus > h2 {
+    display: none;
+    
+}
+
+#SAE1_03, #SAE1_05_06{
+    display: none;
+}
+
+
+/*PAGE COMPETENCES*/
+#Competences{
+    width: 95%;
+    position: relative;
+    background-color: #0d1117;
+    margin-top: 1%;
+    margin-left: 2%;
+}
+
+.CompetencesCadre{
+    display: flex;
+    border: 2px solid blanchedalmond;
+    padding-left: 4px;
+}
+.CompetencesCadre > h1{
+    color: aquamarine;
+    padding-right: 2%
+}
+section.CompetencesCadre > * > p{
+    color: gray;
+    padding-left: 40px;
+    letter-spacing: 0.1vh;
+    line-height: 3vh;
+    
+}
+
+.CompetencesCode{
+    line-height: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 5 colonnes -->crée x colonnes avec 3 p à chaque fois, chacune prenant 1 fraction de l'espace disponible*/
+    
+    box-sizing: border-box;
+    
+}
+
+.CompetencesLangues{
+    line-height: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 5 colonnes -->crée x colonnes avec 3 p à chaque fois, chacune prenant 1 fraction de l'espace disponible*/
+    
+    box-sizing: border-box;
+    
+}
+
+
+
+
+
+/*FOOTER */
+footer{
+    
+    width: 85%;
+    position: relative;
+    padding-top: 3%;
+    margin: 0 auto;
+}
+footer > hr{
+    width: 100%;
+    justify-content: center;
+}
+#Footer-Global{
+    display: flex;
+    justify-content: space-between; /* Écarte les enfants à gauche et à droite */
+    align-items: flex-end; /* Aligne les enfants verticalement au centre */
+}
+#Footer-Content{
+    text-align: end;
+    
+
+}
+#Footer-Content > a {
+    display: inline-block;
+}
+
+#Footer-Content > p{
+    color: orangered;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 380;
+    font-size: 1.2em;
+    margin: 0%;
+}
+
+#RESEAUX{
+    display: flex;
+    justify-content: right;
+}
+
+#RESEAUX > img{
+    margin-top: 0.2%;
+    width: 10%;
+    transition: 50ms;
+}
+#RESEAUX > img:hover{
+    margin-top: 0.3%;
+    width: 11%;
+}
+
+#Footer-Mail > p{
+    color: orangered;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 1.2em;
+    margin: 0%;
+}
