@@ -2,19 +2,19 @@
 /* PARTIE PAGE ACCUEIL */
 main.Accueil{
     width: 90%;
-    position: relative;
-    /*background-color: #0d1117;*/
+    display: flex;
+    /*background-color: #0d1117; */
     padding-top: 2%;
-    overflow: hidden
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
 }
 
 #Accueil-HautPage{
     display : flex;    
     justify-content: center;  
-    width: 40%;
+    width: 100%;
     gap : 1em;
-    margin-left: auto;
-    margin-right: auto;
     flex-direction: column;
 }
 
@@ -35,10 +35,11 @@ main.Accueil{
 }
 #Accueil-HautPage>p:last-child {    /*Affecte l'affichage de ma recherche de stage */
     
+    margin-left: auto;
     margin-right: auto;
     
     text-align: center;
-    
+    width: 60%;
 
 }
 
@@ -51,9 +52,9 @@ main.Accueil{
 div.Accueil{
     display:flex;
     flex-direction: row;
-    justify-content: center;
-    gap: 3em;
-    
+    justify-content: space-evenly;
+    gap: 1.2em;
+    width: 100%;
 }
 
 

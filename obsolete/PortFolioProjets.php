@@ -15,7 +15,8 @@ if (isset($_GET['projet'])) {
   <head>
     <meta charset="utf-8">
     <title>Portfolio Projets</title>
-    <link rel="stylesheet" href="styles/style.css" media="screen" />
+    <link rel="stylesheet" href="styles/styles.css" media="screen" />
+    <link rel="stylesheet" href="styles/stylesProjets.css" media="screen" />
     <script src="styles/script.js"></script>
   </head>
 

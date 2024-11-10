@@ -2,19 +2,31 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8">
-    <title>Portfolio Projets</title>
+    <title>Portfolio Parcours</title>
     <link rel="stylesheet" href="styles/style.css" media="screen" />
-    <link rel="stylesheet" href="styles/stylesParcours.css" media="screen" />
+    <link rel="stylesheet" href="styles/styleParcours.css" media="screen"/>
+    <style>body{background-color: #0d1117;}</style>
   </head>
 
   <body>
-    
-    <main id="Competences">
-      <div id="Projets-NomAccueil">
-        <p class="Menu" ><a href="index.html">Mathias FERNANDES</a></p>
-      </div>
+    <header>
+      <nav class="navbar">
 
-      <br>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="nav-links">
+            <li><a  href="index.html">Accueil</a></li>
+            <li class="pageActive"><a href="PortFolioParcours.html">Parcours</a></li>
+            <li><a href="PortFolioCompetences.html">Compétences</a></li>
+            <li><a href="PortFolioProjets.html">Projets</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="Competences">
+      
       <section class="CompetencesCadre">
         <h1>Parcours Scolaire</h1>
         <br>

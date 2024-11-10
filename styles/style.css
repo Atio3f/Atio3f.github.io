@@ -8,11 +8,13 @@ canvas {
 
 
 body{
-    background-color: #0d1117;
+    /* La couleur de l'arrière plan est défini à l'intérieur du html pour éviter
+    un flash blanc au chargement de la page */
     margin: 0;
     min-height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
+    justify-items: center;
 }
     
 
@@ -20,12 +22,12 @@ div>p.Menu {
     color: orangered;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 800;
-    font-size: 1rem;
+    font-size: 2.2rem;
     text-shadow: 2.2px 2.2px 0 #000, -0.8px -0.8px 0 #000, 0.8px -0.8px 0 #000, -0.8px 0.8px 0 #000, 0.8px 0.8px 0 #000;
-    scale: 240%;  
-    margin-left: 8%;
-    margin-right: 8%;
-    margin-bottom: 10%;
+     
+    
+   
+    
 }
 
 div>p.TitreMenu {    
@@ -47,7 +49,7 @@ a{
     
     font-size: 1.2em;
     transition: font-size 0.2s ease ;
-    text-decoration: underline;
+    
     overflow: hidden;
 }
 
@@ -187,7 +189,7 @@ footer > hr{
 header {
     display: inline-grid;
     width: 96%;
-    transform: translate(2%, 0%);   /* Place en plein milieu le menu */
+    
     grid-auto-flow : column; /* Aligne les éléments en ligne horizontale */
 }
 
@@ -196,15 +198,12 @@ header {
     align-items: center;
     border-color: aquamarine;
     border: aquamarine 2px solid;
-    padding: 1rem;
+    
     background-clip: padding-box;
     /*background-color: #e8824f; A VOIR SI ON CONSERVE*/
     backdrop-filter: blur(1px);
 }
-.nav-links{
-    width: 100%;
-    display: flex;
-}
+
 
 .ul:nth-child(n){
     width: 30%;
@@ -212,14 +211,15 @@ header {
 .nav-links li {
     flex : 1;
     text-align: center; /* Centre le texte dans chaque <li> */
+    padding: 1rem;
 }
 .navbar a {
-    color: wheat;
+    color: red;
     text-decoration: none;
     margin: 0 1rem;
     transition: color 0.3s;
     font-weight: 420;
-    font-size: 2em;
+    font-size: 2.2em;
 }
 .navbar a:hover {
     color: #ddd;        /* mettre une animation plutôt */
@@ -228,21 +228,24 @@ header {
 
 
 .nav-links {
-    display : inline-grid;
+    width: 100%;
+    display: flex;
+    padding: 0;
     list-style : none;
     grid-auto-flow : column; /* Aligne les éléments en ligne horizontale */
     justify-content : space-evenly;
-    gap : 1em
-
+    gap : 1em ;
+    margin : 0;
 }
 
 li.pageActive{
-    background-color: #e8824f;
+    background-color: #1c1c3c;
 
 }
 
 li.pageActive>a:hover {      
-    color: #000;        /* mettre une animation plutôt */
+    color: #ddd;        /* mettre une animation plutôt */
+    
 }
 @media (max-width: 768px) {
     .nav-links {
@@ -269,3 +272,5 @@ li.pageActive>a:hover {
         display: flex;
     }
 }
+
+

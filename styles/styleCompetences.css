@@ -25,6 +25,10 @@ section.CompetencesCadre > * > p{
     
 }
 
+.competence {
+    display: inline-block;
+}
+
 .CompetencesCode{
     line-height: 0.65em;
     display: grid;
@@ -65,6 +69,8 @@ section.CompetencesCadre > * > p{
     height: 0.5em;
     
 }
+
+
 
 /* FAUDRA CHANGER POUR QUE ça fasse un effet de conteneur avec le h2 + les p
 correspondants à l'intérieur */

@@ -2,20 +2,31 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8">
-    <title>Portfolio Projets</title>
+    <title>Portfolio Competences</title>
     <link rel="stylesheet" href="styles/style.css" media="screen" />
     <link rel="stylesheet" href="styles/styleCompetences.css" media="screen" />
+    <style>body{background-color: #0d1117;}</style>
   </head>
 
   <body>
-    
+    <header>
+      <nav class="navbar">
+
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="nav-links">
+            <li><a  href="index.html">Accueil</a></li>
+            <li><a href="PortFolioParcours.html">Parcours</a></li>
+            <li class="pageActive"><a href="PortFolioCompetences.html">Compétences</a></li>
+            <li><a href="PortFolioProjets.html">Projets</a></li>
+        </ul>
+      </nav>
+    </header>
     <main id="Competences">
-      <div id="Projets-NomAccueil">
-        <p class="Menu" ><a href="index.html">Mathias FERNANDES</a></p>
-      </div>
-
-      <br>
-
+      
       <section class="CompetencesCadre">
           <h1>Langages Informatique</h1>
         <br>
@@ -23,29 +34,29 @@
           <div class="conteneurCompetencesType">
             <h2>Developpement web</h2>
             <div class="sousConteneurCompetencesType"><h2>Front-end</h2>
-              <p> HTML --> <div class="barreProgressVide"><div class="barreProgressRemplie" pourcentage="75"></div></div> </p><p>Bonne maîtrise </p>
-              <p>CSS --> <div class="barreProgressVide"><div class="barreProgressRemplie" pourcentage="65"></div></div> </p><p>Bonne maîtrise</p>
-              <p>Javascript --> <div class="barreProgressVide"> <div class="barreProgressRemplie" pourcentage="45"></div></div> </p><p>Maîtrise intermédiaire</p>
+              <div class="competence"><p> HTML --> <div class="barreProgressVide"><div class="barreProgressRemplie" pourcentage="75"></div></div> </p><p>Bonne maîtrise </p></div>
+              <div class="competence"><p>CSS --> <div class="barreProgressVide"><div class="barreProgressRemplie" pourcentage="65"></div></div> </p><p>Bonne maîtrise</p></div>
+              <div class="competence"><p>Javascript --> <div class="barreProgressVide"> <div class="barreProgressRemplie" pourcentage="45"></div></div> </p><p>Maîtrise intermédiaire</p></div>
               
               
               
             </div>
             <div class="sousConteneurCompetencesType">
               <h2>Back-end</h2>
-              <p>PHP --> <div class="barreProgressVide"><div class="barreProgressRemplie" pourcentage="40"></div></div></progress> </p><p>Maîtrise intermédiaire</p>    
-              <p>SQL --> <div class="barreProgressVide"><div class="barreProgressRemplie" pourcentage="75"></div></div></progress> </p><p>Bonne maîtrise</p>
+              <div class="competence"><p>PHP --> <div class="barreProgressVide"><div class="barreProgressRemplie" pourcentage="40"></div></div></progress> </p><p>Maîtrise intermédiaire</p></div>    
+              <div class="competence"><p>SQL --> <div class="barreProgressVide"><div class="barreProgressRemplie" pourcentage="75"></div></div></progress> </p><p>Bonne maîtrise</p></div></div>
             </div>
              
           </div>
-          <p>Java --> <div class="barreProgressVide"><div class="barreProgressRemplie" pourcentage="80"></div></div> </p><p>Très bonne maîtrise</p>    
-          <p>Python --> <div class="barreProgressVide"><div class="barreProgressRemplie" pourcentage="80"></div></div> </p><p>Très bonne maîtrise </p>
+          <div class="competence"><p>Java --> <div class="barreProgressVide"><div class="barreProgressRemplie" pourcentage="80"></div></div> </p><p>Très bonne maîtrise</p></div>    
+          <div class="competence"></div><p>Python --> <div class="barreProgressVide"><div class="barreProgressRemplie" pourcentage="80"></div></div> </p><p>Très bonne maîtrise </p></div>
          
         
          
          
-         <p>C --> <div class="barreProgressVide"><div class="barreProgressRemplie" pourcentage="40"></div></div> </p><p>Maîtrise intermédiaire</p>
-         <p>C++ --> <div class="barreProgressVide"><div class="barreProgressRemplie" pourcentage="45"></div></div> </p><p>Maîtrise intermédiaire</p>
-         <p>Gdscript --> <div class="barreProgressVide"><div class="barreProgressRemplie" pourcentage="85"></div></div> </p><p>Très bonne maîtrise</p>
+         <div class="competence"><p>C --> <div class="barreProgressVide"><div class="barreProgressRemplie" pourcentage="40"></div></div> </p><p>Maîtrise intermédiaire</p></div>
+         <div class="competence"><p>C++ --> <div class="barreProgressVide"><div class="barreProgressRemplie" pourcentage="45"></div></div> </p><p>Maîtrise intermédiaire</p></div>
+         <div class="competence"><p>Gdscript --> <div class="barreProgressVide"><div class="barreProgressRemplie" pourcentage="85"></div></div> </p><p>Très bonne maîtrise</p></div>
           
         </div>
       </section>
