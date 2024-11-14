@@ -1,0 +1,60 @@
+/* PARTIE PAGE PROJETS */
+
+main.Projets{
+    width: 95%;
+    position: relative;
+    background-color: #0d1117;
+    margin-top: 1%;
+    margin-left: 2%;
+    
+}
+
+#Projets-NomAccueil{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+#Projets-NomAccueil>p{
+    margin-bottom: 1%;
+    
+}
+
+#Projets-Titre{
+    display: flex;
+    color: wheat;
+    justify-content: center;
+    align-items: center;
+    font-size: 160%;
+    font-size: 1.2em;
+}
+
+select {
+    font-size: 0.9rem;
+    padding: 2px 5px;
+    background-color: #0d1117;
+    color: wheat;
+    border-color: antiquewhite;
+}
+  
+#outputProjet{
+    font-size: 1.7em;
+    color: gray;
+}
+#Projets-bonus {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+#Projets-bonus > h2 {
+    display: none;
+    
+}
+
+#SAE1_03, #SAE1_05_06{
+    display: none;
+}
+
+
+
