@@ -54,7 +54,7 @@ a{
 }
 
 div>a:hover{
-    font-size: 1.3em;
+    color: #ddd;
     
 }
 
@@ -151,15 +151,17 @@ header {
 .nav-links li {
     flex : 1;
     text-align: center; /* Centre le texte dans chaque <li> */
-    padding: 1rem;
+   
 }
 .navbar a {
     color: red;
     text-decoration: none;
-    margin: 0 1rem;
     transition: color 0.3s;
     font-weight: 420;
     font-size: 2.2em;
+    display: block;
+    width: 100%;
+    padding: 1rem;
 }
 .navbar a:hover {
     color: #ddd;        /* mettre une animation plutôt */
@@ -174,7 +176,7 @@ header {
     list-style : none;
     grid-auto-flow : column; /* Aligne les éléments en ligne horizontale */
     justify-content : space-evenly;
-    gap : 1em ;
+    
     margin : 0;
 }
 
