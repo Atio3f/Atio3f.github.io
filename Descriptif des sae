@@ -1,10 +1,28 @@
+PROJET PERSO FIGHT OF CITIES :
+	DESCRIPTIF PROJET :
+	  Adaption de l'un de nos jeux de société en un jeu vidéo 2D sur Godot pour permettre de continuer à y jouer malgré la distance.
+	LIEN PROJET :
+	  Repertoire Github : https://github.com/Atio3f/FightOfCities2D
+	  Version en ligne jouable (mise à jour le 12/11) : atio3f.itch.io/fight-of-cities-2d
+	DESCRIPTION Fight Of Cities : 
+	   Fight of Cities est un jeu de stratégie sur plateau. L'objectif est de détruire le cristal de l'adversaire pour remporter la partie. Il faut ainsi constituer une petite armée, construire différents bâtiments et utiliser des objets afin de vous renforcer. Les différentes races de créatures disponibles(pingouins, singes, taureaux, humains et chauves-souris) possèdent toutes des spécificités particulières pour les exploiter au mieux et permet ainsi de faire la tactique à employer pour venir à bout de l'adversaire. Les unités, bâtiments et objets sont tous des cartes à piocher et à poser.
+	NOTRE TRAVAIL :
+	  Notre équipe de 3 personnes actuellement sur l'approfondissement des règles, d'un équilibrage général et de plusieurs tests de la version papier
+	  tandis que je m'occupe, en tant qu'unique développeur, d'implémenter le maximum d'éléments permettant de retranscrire au mieux le système de jeu
+	  et les mécaniques des différentes cartes.
+	TRAVAIL INFORMATIQUE DEJA EFFECTUE :
+	  J'ai pour le moment réalisé la structure des unités de manière satisfaisante. J'ai également ajouter différentes classes pour implémenter le système de capacités qui sera approfondi à chaque nouvelle unité rajoutée. Le système de déplacement et de terrain fonctionne très bien également et la structure du jeu a été restructurée récemment pour permettre bientôt le multijoueur.
+	TRAVAIL INFORMATIQUE A VENIR :
+	  Dans les prochains mois, j'implémenterai les bâtiments et les sorts puis je rajouterai le multijoueur puis je réaliserai tout l'aspect menu et paramètres.
+	
+
 MEGASAE :
 	DESCRIPTIF SAE :
 	  Mise en place d'un projet pour une application de gestion d'évènements de cirque en équipe de 5.
 	MON TRAVAIL :
 	  Diagrammes de cas d'utilisation
 	  Réflexion autour de la gestion des risques puis mise en place de solutions de mitigation pour les éviter.
-
+	
 
 SAE1.01/1.02 :
    	DESCRIPTIF SAE: 
