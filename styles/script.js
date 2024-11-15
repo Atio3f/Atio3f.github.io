@@ -164,5 +164,6 @@ function baseValue(){
 }
 
 window.onload = function() {
+  document.getElementById('Projets-list').value = "FoC";
   baseValue();
 };
