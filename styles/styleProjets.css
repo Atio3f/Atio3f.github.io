@@ -60,3 +60,8 @@ select {
 .FoC {
     display: none;
 }
+
+label {
+  font-size: 2.2em;
+  color: wheat;
+}
