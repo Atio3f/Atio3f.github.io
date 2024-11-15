@@ -161,6 +161,7 @@ function baseValue(){
   //document.getElementById('Projets-list').value = "FoC" ;
   console.log(document.getElementById('Projets-list').value);
   document.getElementById('Projets-list').value = "FoC";
+
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -169,4 +170,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
 window.onload = function() {
   baseValue();
+  updateText();
 };
