@@ -160,10 +160,13 @@ function toggleMenu() {
 function baseValue(){
   //document.getElementById('Projets-list').value = "FoC" ;
   console.log(document.getElementById('Projets-list').value);
- 
+  document.getElementById('Projets-list').value = "FoC";
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    baseValue();
+});
+
 window.onload = function() {
-  document.getElementById('Projets-list').value = "FoC";
   baseValue();
 };
