@@ -60,7 +60,11 @@ div>a:hover{
 
 
 
-
+.lienProjet {
+    width: 37em;
+    margin-top: auto;
+    overflow: visible;
+}
 
 
 
