@@ -166,6 +166,7 @@ function baseValue(){
 
 document.addEventListener("DOMContentLoaded", function() {
     baseValue();
+    updateText();
 });
 
 window.onload = function() {
