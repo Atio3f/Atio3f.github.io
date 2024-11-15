@@ -30,7 +30,7 @@ section.CompetencesCadre > * > p{
 }
 
 .CompetencesCode{
-    line-height: 0.65em;
+    line-height: 1em;
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 5 colonnes -->crée x colonnes avec 3 p à chaque fois, chacune prenant 1 fraction de l'espace disponible*/
     
