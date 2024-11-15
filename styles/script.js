@@ -164,8 +164,6 @@ function baseValue(){
 }
 
 window.onload = function() {
-echo document.getElementById('Projets-list').value ;
   document.getElementById('Projets-list').value = "FoC";
-echo document.getElementById('Projets-list').value ;
   baseValue();
 };
