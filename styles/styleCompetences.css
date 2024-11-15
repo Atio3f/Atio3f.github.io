@@ -26,7 +26,7 @@ section.CompetencesCadre > * > p{
 }
 
 .competence {
-    display: inline-block;
+     display : flex;
 }
 
 .CompetencesCode{
@@ -60,6 +60,7 @@ section.CompetencesCadre > * > p{
     background-color:#DDDDDD;
     width: 10em;
     height: 0.5em;
+    margin : auto 0% auto 0%;
 }
 
 .barreProgressRemplie{
@@ -90,4 +91,5 @@ p{
     align-items: center;
     overflow-wrap: break-word;
     font-size: 1.2em;
+    width : 40%;
 }
