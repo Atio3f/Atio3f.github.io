@@ -10,11 +10,11 @@
 
 .CompetencesCadre{
     display: flex;
-    border: 2px solid blanchedalmond;
+    border: 2px solid #FFD700 ;
     padding-left: 4px;
 }
 .CompetencesCadre > h1{
-    color: aquamarine;
+    color: #E63946; /* aquamarine est faisable aussi */
     padding-right: 2%
 }
 section.CompetencesCadre > * > p{
@@ -50,10 +50,17 @@ section.CompetencesCadre > * > p{
     
 }
 
+.conteneurCompetencesType{
+    border: 0.3em #FFD700 solid;
+    margin : 2%;
+}
+
+
 .sousConteneurCompetencesType{
-    border: 0.2em wheat solid;
+    border: 0.2em #FFD700 solid;
     display: grid;
     place-items: center stretch;
+    margin: 0.5em;
 }
 
 .barreProgressVide{
@@ -80,7 +87,7 @@ section.CompetencesCadre > * > p{
 correspondants à l'intérieur */
 h2{
     display: flex;
-    color: wheat;
+    color: #50C878;
     justify-content: center;
     align-items: center;
     
@@ -89,7 +96,7 @@ h2{
 
 p{
     display: flex;
-    color: wheat;
+    color: #98FF98;
     justify-content: center;
     align-items: center;
     overflow-wrap: break-word;
