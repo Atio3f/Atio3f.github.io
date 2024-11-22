@@ -1,15 +1,2 @@
-# portfolio
-
-To install dependencies:
-
-```bash
-bun install
-```
-
-To run:
-
-```bash
-bun run index.js
-```
-
-This project was created using `bun init` in bun v1.1.33. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+Mon portfolio de développeur web pour ma 2ème année de BUT Informatique.
+Le portfolio de ma 1ère année est disponible dans la branche 1èreAnnéePortfolio.
