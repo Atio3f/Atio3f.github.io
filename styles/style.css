@@ -172,6 +172,10 @@ header {
     display: block;
     width: 100%;
     padding: 1rem;
+    -moz-user-select: none; /* Firefox */
+    -webkit-user-select: none; /* Chrome, Safari, Opéra depuis la version 15 */
+    -ms-user-select: none; /* Internet explorer depuis la version 10 et Edge */
+    user-select: none; 
 }
 .navbar a:hover {
     color: #ddd;        /* mettre une animation plutôt */
