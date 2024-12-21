@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="author" content="Département info" />
+<link href="r3.05-tp03_files/style.css" type="text/css" rel="stylesheet" />
+
+<title>r3.05-tp03</title>
+</head>
+
+<body>
+<p>UGA - IUT2 - Département informatique<br />
+BUT 2 - R3.05 Programmation système - 2024/2025</p>
+
+
+<h1>TP03 : Mémoire secondaire, SGF et E/S
+
+</h1>
+
+<div class="instructions">
+  Ce TP doit être fait sur une station fraîchement démarrée.
+  Si votre enseignant ne l'a pas fait avant votre arrivée,
+  veuillez redémarrer votre station (Ctrl-Alt-F1 puis Ctrl-Alt-Suppr).
+</div>
+
+
+
+<p> Il n'y a pas de fichier à récupérer pour ce TP.</p>
+
+<p> <strong>En fin de séance, ne pas oublier d'imprimer le sujet dans un fichier PDF
+  (Ctrl-p puis Destination: Save to PDF).</strong></p>
+
+<h2>Mémoire secondaire et natures de SGF </h2>
+
+<h3> Mémoire secondaire </h3>
+
+<ol class="question">
+  <li>Exécuter la commande suivante :
+    <pre>lsblk -o NAME,SIZE,LOG-SEC,TYPE,MODEL</pre>
+    Sous quel nom le disque dur est-il désigné par le système ?
+    <div class="aremplir">
+      <textarea cols="4" rows="1" id="r3.05-tp032" placeholder="Ecrire votre réponse ici">nvme0n1</textarea>
+    </div>
+  </li>
+  <li>Combien de partitions sont présentes sur le disque dur ?
+    <div class="aremplir">
+      <textarea cols="4" rows="1" id="r3.05-tp033" placeholder="Ecrire votre réponse ici">1 seule</textarea>
+    </div>
+  </li>
+  <li> Quelle est la taille d'un secteur ?
+    <div class="aremplir">
+      <textarea cols="4" rows="1" id="r3.05-tp034" placeholder="Ecrire votre réponse ici">476,9G</textarea>
+    </div>
+  </li>
+  <li>Chaque ligne du pseudo-fichier <kbd>/proc/interrupts</kbd>
+    correspond à un numéro d'interruption (<code>irq</code>) différent,
+    donné en première colonne.
+    Retrouver les numéros d'interruption correspondant au contrôleur nvme
+    (penser à faire un <kbd>grep</kbd>).
+    <div class="aremplir">
+      <textarea cols="4" rows="1" id="r3.05-tp035" placeholder="Ecrire votre réponse ici">126, 127, 128, 129, 130, 131, 132</textarea>
+    </div>
+  </li>
+  <li> Noter le nombre d'interruptions reçues par chacun des processeurs.
+    Que remarquez-vous?
+    Nous referons la même mesure à la fin du TP...
+    <div class="aremplir">
+      <textarea cols="4" rows="1" id="r3.05-tp036" placeholder="Ecrire votre réponse ici">33984, 34492, 19743, 34980, 30474, 37863</textarea>
+    </div>
+  </li>
+</ol>
+
+<h3> Points de montage et natures de SGF </h3>
+
+<p>Nous étudions les trois sous-arborescences
+<samp>/</samp>, <samp>/users</samp> et <samp>/proc</samp>.
+</p>
+
+<ol class="question">
+  <li>Le fichier <samp>/proc/mounts</samp> liste l'ensemble des systèmes
+    de fichiers montés dans l'arborescence utilisable par le processus courant.
+    Chaque ligne indique le lieu d'origine du système de fichiers (partition d'un disque, etc.),
+    le répertoire où ce dernier est monté dans l'arborescence courante, son type,
+    et d'autres informations.
+    L'utilisation actuelle de ces systèmes de fichiers est donnée par les commandes <kbd>df</kbd>
+    ou <kbd>duf</kbd> (utiliser l'option <kbd>-all</kbd>).
+    <br />
+    Indiquer ces trois informations (périphérique, répertoire, type) pour les trois
+    répertoires cités en introduction de cet exercice.
+    <div class="aremplir">
+      <textarea cols="4" rows="1" id="r3.05-tp037" placeholder="Ecrire votre réponse ici">Pour / : /
+dev/nvme0n1p1, /, ext4  ;  Pour /users : erebus4:/users, /users, nfs4  ;
+  Pour /proc : proc, /proc, proc-&gt; car agit sur le processeur</textarea>
+      </div>
+  </li>
+  <li>L'administrateur a édité le fichier <samp>/etc/fstab</samp> <em>(file system table)</em>
+    pour indiquer quels systèmes de fichiers doivent être montés en divers points de l'arboresence
+    des répertoires. Afficher le contenu de ce fichier. Parmi les trois répertoires cités en introduction,
+    l'un ne s'y trouve pas. Lequel, et pourquoi?
+    <div class="aremplir">
+      <textarea cols="4" rows="1" id="r3.05-tp038" placeholder="Ecrire votre réponse ici">Le
+ répertoire qui ne s'y trouve pas est /proc car les fichiers qu'il 
+contient ne servent qu'à partager des informations et n'ont pas pour but
+ d'être stocké.</textarea>
+      </div>
+  </li>
+</ol>
+
+<h2 class="newpage">
+SGF ext4</h2>
+
+<div class="instructions">
+  Pour cet exercice, il vous est demandé de travailler
+  dans le répertoire <kbd>/tmp/</kbd>, qui vous offre une capacité
+  de stockage suffisante pour répondre aux questions posées.
+</div>
+
+<h3>I-nœuds</h3>
+
+<p>Dans cette partie, nous allons nous intéresser aux i-nœuds pointant vers des
+des répertoires ou des fichiers. </p>
+
+<ol class="question">
+  <li>Exécuter les deux commandes <kbd>ls <var>-ali /</var></kbd>
+    et <kbd>stat <var>/usr</var></kbd>.
+    Quelle colonne du résultat de <kbd>ls <var>-ali /</var></kbd>
+    donne le numéro de i-nœud de chaque entrée?
+    <div class="aremplir">
+      <textarea cols="4" rows="1" id="r3.05-tp039" placeholder="Ecrire votre réponse ici">c'est la 1ère colonne qui donne le numéro de i-noeud qui vaut 27262977 pour /usr</textarea>
+    </div>
+  </li>
+  <li>Que déduisez-vous des numéros de i-nœud pour les entrées <kbd>.</kbd> et <kbd>..</kbd>?
+    <div class="aremplir">
+      <textarea cols="4" rows="1" id="r3.05-tp0310" placeholder="Ecrire votre réponse ici">Pour . et .. : le i-noeud est 2 pour /  --&gt; ce sont les 2 premières lignes qui le montrent</textarea>
+    </div>
+  </li>
+  <li>Même question, mais pour les entrées <kbd>.</kbd> et <kbd>..</kbd>
+    du résultat de <kbd>ls <var>-ali /usr</var></kbd>.
+    <div class="aremplir">
+      <textarea cols="4" rows="1" id="r3.05-tp0311" placeholder="Ecrire votre réponse ici">Pour . : 27262977  ;  Pour .. : 2</textarea>
+    </div>
+  </li>
+  <li>Créer le fichier <kbd>/tmp/mon-fichier</kbd> par la commande
+    <kbd>echo "hello boys" &gt; /tmp/mon-fichier</kbd>
+    et noter ses dates <em>Access</em>, <em>Modify</em> et <em>Change</em>
+    données par la commande <kbd> stat <var>/tmp/mon-fichier</var></kbd>.
+  </li>
+  <li>Exécuter les commandes suivantes, suivies à chaque fois de la commande
+    <kbd> stat <var>/tmp/mon-fichier</var></kbd>.
+    Cocher les dates qui sont changées par chacune des trois dernières commandes.
+    <table>
+      <tr>
+        <th>Commande</th>
+        <th>Access</th>
+        <th>Modify</th>
+        <th>Change</th>
+      </tr>
+      <tr>
+        <td><kbd>cat /tmp/mon-fichier</kbd></td>
+        <td>
+          <textarea class="vide" cols="4" rows="1" id="r3.05-tp0312" placeholder="" style="width: 264px; height: 26px;">2024-12-12 10:40:34</textarea>
+        </td>
+        <td>
+          <textarea class="vide" cols="4" rows="1" id="r3.05-tp0313" placeholder="" style="width: 255px; height: 36px;">2024-12-12 10:40:33</textarea>
+        </td>
+        <td>
+          <textarea class="vide" cols="4" rows="1" id="r3.05-tp0314" placeholder="" style="width: 233px; height: 41px;">2024-12-12 10:40:33</textarea>
+        </td>
+      </tr>
+      <tr>
+        <td><kbd>chmod g+r /tmp/mon-fichier</kbd></td>
+        <td>
+          <textarea class="vide" cols="4" rows="1" id="r3.05-tp0315" placeholder="">2024-12-12 10:40:34</textarea>
+        </td>
+        <td>
+          <textarea class="vide" cols="4" rows="1" id="r3.05-tp0316" placeholder="">2024-12-12 10:40:33</textarea>
+        </td>
+        <td>
+          <textarea class="vide" cols="4" rows="1" id="r3.05-tp0317" placeholder="">2024-12-12 10:42:47</textarea>
+        </td>
+      </tr>
+      <tr>
+        <td><kbd>echo "hi friends" &gt; /tmp/mon-fichier</kbd></td>
+        <td>
+          <textarea class="vide" cols="4" rows="1" id="r3.05-tp0318" placeholder="">2024-12-12 10:44:06</textarea>
+        </td>
+        <td>
+          <textarea class="vide" cols="4" rows="1" id="r3.05-tp0319" placeholder="">2024-12-12 10:44:05</textarea>
+        </td>
+        <td>
+          <textarea class="vide" cols="4" rows="1" id="r3.05-tp0320" placeholder="">2024-12-12 10:44:05</textarea>
+        </td>
+      </tr>
+    </table>
+En déduire la signification de chacune de ces dates :
+  <ul>
+    <li>Access :
+      <div class="mot-aremplir">
+        <textarea cols="4" rows="1" id="r3.05-tp0321" placeholder="Ecrire votre réponse ici" style="width: 589px; height: 28px;">Dernier accès au contenu du fichier</textarea>
+      </div>
+    </li>
+    <li>Modify :
+      <div class="mot-aremplir">
+        <textarea cols="4" rows="1" id="r3.05-tp0322" placeholder="Ecrire votre réponse ici" style="width: 593px; height: 27px;">Dernière modification au contenu du fichier</textarea>
+      </div>
+    </li>
+    <li>Change :
+      <div class="mot-aremplir">
+        <textarea cols="4" rows="1" id="r3.05-tp0323" placeholder="Ecrire votre réponse ici" style="width: 570px; height: 40px;">Dernière modification du fichier(contenu ou fichier en lui-même)</textarea>
+      </div>
+    </li>
+  </ul>
+  </li>
+</ol>
+
+<h3>Blocs de données et extents</h3>
+
+<p>Dans cette partie, nous allons nous intéresser aux extents et aux blocs de données utilisés
+pour le stockage des fichiers. Des expériences similaires pourraient être
+menées avec des répertoires. La commande suivante va nous aider:</p>
+<pre>ls <var>-ls --block-size=4K NOM_FICHIER</var></pre>
+
+<p>Cette commande affiche: </p>
+<ul>
+  <li> <strong>dans la 1ère colonne</strong> : le nombre de blocs utilisés par le fichier sur le disque.
+  Ce nombre prend en compte les blocs de données <strong>et</strong>
+  les éventuels blocs utilisés pour stocker des descripteurs d'extents.</li>
+  <li> <strong>dans la 6ème colonne</strong> : taille du fichier en prenant 4Kio comme unité.
+  Si les données du fichier sont bien sur le disque, ce nombre correspond
+  au nombre de blocs qu'il utilise pour ses données uniquement.</li>
+</ul>
+
+<p>
+<span class="titre">Questions :</span> Répéter <strong>quatre fois</strong> la séquence suivante,
+  pour créer et étudier le stockage de <strong>quatre fichiers</strong> de tailles différentes,
+  afin de remplir le tableau ci-dessous.
+</p>
+<ol class="question">
+    <li>Utiliser la commande suivante pour créer un fichier de <kbd>N Kio</kbd>
+      (dans le répertoire <kbd>/tmp/</kbd>) :
+      <pre>dd if=/dev/zero of=/tmp/mon-fichier bs=1024 count=N</pre>
+      </li>
+    <li>Exécuter la commande <kbd>sync</kbd> pour forcer l'écriture du fichier sur disque;</li>
+    <li>Exécuter la commande <kbd>/sbin/filefrag -v /tmp/mon-fichier</kbd>
+      pour avoir une description des extents utilisés pour ce fichier.<br />
+      <em>Attention, le résultat de cette commande n'est fiable que si chaque
+      extent contient au plus 32 768 blocs.
+      Dans le cas contraire, cette commande est alors trompée par le fait que
+      le système de fichiers a été créé avec l'option
+      <code>flex_bg</code> qui permet d'avoir des extents physiques (mais pas logiques!)
+      de plus que 32 768 blocs ;</em></li>
+    <li>Si vous pensez que le nombre d'extents peut être réduit par défragmentation,
+      exécuter <strong>3 à 5 fois</strong>
+      la commande <kbd>/sbin/e4defrag -v /tmp/mon-fichier</kbd>
+      suivie de <kbd>sync</kbd> pour forcer l'écriture du fichier sur disque;</li>
+    <li>A l'aide de la commande <kbd>ls -ls --block-size=4K /tmp/mon-fichier</kbd>,
+      remplir les 2 premières colonnes libres du tableau;</li>
+    <li>Calculer par différence la 3ème colonne du tableau;</li>
+    <li>Remplir la 4ème colonne avec les valeurs possibles pour
+      le nombre d'extents contenant les données du fichier
+      et justifier dans la dernière colonne du tableau;</li>
+    <li>Supprimer le fichier <kbd>/tmp/mon-fichier</kbd>.</li>
+</ol>
+
+<table>
+  <tr>
+    <th>Taille du fichier</th>
+    <th>Nombre de blocs sur disque</th>
+    <th>Nombre de blocs contenant les données</th>
+    <th>Nombre de blocs contenant des desc. d'extents</th>
+    <th>Nombre d'extents</th>
+    <th class="commentaire">Explication</th>
+  </tr>
+  <tr>
+    <td>0_Kio</td>
+    <td>
+      <textarea class="vide" cols="4" rows="1" id="r3.05-tp0324" placeholder="">0</textarea>
+    </td>
+    <td>
+      <textarea class="vide" cols="4" rows="1" id="r3.05-tp0325" placeholder="">0</textarea>
+    </td>
+    <td>
+      <textarea class="vide" cols="4" rows="1" id="r3.05-tp0326" placeholder="">0</textarea>
+    </td>
+    <td>
+      <textarea class="vide" cols="4" rows="1" id="r3.05-tp0327" placeholder="">0</textarea>
+    </td>
+    <td>
+      <textarea cols="4" rows="1" id="r3.05-tp0328" placeholder="Ecrire votre réponse ici">Il n'a pas de donneés, il n'y a donc pas besoin d'avoir un extent</textarea>
+    </td>
+  </tr>
+  <tr>
+    <td>1_Kio</td>
+    <td>
+      <textarea class="vide" cols="4" rows="1" id="r3.05-tp0329" placeholder="">1</textarea>
+    </td>
+    <td>
+      <textarea class="vide" cols="4" rows="1" id="r3.05-tp0330" placeholder="">1</textarea>
+    </td>
+    <td>
+      <textarea class="vide" cols="4" rows="1" id="r3.05-tp0331" placeholder="">0</textarea>
+    </td>
+    <td>
+      <textarea class="vide" cols="4" rows="1" id="r3.05-tp0332" placeholder="">1</textarea>
+    </td>
+    <td>
+      <textarea cols="4" rows="1" id="r3.05-tp0333" placeholder="Ecrire votre réponse ici">Les données (1Kio) rentrent dans un extent</textarea>
+    </td>
+  </tr>
+  <tr>
+    <td>131_073_Kio</td>
+    <td>
+      <textarea class="vide" cols="4" rows="1" id="r3.05-tp0334" placeholder="">32770</textarea>
+    </td>
+    <td>
+      <textarea class="vide" cols="4" rows="1" id="r3.05-tp0335" placeholder="">32769</textarea>
+    </td>
+    <td>
+      <textarea class="vide" cols="4" rows="1" id="r3.05-tp0336" placeholder="">1</textarea>
+    </td>
+    <td>
+      <textarea class="vide" cols="4" rows="1" id="r3.05-tp0337" placeholder="">8</textarea>
+    </td>
+    <td>
+      <textarea cols="4" rows="1" id="r3.05-tp0338" placeholder="Ecrire votre réponse ici" style="width: 749px; height: 39px;">De
+ base, il y en avait 13 mais avec /sbin/e4defrag -v /tmp/mon-fichier, le
+ nombre a été réduit à 8 car il a réussi à optimiser --&gt; Il paraît 
+que c'est un problème sur les tailles d'extents à voir plus tard</textarea>
+    </td>
+  </tr>
+  <tr>
+    <td>524_289_Kio</td>
+    <td>
+      <textarea class="vide" cols="4" rows="1" id="r3.05-tp0339" placeholder="">131074</textarea>
+    </td>
+    <td>
+      <textarea class="vide" cols="4" rows="1" id="r3.05-tp0340" placeholder="">131073</textarea>
+    </td>
+    <td>
+      <textarea class="vide" cols="4" rows="1" id="r3.05-tp0341" placeholder="">1</textarea>
+    </td>
+    <td>
+      <textarea class="vide" cols="4" rows="1" id="r3.05-tp0342" placeholder="">1</textarea>
+    </td>
+    <td>
+      <textarea cols="4" rows="1" id="r3.05-tp0343" placeholder="Ecrire votre réponse ici" style="height: 58px; width: 755px;">De
+ base, il y en avait 36 mais avec plusieurs /sbin/e4defrag -v 
+/tmp/mon-fichier, le nombre a été réduit à 1 --&gt; Il paraît que c'est 
+un problème sur les tailles d'extents à voir plus tard </textarea>
+    </td>
+  </tr>
+</table>
+
+
+
+
+
+<h3>Création d'un SGF</h3>
+
+<p>Dans cette partie nous allons créer un SGF à l'intérieur d'un fichier <kbd>/tmp/mon-sgf</kbd>.</p>
+
+<ol class="question">
+  <li>Utiliser la commande suivante pour créer un fichier de 1Gio (dans le répertoire <kbd>/tmp/</kbd>) :
+    <pre>dd if=/dev/zero of=/tmp/mon-sgf bs=1024 count=1048576</pre>
+  </li>
+  <li>Créer un SGF ext4 dans le fichier <kbd>mon-sgf</kbd> avec la commande
+    <kbd>/sbin/mke2fs -v -t ext4 /tmp/mon-sgf</kbd>.</li>
+  <li>Analyser ce qui est affiché par cette commande pour remplir le tableau
+    donné ci-dessous</li>
+  <li> L'option <kbd>-t ext4</kbd> signifie que le SGF a été créé selon certaines options
+    indiquées dans le fichier <kbd>/etc/mke2fs.conf</kbd>.
+    Quelles sont les deux caractéristiques principales (citées en premier) qui ont été
+    ajoutées par cette option par rapport à la configuration par défaut ?
+    <div class="aremplir">
+      <textarea cols="4" rows="1" id="r3.05-tp0344" placeholder="Ecrire votre réponse ici"></textarea>
+    </div></li>
+  <li>Supprimer le fichier créé.</li>
+</ol>
+
+<table>
+  <tr>
+    <th>Paramètre du SGF</th>
+    <th>Valeur par défaut</th>
+  </tr>
+  <tr>
+    <td>Taille de bloc</td>
+    <td>
+      <textarea cols="4" rows="1" id="r3.05-tp0345" placeholder="Ecrire votre réponse ici">4096</textarea>
+    </td>
+  </tr>
+  <tr>
+    <td>Nombre de i-nœuds</td>
+    <td>
+      <textarea cols="4" rows="1" id="r3.05-tp0346" placeholder="Ecrire votre réponse ici">65536</textarea>
+    </td>
+  </tr>
+  <tr>
+    <td>Nombre de blocs</td>
+    <td>
+      <textarea cols="4" rows="1" id="r3.05-tp0347" placeholder="Ecrire votre réponse ici">262144</textarea>
+    </td>
+  </tr>
+  <tr>
+    <td>Nombre de blocs réservés à root</td>
+    <td>
+      <textarea cols="4" rows="1" id="r3.05-tp0348" placeholder="Ecrire votre réponse ici">13107 blocs</textarea>
+    </td>
+  </tr>
+  <tr>
+    <td>Nombre de groupes</td>
+    <td>
+      <textarea cols="4" rows="1" id="r3.05-tp0349" placeholder="Ecrire votre réponse ici">8 blocs groupes</textarea>
+    </td>
+  </tr>
+  <tr>
+    <td>Nombre de copies du superbloc</td>
+    <td>
+      <textarea cols="4" rows="1" id="r3.05-tp0350" placeholder="Ecrire votre réponse ici" style="width: 281px; height: 62px;">Superblock backups stored on blocks: 
+        32768, 98304, 163840, 229376
+</textarea>
+    </td>
+  </tr>
+  <tr>
+    <td>Taille du journal</td>
+    <td>
+      <textarea cols="4" rows="1" id="r3.05-tp0351" placeholder="Ecrire votre réponse ici">8192 blocs</textarea>
+    </td>
+  </tr>
+</table>
+
+<p><em>Remarque : pour utiliser le SGF ainsi créé, il faudrait qu'un
+  <strong>super-utilisateur (un root) </strong>
+  le monte en un point de l'arborescence. Par exemple en exécutant les commandes suivantes.
+</em></p>
+<ul>
+  <li><em> création du point de montage : <kbd>mkdir /mnt/mon-entree</kbd>
+  </em></li>
+  <li><em>montage : <kbd>mount -t ext4 /tmp/mon-sgf /mnt/mon-entree</kbd>
+  </em></li>
+</ul>
+
+<h2 class="newpage"> Mémoire principale - Effet du cache disque</h2>
+
+<p>La quantité de RAM allouée par le noyau pour le <strong>cache de blocs de données</strong> 
+  est donnée par la commande <kbd>free</kbd>, dans la colonne <code>buff/cache</code>.
+  Notez qu'il existe d'autre types de <em>caches</em> d'éléments de la mémoire secondaire
+  conservées temporairement en mémoire principale (le cache de i-nœuds par exemple)
+  pour lesquels nous pourrions réaliser des expériences similaires.
+</p>
+
+<h3> Le cache disque est une utilisation secondaire de la mémoire principale</h3>
+
+<p>L'objet premier de la mémoire principale est de contenir les espaces mémoires des
+  processus. Seul l'espace non utilisé à cette fin peut être utilisé comme <em>cache disque</em>.
+  Nous réalisons une première expérience qui illustre cela.</p>
+
+<ol class="question">
+  <li>
+    Notez la valeur actuelle de la taille du cache de bloc de données :
+    <div class="mot-aremplir">
+      <textarea cols="4" rows="1" id="r3.05-tp0352" placeholder="Ecrire votre réponse ici">6989956</textarea>
+    </div>
+  </li>
+  <li> En ayant sous les yeux une indication de l'occupation
+    de la RAM et du SWAP (grâce à l'application <kbd>gnome-system-monitor</kbd>
+    par exemple), exécuter le programme <kbd>tableau1d</kbd> d'un
+    TP précédent en utilisant une quantité de mémoire suffisante pour qu'elle soit
+    légèrement inférieure à la RAM de votre station sans pour autant déborder sur le SWAP
+    (une bonne valeur est celle renvoyée par la commande <kbd>free</kbd>,
+    dans la colonne <code>available</code> de la première ligne,
+    multipliée par 1024 pour obtenir un nombre d'octets).
+    Répéter cette opération 1 ou 2 fois.</li>
+  <li> Notez la nouvelle valeur de la taille du cache de bloc de données :
+    <div class="mot-aremplir">
+      <textarea cols="4" rows="1" id="r3.05-tp0353" placeholder="Ecrire votre réponse ici" style="height: 24px; width: 81px;"></textarea>
+    </div>
+  </li>
+  <li> En quoi cela illustre-t-il la propriété annoncée en début de cette section?
+    <div class="aremplir">
+      <textarea cols="4" rows="1" id="r3.05-tp0354" placeholder="Ecrire votre réponse ici"></textarea>
+    </div>
+  </li>
+</ol>
+
+<h3>Lecture de fichiers : cache de blocs de données</h3>
+
+<p>Dans cette partie, on va s'intéresser au répertoire <kbd>/usr/bin/</kbd> et
+aux fichiers qu'il contient.</p>
+
+<p>Nous utiliserons la commande <kbd>/usr/bin/time <var>PROGRAMME</var></kbd>
+qui permet de mesurer, en plus du temps d'éxécution du programme, le nombre
+d'entrées ou lectures (<code>inputs</code>) et le nombre de sorties ou écritures
+(<code>outputs</code>) effectuées par celui-ci.  Les nombres sont donnés en
+secteurs de 512 octets (le SGF ayant des blocs de 4Kio, ces nombres sont donc
+toujours des multiples de 8).</p>
+
+
+<ol>
+  <li>Quelle est la taille cumulée de tous les fichiers contenus dans ce
+    répertoire ?
+    <em>Indication : utiliser la commande <kbd>du</kbd>.</em>
+    <div class="aremplir">
+      <textarea cols="4" rows="1" id="r3.05-tp0355" placeholder="Ecrire votre réponse ici"></textarea>
+    </div>
+  </li>
+  <li>Lire une 1ère fois tous ces fichiers avec la commande :
+    <kbd>/usr/bin/time tar c /usr/bin/ | cat &gt; /dev/null</kbd>. </li>
+  <li>Remplir la 1ère colonne du <strong>Tableau 3</strong>.</li>
+  <li>Rappeler la taille d'un secteur trouvée en début de TP, dans l'exercice 1
+    <div class="aremplir">
+      <textarea cols="4" rows="1" id="r3.05-tp0356" placeholder="Ecrire votre réponse ici"></textarea>
+    </div>
+  </li>
+  <li>Vérifier que l'ordre de grandeur de la taille des données lues
+    est similaire à celle mesurée à la première question de de cette partie.
+    Pour cela, écrire l'équation qui démontre cette égalité approximative.
+    <div class="aremplir">
+      <textarea cols="4" rows="1" id="r3.05-tp0357" placeholder="Ecrire votre réponse ici"></textarea>
+    </div>
+    </li>
+  <li>Parcourir à nouveau 2 ou 3 fois les fichiers avec la même commande.
+      Remplir la 2ème colonne du <strong>Tableau 3</strong>.</li>
+  <li>Expliquer la réduction du nombre de lectures.
+    <div class="aremplir">
+      <textarea cols="4" rows="1" id="r3.05-tp0358" placeholder="Ecrire votre réponse ici"></textarea>
+    </div>
+  </li>
+  <li>Qualifier le facteur d'accélération offert par le cache disque.
+    <div class="aremplir">
+      <textarea cols="4" rows="1" id="r3.05-tp0359" placeholder="Ecrire votre réponse ici"></textarea>
+    </div>
+  </li>
+  <li> La taille du cache de blocs de données a-t-elle augmenté?
+    Quelle commande permet de l'illustrer?
+    <div class="aremplir">
+      <textarea cols="4" rows="1" id="r3.05-tp0360" placeholder="Ecrire votre réponse ici"></textarea>
+    </div>
+  </li>
+</ol>
+
+<table>
+  <caption> Tableau 3 : lecture de fichiers </caption>
+  <tr>
+    <th>Mesures</th>
+    <th>1er parcours</th>
+    <th>2ème parcours</th>
+  </tr>
+  <tr>
+    <td>Durée écoulée</td>
+    <td>
+      <textarea class="vide" cols="4" rows="1" id="r3.05-tp0361" placeholder=""></textarea>
+    </td>
+    <td>
+      <textarea class="vide" cols="4" rows="1" id="r3.05-tp0362" placeholder=""></textarea>
+    </td>
+  </tr>
+  <tr>
+    <td>Nombre de lectures (<code>inputs</code>) en secteurs</td>
+    <td>
+      <textarea class="vide" cols="4" rows="1" id="r3.05-tp0363" placeholder=""></textarea>
+    </td>
+    <td>
+      <textarea class="vide" cols="4" rows="1" id="r3.05-tp0364" placeholder=""></textarea>
+    </td>
+  </tr>
+</table>
+
+<h2> Entrées-sorties </h2>
+
+<h3> Disque dur : mesures de débit </h3>
+
+<p>Lors du premier exercice de ce TP, nous avons constaté que
+le disque dur est désigné par le nom <code>nvme0n1</code> par le système.
+C'est un nom donné donné à un disque dur de type SSD accédé
+en suivant le standard NVMe <em>(Non-Volatile Memory express)</em> sur
+des bus PCI express. Ces trois technologies combinées assurent un accès
+aux données du disque dur bien plus rapide que, par exemple, depuis un disque HDD accédé
+par le protocole SCSI sur des bus SATA.  </p>
+
+<p> La commande <kbd>hdparm</kbd>, réservée à l'administrateur, permet de mesurer le débit
+brut d'un disque dur en lecture, sans passer par la couche SGF.
+Cette commande, exécutée sur une station du département donne le résultat suivant:</p>
+<pre>iut2-dg023-d09:~# hdparm -t /dev/nvme0n1
+/dev/nvme0n1:
+ Timing buffered disk reads: 2510 MB in  3.00 seconds = 836.17 MB/sec
+</pre>
+
+<ol class="question">
+  <li>
+  Quel est le plus gros fichier dans <kbd>/usr/local/images-ISO/</kbd> ?
+  <em>Indications : lire la page de manuel de la commande <kbd>ls</kbd>
+  pour savoir quelle option permet d'afficher les fichiers dans l'ordre
+  décroissant de leur taille.</em>
+    <div class="aremplir">
+      <textarea cols="4" rows="1" id="r3.05-tp0365" placeholder="Ecrire votre réponse ici"></textarea>
+    </div>
+  </li>
+  <li> Utiliser la commande suivante pour forcer la lecture complète de ce fichier:
+    <pre>/usr/bin/time cat NOM_FICHIER &gt; /dev/null</pre>
+  </li>
+  <li>Combien de lectures ont été effectuées (en secteurs de 512 octets) ?
+    <div class="aremplir">
+      <textarea cols="4" rows="1" id="r3.05-tp0366" placeholder="Ecrire votre réponse ici"></textarea>
+    </div>
+  </li>
+  <li>Combien d'écritures ont été effectuées (en secteurs de 512 octets) ?
+    <div class="aremplir">
+      <textarea cols="4" rows="1" id="r3.05-tp0367" placeholder="Ecrire votre réponse ici"></textarea>
+    </div>
+  </li>
+  <li>Combien de temps a duré la lecture ?
+    <em>Attention! Notez bien la durée totale de ce processus (temps écoulé entre
+    sa création et sa terminaison)!</em>
+    <div class="aremplir">
+      <textarea cols="4" rows="1" id="r3.05-tp0368" placeholder="Ecrire votre réponse ici"></textarea>
+    </div>
+  </li>
+  <li>Calculer le débit correspondant (en Mio/sec).
+    <div class="aremplir">
+      <textarea cols="4" rows="1" id="r3.05-tp0369" placeholder="Ecrire votre réponse ici"></textarea>
+    </div>
+  </li>
+  <li>Comparer ce débit avec le débit trouvé précédemment.
+    <div class="aremplir">
+      <textarea cols="4" rows="1" id="r3.05-tp0370" placeholder="Ecrire votre réponse ici"></textarea>
+    </div>
+  </li>
+</ol>
+
+<h3 class="newpage">
+Disque dur : interruptions</h3>
+
+<p>Consulter à nouveau le pseudo-fichier <kbd>/proc/interrupts</kbd>, retrouver les lignes
+  correspondant aux interruptions du contrôleur nvme, et noter le nombre
+  d'interruptions reçues par chacun des processeurs.
+  Que constatez-vous par rapport aux mesures prises en début de TP ? Proposer une explication.
+</p>
+<div class="aremplir">
+  <textarea cols="4" rows="1" id="r3.05-tp0371" placeholder="Ecrire votre réponse ici"></textarea>
+</div>
+
+<h3> Autres entrées-sorties</h3>
+
+<p>La communication entre le processeur et les autres péripériques
+est organisée de façon similaire : avec des contrôleurs, via des bus,
+et synchronisée à l'aide d'interruptions.
+La commande <kbd>lstopo</kbd> 
+représente graphiquement les éléments du système, illustrant
+en particulier chaque périphérique par un rectangle vert.</p>
+
+<ol>
+  <li>Exécuter la commande <kbd>lstopo</kbd></li>
+
+  <li>Identifier le rectangle illustrant le disque dur et son bus <code>PCI 01:00.0</code>.</li>
+
+  <li> La seule information présente pour chaque périphérique est l'identifiant de son bus PCI.
+    Identifier les autres périphériques en notant leur nature
+    (carte graphique etc.) et le nom sous lequel ils sont désignés par le système,
+    en exécutant la commande <kbd>lstopo-no-graphics --filter io </kbd>.
+    <div class="aremplir">
+      <textarea cols="4" rows="1" id="r3.05-tp0372" placeholder="Ecrire votre réponse ici"></textarea>
+    </div>
+  </li>
+</ol>
+
+<script type="text/javascript">
+  const mylist = document.querySelectorAll("textarea");
+  let myId = 1;
+  for (elem of mylist) {
+    myId++;
+    elem.id = document.title+myId;
+    elem.value=localStorage.getItem(elem.id);
+    elem.placeholder="Ecrire votre réponse ici";
+    elem.addEventListener('input',myF);
+  }
+
+  const myplist = document.querySelectorAll("textarea.vide");
+  for (elem of myplist) {
+    elem.placeholder="";
+  }
+
+  function myF(e){
+    localStorage.setItem(e.target.id,e.target.value);
+  }
+</script>
+
+<div class="bas-page">
+<p>
+  <a href="https://validator.w3.org/check/referer"><img class="logo" height="31" width="88" src="r3.05-tp03_files/valid-xhtml11.png" alt="XHTML 1.1 Valide !" /></a>
+  <a href="https://jigsaw.w3.org/css-validator/check/referer"><img class="logo" height="31" width="88" src="r3.05-tp03_files/vcss.png" alt="CSS Valide !" /></a>
+</p>
+</div>
+</body>
+</html>

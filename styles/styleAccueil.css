@@ -1,4 +1,5 @@
 /* Contient toutes les modifications qui ne s'appliquent qu'à la page d'accueil */
+
 /* PARTIE PAGE ACCUEIL */
 main.Accueil{
     width: 90%;
@@ -68,3 +69,125 @@ div.Accueil{
     -webkit-text-stroke-width: 0.05em;
     -webkit-text-stroke-color: white;
 }
+
+.LangageCadre{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.LangageCadre>div{
+    display: flex;
+    flex-direction: wrap;
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Permet de passer à une nouvelle ligne si nécessaire */
+    gap: 2em; /* Espacement entre les éléments */
+    justify-content: space-between; /* Espacement équilibré entre les colonnes */
+}
+
+
+
+.encadreLangage{
+    display: flex;
+    height: 9em;
+    justify-content:space-around;
+    align-items: center;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    flex: 4 0 calc(33% - 3em); /* Chaque div occupe 50% de la largeur moins l'espace */
+    box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur */
+}
+
+.encadreLangage > img{
+    width: 6em;
+    height: 6em; 
+    object-fit:contain; /*Evite que l'image déborde*/
+    flex-grow: 3;
+}
+
+
+
+.sousEncadreLangage > h4{
+    color : white;
+    
+    text-shadow:
+    0 0 0.3em rgba(202,228,225,0.92),
+    0 0 1.9em rgba(202,228,225,0.34),
+    0 0 0.7em rgba(30,132,242,0.52),
+    0 0 1.4em var(--dark-blue-color),
+    0 0 2.1em rgba(30,132,242,0.78),
+    0 0 3.7em var(--dark-blue-color);
+}
+
+.sousEncadreLangage {
+    flex-grow: 4;
+    text-align: start; 
+}
+
+.sousEncadreLangage > p{
+    color : white;
+    text-shadow:
+    0 0 6px rgba(202,228,225,0.92),
+    0 0 30px rgba(202,228,225,0.34),
+    0 0 12px rgba(30,132,242,0.52),
+    0 0 21px var(--dark-blue-color), 
+    0 0 34px rgba(30,132,242,0.78),
+    0 0 54px ;
+    padding-left: 1em;
+}
+
+.LangageCadre>h2{
+    color : white;
+}
+
+/* https://blog.dorianguilmain.com/comment-creer-un-effet-neon-en-css/ */
+.encadreLangage {
+    
+   
+    
+    border-radius: 12px;
+    /*box-shadow:
+      0 0 0.5em #fff,
+      inset 0 0 0.5em #fff,
+      0 0 1em #37f713,
+      inset 0 0 1em #37f713,
+      0 0 2em #37f713,
+      inset 0 0 2em #37f713; */
+      animation: flashing 10s infinite alternate; 
+      box-shadow:
+        0 0 0.2em #fff,
+        inset 0 0 0.1em #fff,
+        0 0 1em var(--light-blue-color),
+        inset 0.1em 0 0.2em var(--light-blue-color),
+        0 0 0.2em var(--light-blue-color),
+        inset 0 0 0.2em white;
+
+  }
+
+ /*
+@keyframes flashing {
+    from {
+        box-shadow:
+        0 0 0.5em #fff,
+        inset 0 0 0.5em #fff,
+        0 0 1em var(--light-blue-color),
+        inset 0 0 1em var(--light-blue-color),
+        0 0 2em var(--light-blue-color),
+        inset 0 0 2em var(--light-blue-color); 
+      }
+    
+      to {
+        box-shadow:
+        0 0 0.5em #fff,
+        inset 0 0 0.5em #fff,
+        0 0 1em #37f713,
+        inset 0 0 1em #37f713,
+        0 0 2em #37f713,
+        inset 0 0 2em #37f713; 
+      } 
+}
+*/

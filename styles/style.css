@@ -1,3 +1,14 @@
+
+/* Contiendra toutes les couleurs utilisées */
+:root {
+    --red-color: #ff035b;
+    --light-blue-color: #04d9ff;
+    --dark-blue-color : rgba(30,132,242,0.92);
+    --green-color: #37f713;
+    
+
+  }
+
 canvas {
     position: fixed; /* Le rendre fixe pour qu'il reste en arrière-plan */
     top: 0;
@@ -73,9 +84,11 @@ div>a:hover{
 footer{
     
     width: 85%;
-    position: relative;
+   
+    /* param quand le footer était en relative */
     padding-top: 3%;
     margin: 0 auto;
+    
 }
 footer > hr{
     width: 100%;
@@ -136,18 +149,18 @@ footer > hr{
 
 /* POUR LA BARRE DE NAVIGATION */
 header {
-    display: inline-grid;
-    width: 96%;
     
-    grid-auto-flow : column; /* Aligne les éléments en ligne horizontale */
+    width: 94%;
+    /* display: inline-grid;
+    grid-auto-flow : column; */ /* Aligne les éléments en ligne horizontale */ 
 }
 
 .navbar {
     display: flex;
     align-items: center;
    
-    border: #FFD700 2px solid;
-    
+    animation: flashing 10s infinite alternate; 
+      
     background-clip: padding-box;
     /*background-color: #e8824f; A VOIR SI ON CONSERVE*/
     backdrop-filter: blur(1px);
@@ -195,12 +208,15 @@ header {
 }
 
 li.pageActive{
-    background-color: #800020;
-
+    box-shadow: inset 0em 0em 5em aqua;
+    
+}
+li.pageActive > a{
+    text-shadow: none;
 }
 
 li.pageActive>a:hover {      
-    color: #ddd;        /* mettre une animation plutôt */
+    color: #ddd;        /* mettre une animation plutôt avec GSAP*/
     
 }
 @media (max-width: 768px) {
@@ -223,9 +239,66 @@ li.pageActive>a:hover {
     background-color: white;
     margin: 0.3rem 0;
 }
+
+
 @media (max-width: 768px) {
     .menu-toggle {
         display: flex;
     }
 }
 
+
+
+@keyframes flashing {
+    0%{
+      box-shadow:
+        0 0 0.5em #fff,     /* Offset Ombre externe */
+        inset 0 0 0.5em #fff,   /* Offset Ombre interne */
+        0 0 1em var(--light-blue-color),    /* Ombre vers le bas */
+        inset 0 0 1em var(--dark-blue-color),   /* Ombre interne en bas */
+        0 0 0.5em var(--light-blue-color),  /* Ombre externe en bas */
+        inset 0 0 2em var(--dark-blue-color);   /* Ombre interne vers le bas */
+
+    }
+    50% {        
+      box-shadow:
+        0 0 0.5em #fff,
+        inset 0 0 0.5em #fff,
+        0 0 1em var(--dark-blue-color),
+        inset 0 0 1em var(--light-blue-color),
+        0 0 0.5em var(--dark-blue-color),
+        inset 0 0 2em var(--light-blue-color);
+    }  
+    100%{
+        box-shadow:
+          0 0 0.5em #fff,
+          inset 0 0 0.5em #fff,
+          0 0 1em var(--light-blue-color),
+          inset 0 0 1em var(--dark-blue-color),
+          0 0 0.5em var(--light-blue-color),
+          inset 0 0 2em var(--dark-blue-color);
+    }  
+    
+}
+/*Ancien flashing
+@keyframes flashing {
+    0%{
+      box-shadow:
+        0 0 0.5em #fff,
+        inset 0 0 0.5em #fff,
+        0 0 1em var(--light-blue-color),
+        inset 0 0 1em var(--light-blue-color),
+        0 0 2em var(--light-blue-color),
+        inset 0 0 2em var(--green-color);
+
+    }
+    100% {        
+      box-shadow:
+        0 0 0.5em #fff,
+        inset 0 0 0.5em #fff,
+        0 0 1em var(--green-color),
+        inset 0 0 1em var(--light-blue-color),
+        0 0 2em var(--green-color),
+        inset 0 0 2em var(--light-blue-color); 
+    }    
+}*/
