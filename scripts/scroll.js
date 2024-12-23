@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         scrollTrigger: {trigger : '.container', 
         start : "bottom 820px",
         end : "bottom 450px",
-        markers : true,
+        //markers : true,
         scrub : 3
     },
     yPercent: 200,
