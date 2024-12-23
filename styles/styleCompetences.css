@@ -21,6 +21,7 @@ section.CompetencesCadre > * > p{
     padding-left: 2.5em;
     letter-spacing: 0.1vh;
     line-height: 3vh;
+    width: auto;
     
 }
 

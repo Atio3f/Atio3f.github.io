@@ -75,6 +75,7 @@ div.Accueil{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    padding-top: 8%;
 }
 
 .LangageCadre>div{
@@ -83,13 +84,17 @@ div.Accueil{
     box-sizing: border-box;
 }
 .container {
+    
     display: flex;
     flex-wrap: wrap; /* Permet de passer à une nouvelle ligne si nécessaire */
     gap: 2em; /* Espacement entre les éléments */
     justify-content: space-between; /* Espacement équilibré entre les colonnes */
+    
 }
 
-
+.hidden{
+    display : none;
+}
 
 .encadreLangage{
     display: flex;

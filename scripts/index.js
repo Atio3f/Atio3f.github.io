@@ -1,4 +1,4 @@
-
+//PIXI JS Fond étoilé 
 (async () =>
     {
         // Create a new application
@@ -22,7 +22,7 @@
         const baseSpeed = 0.025;    //Petite valeur comme 0.025 pour faire bouger les étoiles
         let speed = 0;
         let warpSpeed = 0;
-        const starStretch = 1;  //Elonge les étoiles
+        const starStretch = 1;  //Allonge les étoiles
         const starBaseSize = 0.05;
     
         // Create the stars
@@ -66,8 +66,8 @@
         // Listen for animate update
         app.ticker.add((time) =>
         {
-            // Simple easing. This should be changed to proper easing function when used for real.
-            speed += (warpSpeed - speed) / 20;
+            // Simple easing. This should be changed to proper easing function when used for real. Sert à rien sans changement de vitesse
+            //speed += (warpSpeed - speed) / 20;
             cameraZ += time.deltaTime * 10 * (speed + baseSpeed);
             for (let i = 0; i < starAmount; i++)
             {
@@ -103,4 +103,14 @@
 
     })();
 
+
+
+//Permet de cacher tous les éléments qui ne doivent pas être affichés au chargement de la page
+window.addEventListener('DOMContentLoaded', () => {
+    //On prend les containers cachés avec hidden
+    const containers = document.querySelectorAll('.hidden');
     
+    containers.forEach(container => {
+    container.classList.remove('hidden');
+    });
+});

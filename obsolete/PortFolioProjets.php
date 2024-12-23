@@ -71,7 +71,7 @@ if (isset($_GET['projet'])) {
           <a href="https://github.com/Atio3f" target="_blank" rel="noopener noreferrer">
             <div id="RESEAUX">
               
-              <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="Lien github">
+              <img src="https://github.githubassets.com/img/modules/logos_page/GitHub-Mark.png" alt="Lien github">
             </div></a>
         </div>
       </div>

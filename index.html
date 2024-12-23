@@ -45,31 +45,33 @@
           <p class="Menu"><a href="PortFolioProjets.html">Projets</a></p>
         
       </div> --->
-      <container class="LangageCadre">
-        <h2>Langages Utilisés</h2>
-
+      <container class="hidden LangageCadre" >
+        <h2 id="split">Langages Utilisés</h2>
+    
         <div class="container">
-          <div class="encadreLangage"><img src="images/CSSLogo.webp"><div class="sousEncadreLangage"><h4>CSS</h4> <p></p></div></div>
-          <div class="encadreLangage"><img src="images/PHPLogo.png"><div class="sousEncadreLangage"><h4>PHP</h4> <p></p></div></div>
-          <div class="encadreLangage"><img src="images/JavascriptLogo.png"><div class="sousEncadreLangage"><h4>Javascript</h4> <p></p></div></div>
-          <div class="encadreLangage"><img src="images/PythonLogo.png"><div class="sousEncadreLangage"><h4>Python</h4> <p></p></div></div>
-          <div class="encadreLangage"><img src="images/javaIcon.png"><div class="sousEncadreLangage"><h4>Java</h4> <p></p></div></div>
-          <div class="encadreLangage"><img src="images/C++Logo.png"><div class="sousEncadreLangage"><h4>C++</h4> <p></p></div></div>
-          <div class="encadreLangage"><img src="images/PostgreSQLogo.png"><div class="sousEncadreLangage"><h4>PostgreSQL</h4> <p>Bases de données relationnelles</p></div></div>
-        </div>
+          <div class="encadreLangage g"><img src="img/CSSLogo.webp"><div class="sousEncadreLangage"><h4>CSS</h4> <p></p></div></div>
+          <div class="encadreLangage m"><img src="img/PHPLogo.png"><div class="sousEncadreLangage"><h4>PHP</h4> <p></p></div></div>
+          <div class="encadreLangage d"><img src="img/JavascriptLogo.png"><div class="sousEncadreLangage"><h4>Javascript</h4> <p></p></div></div>
+          
+          <div class="encadreLangage g"><img src="img/PythonLogo.png"><div class="sousEncadreLangage"><h4>Python</h4> <p></p></div></div>
+          <div class="encadreLangage m"><img src="img/javaIcon.png"><div class="sousEncadreLangage"><h4>Java</h4> <p></p></div></div>
+          <div class="encadreLangage d"><img src="img/C++Logo.png"><div class="sousEncadreLangage"><h4>C++</h4> <p></p></div></div>
+          <div class="encadreLangage m"><img src="img/PostgreSQLogo.png"><div class="sousEncadreLangage"><h4>PostgreSQL</h4> <p>Bases de données relationnelles</p></div></div>
+          
+        </div>  
       </container>
       
-      <container class="LangageCadre">
-        <h2>En cours d'apprentissage</h2>
+      <container class="hidden LangageCadre">
+        <h2 id="split2">En cours d'apprentissage</h2>
 
         <div class="container">
-          <div class="encadreLangage"><img src="images/ReactLogo.png"><div class="sousEncadreLangage"><h4>React</h4><p>Avec l'utilisation dans<br> un projet scolaire</p></div></div>
-          <div class="encadreLangage"><img src="images/TypescriptLogo.png"><div class="sousEncadreLangage"><h4>TypeScript</h4></div></div>
-          <div class="encadreLangage"><img src="images/GSAPLogo.svg"><div class="sousEncadreLangage"><h4>GSAP</h4><p>Utilisé dans ce portfolio<br> pour des transitions fluides</p></div></div>
+          <div class="encadreLangage g"><img src="img/ReactLogo.png"><div class="sousEncadreLangage"><h4>React</h4><p>Avec l'utilisation dans<br> un projet scolaire</p></div></div>
+          <div class="encadreLangage m2"><img src="img/TypescriptLogo.png"><div class="sousEncadreLangage"><h4>TypeScript</h4></div></div>
+          <div class="encadreLangage d"><img src="img/GSAPLogo.svg"><div class="sousEncadreLangage"><h4>GSAP</h4><p>Utilisé dans ce portfolio<br> pour des animations fluides</p></div></div>
         </div>
       </container>
     </main>
-    <footer>
+    <footer class="hidden">
       <hr>
       <div id="Footer-Global">
         <div id="Footer-Mail">
@@ -79,10 +81,10 @@
           <p>Mes réseaux : </p>
             <div id="RESEAUX">
               <a href="https://github.com/Atio3f" target="_blank" rel="noopener noreferrer">
-                <img src="images/github-mark-white.png" alt="Lien github">
+                <img src="img/github-mark-white.png" alt="Lien github">
               </a>
             <a href="https://www.linkedin.com/in/mathias-fernandes" target="_blank" rel="noopener noreferrer">
-              <img src="images/iconLinkedin.png" alt="Lien Linkedin">
+              <img src="img/iconLinkedin.png" alt="Lien Linkedin">
             </a>
             </div>
           
@@ -92,9 +94,14 @@
   </body>
   <script src="https://pixijs.download/release/pixi.min.js"></script> <!-- On importe pixiJS ici-->
   <!-- Ajouter le script après le corps pour que tout le DOM soit chargé avant l'exécution -->
-   <!--On importe GSAP ici-->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="myCustomCode.js"></script>
+   <!--On importe GSAP, Splitting et Lenis ici-->
+   <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script> 
+   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+   <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+
+   <script src="scripts/scroll.js"></script>
   <script type="module" src="scripts/index.js"></script>
   <script type="module" src="styles/script.js"></script>
+  
 </html>
