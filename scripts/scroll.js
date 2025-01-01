@@ -25,7 +25,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     },
     xPercent: -200,
     ease : "none",
-    duration : 1
+    duration : 1,
+    stagger : 0.05
     });
     gsap.from('.m', {
         scrollTrigger: {trigger : '.container',
@@ -35,8 +36,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
     },
     yPercent: 200,
     opacity : 0,
-    ease: "elastic.out(0.5,0.75)",
-    duration : 5
+    ease: "elastic.out(0.1,0.75)",
+    duration : 10,
+    stagger : 1.6
     });
     gsap.from('.d', {
         scrollTrigger: {trigger : '.container',
@@ -47,7 +49,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     },
     xPercent: 200,
     ease : "none",
-    duration : 1
+    duration : 1,
+    stagger : 0.05
     });
 
     
@@ -72,7 +75,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         scrollTrigger: {trigger : '.container', 
         start : "bottom 820px",
         end : "bottom 450px",
-        markers : true,
+        //markers : true,
         scrub : 3
     },
     yPercent: 200,
