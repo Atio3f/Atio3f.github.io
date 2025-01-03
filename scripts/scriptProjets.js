@@ -21,8 +21,25 @@ let projets = {
         `,
     "CIRCUS_PLANNER" : `
         <h2 id="TitreProjet">Application lourde pour la gestion des cirques --> mars 2024</h2>
-        <p>Ce projet, en groupe de 5, portait sur la création d'une application pour aider les gérants de cirques à organiser leurs futurs évènements.</p>
-        <img src="img/projets/Titanic/TitanicSEA.png" alt="Image 1 du rendu final">
+        <div id="langagesUtilises">
+            <h4> Langages utilisées : </h4> 
+          
+            <div class="langage">
+              <img src="img/JavaLogo.png" alt="Java Logo">
+              <div class="overlay-text">Java</div>
+            </div>
+            <div class="langage">
+              <img src="img/JavaFXLogo.png" alt="JavaFX Logo">
+              <div class="overlay-text">JavaFX</div>
+            </div>
+            <div class="langage">
+              <img src="img/CSSLogo.png" alt="CSS Logo">
+              <div class="overlay-text">CSS</div>
+            </div>
+        </div>
+        <p>Ce projet, en groupe de 5, portait sur la création d'une application pour aider les gérants de cirques à organiser leurs futurs évènements.
+        Nous avons utilisé JavaFX et CSS pour réaliser l'interface et Java pour faire le modèle de données.</p>
+        <img class="imgPasNette" src="img/projets/CIRCUSPLANNER/CIRCUSPLANNERdiagrammeClasse.svg" alt="Image 1 du rendu final">
         <br>
         <a href="https://github.com/Thomas-381/CircusPlanner">Lien vers le code source sur Github</a>
         `,
@@ -58,22 +75,21 @@ let projets = {
         `,
     "FOC" : `
         <h2 id="TitreProjet"> Jeu 2d de stratégie tour par tour sur Godot --> 2024-...</h2>
-        <div id="langagesUtilises">
-              <h4> Langages utilisées : </h4> 
-            
-              <div class="langage">
-                <img src="img/PostgreSQLogo.png" alt="PostgreSQL Logo">
-                <div class="overlay-text">PostgreSQL</div>
-              </div>
-              <div class="langage">
-                <img src="img/ReactLogo.png" alt="React Logo">
-                <div class="overlay-text">React</div>
-              </div>
-        </div>
-        <p> Création d'un jeu vidéo avec 3 amis à partir d'un jeu de plateau créé au collège. Etant le seul programmeur, mon rôle est de réaliser le prototype sur Godot et en GDScript(qui est le langage utilisé sur Godot). Pour le moment, on peut faire apparaître des unités, les faire bouger, attaquer et utiliser leurs capacités passives et actives.</p>
-        <br>
-        <img src="img/projets/FoC/FocAttaque.png"><img src="img/projets/FoC/FocApercuUnite.png"><img src="img/projets/FoC/FoCDiagrammeDeClasse.png">
-        <a href="https://github.com/Atio3f/FightOfCities2D">Lien Github vers le projet</a> <a href="https://atio3f.itch.io/fight-of-cities-2d"> Lien pour tester le projet </a>
+          <div id="langagesUtilises">
+                <h4> Langages utilisées : </h4> 
+              
+                <div class="langage">
+                  <img src="img/GodotLogo.png" alt="Godot Logo">
+                  <div class="overlay-text">Godot/Gdscript</div>
+                </div>
+                
+                
+          </div>
+          <p> Création d'un jeu vidéo avec 3 amis à partir d'un jeu de plateau créé au collège. Etant le seul programmeur, mon rôle est de réaliser le prototype sur Godot et en GDScript(qui est le langage utilisé sur Godot). Pour le moment, on peut faire apparaître des unités, les faire bouger, attaquer et utiliser leurs capacités passives et actives.</p>
+          <br>
+          <div class="groupeImages"><img class="imageG" src="img/projets/FoC/FocAttaque.png"><img class="imageG" src="img/projets/FoC/FocApercuUnite.png"><img class="imageG" src="img/projets/FoC/FoCDiagrammeDeClasse.png"></div>
+          <a href="https://github.com/Atio3f/FightOfCities2D">Lien Github vers le projet</a> <a href="https://atio3f.itch.io/fight-of-cities-2d"> Lien pour tester le projet </a>
+       
         `,
     "NUTRISCORE" : `
         <h2 id="TitreProjet">Analyse du naufrage du Titanic --> avril 2024</h2>
@@ -119,8 +135,8 @@ function updateText() {
 //Servira lorsque le php arrêtera ses caprices
 function baseValue(){
   //document.getElementById('Projets-list').value = "FoC" ;
-  console.log(document.getElementById('Projets-list').value);
-  document.getElementById('Projets-list').value = "FOC";
+  //console.log(document.getElementById('Projets-list').value);
+  document.getElementById('Projets-list').value = "CIRCUS_PLANNER";
 
 }
 

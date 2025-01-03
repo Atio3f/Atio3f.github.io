@@ -29,11 +29,12 @@ main.Projets{
 }
 
 select {
-    font-size: 0.9rem;
+    font-size: 1.4rem;
     padding: 2px 5px;
     background-color: #0d1117;
     color: #50C878;
-    border-color: FFD700;
+    border-color: white;
+    box-shadow: 0 0 0.2em #fff, inset 0 0 0.1em #fff, 0 0 1em var(--light-blue-color), inset 0.1em 0 0.2em var(--light-blue-color), 0 0 0.2em var(--light-blue-color), inset 0 0 0.2em white;
 }
   
 #outputProjet{
@@ -69,7 +70,7 @@ label {
 .langage {
     position: relative; 
     width: 3em;     
-    height: 2.2em;      
+    height: 2.5em;      
     margin-right: 1em;
     overflow: hidden; 
 }
@@ -110,4 +111,24 @@ h2{
 }
 h4{
     color : var(--red-color);
+}
+
+/*Groupe d'images affichées sur la même ligne*/
+.groupeImages{
+    display: flex;
+    flex-direction: row;
+}
+
+.imageG{
+    width: 28%;
+    margin: auto;
+}
+
+.output > a {
+    margin-left: 0.7em;
+}
+
+/* Pour toutes les images pas visibles à cause du fond noir */
+.imgPasNette {
+    filter: contrast(40%);
 }
