@@ -34,11 +34,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
         end : "top 200px",
         scrub : 2
     },
-    yPercent: 200,
+    yPercent: 150,
     opacity : 0,
     ease: "elastic.out(0.1,0.75)",
-    duration : 10,
-    stagger : 1.6
+    duration : 4,
+    stagger : 1
     });
     gsap.from('.d', {
         scrollTrigger: {trigger : '.container',
@@ -97,6 +97,29 @@ document.addEventListener("DOMContentLoaded", (event) => {
             //markers : true,
             scrub : 2,
         }
+    });
+    //Scroll pour la box de gauche de la partie des langues
+    gsap.from('.g3', {
+        scrollTrigger: {trigger : '.LangageCadre3', 
+        start : "top 700px",
+        end : "top 200px",
+        //markers : true,
+    },
+    yPercent: 80,
+    opacity : 20,
+    ease: "none",
+    duration : 0.6
+    });
+    //Scroll pour la box de droite de la partie des langues
+    gsap.from('.d3', {
+        scrollTrigger: {trigger : '.LangageCadre3', 
+        start : "top 700px",
+        end : "top 200px",
+    },
+    yPercent: 80,
+    opacity : 20,
+    ease: "none",
+    duration : 0.6
     });
     // Initialize a new Lenis instance for smooth scrolling
     const lenis = new Lenis();

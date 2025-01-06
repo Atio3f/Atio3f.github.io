@@ -1,20 +1,23 @@
 
 #Competences{
-    width: 95%;
+    width: 82%;
     position: relative;
-    margin-top: 1%;
-    margin-left: 2%;
+    margin-top: 5%;
 }
 
 .CompetencesCadre{
     display: flex;
-    border: 2px solid blanchedalmond;
-    padding-left: 4px;
+    animation: flashing 9s infinite alternate; 
+    margin-top: 2.4vh;
+    padding : 5vh;
+    border-radius: 8px;
 }
+
 .CompetencesCadre > h1{
     color: aquamarine;
     padding-right: 2%
 }
+
 section.CompetencesCadre > * > p{
     
     padding-left: 2.5em;
@@ -46,8 +49,83 @@ h1{
 p{
     display: flex;
     color: wheat;
-    justify-content: center;
     align-items: center;
     overflow-wrap: break-word;
     font-size: 1.2em;
+}
+
+
+h4 {
+    color: white;
+}
+
+
+
+
+#passions{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+}
+
+.passion {
+    position: relative;
+    width: 5em;
+    height: 5em;
+    margin-right: 1em;
+    overflow: hidden;
+    cursor:pointer;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); /* Texte lisible sur fond flouté */
+    opacity: 0; /* Caché par défaut */
+    transition: opacity 0.5s ease; /* Animation pour l'apparition du texte */
+    pointer-events: none; /* Évite d'intercepter les événements de la souris */
+
+}
+
+.passion img {
+    width: 100%;
+    height: 100%;
+    transition: filter 1s ease; /* Animation pour le floutage */
+}
+
+.passion:hover img {
+   
+    filter: blur(2px);
+}
+
+
+
+.passion:hover .overlay-text {
+    opacity: 1; /* Rend le texte visible */
+}
+
+video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio : 16/9){
+    video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio : 16/9){
+    video {
+        width: auto;
+        height: 100%;
+    }
 }

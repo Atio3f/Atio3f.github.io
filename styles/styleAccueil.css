@@ -15,7 +15,7 @@ main.Accueil{
     display : flex;    
     justify-content: center;  
     width: 100%;
-    gap : 1em;
+    gap : 2em;
     flex-direction: column;
 }
 
@@ -92,6 +92,22 @@ div.Accueil{
     
 }
 
+.LangageCadre3{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 8%;
+}
+
+.container3 {
+    
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 5em; /* Espacement entre les éléments */
+    justify-content: space-around; /* Espacement équilibré entre les colonnes */
+    width: 60em;
+}
 .hidden{
     display : none;
 }
@@ -105,6 +121,7 @@ div.Accueil{
     padding-bottom: 0.3em;
     flex: 4 0 calc(33% - 3em); /* Chaque div occupe 50% de la largeur moins l'espace */
     box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur */
+    margin-bottom: 1em;
 }
 
 .encadreLangage > img{
@@ -148,7 +165,9 @@ div.Accueil{
 .LangageCadre>h2{
     color : white;
 }
-
+.LangageCadre3>h2{
+    color : white;
+}
 /* https://blog.dorianguilmain.com/comment-creer-un-effet-neon-en-css/ */
 .encadreLangage {
     
@@ -162,7 +181,7 @@ div.Accueil{
       inset 0 0 1em #37f713,
       0 0 2em #37f713,
       inset 0 0 2em #37f713; */
-      animation: flashing 10s infinite alternate; 
+      animation: flashing 9s infinite alternate; 
       box-shadow:
         0 0 0.2em #fff,
         inset 0 0 0.1em #fff,
@@ -173,6 +192,7 @@ div.Accueil{
 
   }
 
+ 
  /*
 @keyframes flashing {
     from {

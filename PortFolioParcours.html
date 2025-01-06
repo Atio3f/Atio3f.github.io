@@ -9,6 +9,9 @@
   </head>
 
   <body>
+    <video autoplay loop muted plays-inline id="fondVideo">
+      <source src="" type="video/mp4">
+    </video>
     <header>
       <nav class="navbar">
 
@@ -20,7 +23,6 @@
         <ul class="nav-links">
             <li><a  href="index.html">Accueil</a></li>
             <li class="pageActive"><a href="PortFolioParcours.html">Parcours</a></li>
-            <li><a href="PortFolioCompetences.html">Compétences</a></li>
             <li><a href="PortFolioProjets.html">Projets</a></li>
         </ul>
       </nav>
@@ -31,9 +33,9 @@
         <h1>Parcours Scolaire</h1>
         <br>
         <div>
-          <p>1ère année de BUT INFO validée à l'IUT 2 de Grenoble</p>  
-          <p>Bac avec Mention Bien au lycée Pierre Termier</p>  
-          <p>Brevet avec Mention Très Bien au collège Jules Vallès</p> 
+          <p>2024 - 1ère année de BUT INFO validée à l'IUT 2 de Grenoble</p>  
+          <p>2023 - Bac avec Mention Bien au lycée Pierre Termier</p>  
+          <p>2020 - Brevet avec Mention Très Bien au collège Jules Vallès</p> 
           
                  
         </div>
@@ -52,8 +54,22 @@
       <section class="CompetencesCadre">
         <h1>Passions</h1>
         <br>
-        <div>
+        <!--<div>
           <p>Jeux vidéos, Football et Jeux de rôle</p>
+        </div> -->
+        <div id="passions">
+          <div class="passion" id="JeuxVideos"> 
+            <img src="img/JeuxVideosImg.png" alt="Jeux vidéos Img">
+            <div class="overlay-text">Jeux vidéos</div>
+          </div>
+          <div class="passion">
+            <img src="img/FootballImg.png" alt="Football Img">
+            <div class="overlay-text">Football</div>
+          </div>
+          <div class="passion">
+            <img src="img/JdRImg.jpg" alt="JdR Img">
+            <div class="overlay-text">Jeux Rôles</div>
+          </div>
         </div>
       </section>
       
@@ -79,4 +95,5 @@
       </div>
     </footer>
   </body>
+  <script type="module" src="scripts/scriptParcours.js"></script>
 </html>

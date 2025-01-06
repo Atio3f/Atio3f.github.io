@@ -5,7 +5,7 @@
     --light-blue-color: #04d9ff;
     --dark-blue-color : rgba(30,132,242,0.92);
     --green-color: #37f713;
-    
+    --gold-color : #FFD700;
 
   }
 
@@ -155,13 +155,15 @@ header {
     width: 94%;
     /* display: inline-grid;
     grid-auto-flow : column; */ /* Aligne les éléments en ligne horizontale */ 
+    position: fixed;
+    z-index: 1000;
 }
 
 .navbar {
     display: flex;
     align-items: center;
    
-    animation: flashing 10s infinite alternate; 
+    animation: flashing 8s infinite alternate; 
       
     background-clip: padding-box;
     /*background-color: #e8824f; A VOIR SI ON CONSERVE*/
@@ -282,6 +284,41 @@ li.pageActive>a:hover {
     }  
     
 }
+
+
+
+@keyframes red-flashing {
+    0%{
+      box-shadow:
+        0 0 0.5em #fff,     /* Offset Ombre externe */
+        inset 0 0 0.5em #fff,   /* Offset Ombre interne */
+        0 0 1em var(--red-color),    /* Ombre vers le bas */
+        inset 0 0 1em var(--gold-color),   /* Ombre interne en bas */
+        0 0 0.5em var(--red-color),  /* Ombre externe en bas */
+        inset 0 0 2em var(--dark-blue-color);   /* Ombre interne vers le bas */
+
+    }
+    50% {        
+      box-shadow:
+        0 0 0.5em #fff,
+        inset 0 0 0.5em #fff,
+        0 0 1em var(--gold-color),
+        inset 0 0 1em var(--red-color),
+        0 0 0.5em var(--gold-color),
+        inset 0 0 2em var(--red-color);
+    }  
+    100%{
+        box-shadow:
+          0 0 0.5em #fff,
+          inset 0 0 0.5em #fff,
+          0 0 1em var(--red-color),
+          inset 0 0 1em var(--gold-color),
+          0 0 0.5em var(--red-color),
+          inset 0 0 2em var(--gold-color);
+    }  
+    
+}
+
 /*Ancien flashing
 @keyframes flashing {
     0%{
