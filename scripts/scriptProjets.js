@@ -67,11 +67,31 @@ let projets = {
                 <img src="img/PHPLogo.png" alt="PHP Logo">
                 <div class="overlay-text">PHP</div>
               </div>
+              <div class="langage">
+                <img src="img/PostgreSQLLogo.png" alt="PostgreSQL Logo">
+                <div class="overlay-text">PostgreSQL</div>
+              </div>
         </div>
-        <p> Réalisation d'une application web, à 7, mettant en valeur le patrimoine français en mettant en relation des propriétaires de monuments avec des prestataires d'évènements
-        afin d'organiser des activités exclusives redonnant vie à ces bâtiments historiques. Les visiteurs pourront prendre leurs places depuis notre billeterie.
+        <p> 
+          Réalisation d'une application web, à 7, mettant en valeur le patrimoine français en mettant en relation des propriétaires de monuments avec des prestataires d'évènements
+          afin d'organiser des activités exclusives redonnant vie à ces bâtiments historiques. Les visiteurs pourront prendre leurs places depuis notre billeterie.
+          J'ai été chargé de réaliser la partie front en React avec un autre camarade. Je me suis occupé de toute la gestion des évènements pour les prestataires.
+        </p>
         `,
     "TRI_DEPECHES" : `
+        <h2 id="TitreProjet">Trieur de dépêches en Java --> novembre 2024</h2>
+        <div id="langagesUtilises">
+            <h4> Langages utilisées : </h4>
+            <div class="langage">
+              <img src="img/JavaLogo.png" alt="Java Logo">
+              <div class="overlay-text">Java</div>
+            </div>
+        </div>
+        <p>
+        Réalisation d'un trieur de dépêches en fonction de leur catégorie(sport/politique/économie/environnement/culture) en analysant la fréquence d'apparition des mots qu'ils contiennent dans les articles de ces catégories par rapport à leur présence dans les autres catégories. Le tout avec 85% de succès.<br>
+        Ce projet m'a permis d'en apprendre davantage dans l'automatisation de réponse à des problèmes complexes et de développer mes compétences en Java, la lecture/écriture d'un fichier et dans la gestion des délais pour un projet informatique en groupe.
+        </p>
+        <a href="https://github.com/Atio3f/">Lien Github vers le code source du projet</a>
         `,
     "FOC" : `
         <h2 id="TitreProjet"> Jeu 2d de stratégie tour par tour sur Godot --> 2024-...</h2>
