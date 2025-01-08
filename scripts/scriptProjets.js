@@ -107,7 +107,7 @@ let projets = {
           </div>
           <p> Création d'un jeu vidéo avec 3 amis à partir d'un jeu de plateau créé au collège. Etant le seul programmeur, mon rôle est de réaliser le prototype sur Godot et en GDScript(qui est le langage utilisé sur Godot). Pour le moment, on peut faire apparaître des unités, les faire bouger, attaquer et utiliser leurs capacités passives et actives.</p>
           <br>
-          <div class="groupeImages"><img class="imageG" src="img/projets/FoC/FocAttaque.png"><img class="imageG" src="img/projets/FoC/FocApercuUnite.png"><img class="imageG" src="img/projets/FoC/FoCDiagrammeDeClasse.png"></div>
+          <div class="groupeImages"><img class="imageG" src="img/projets/FoC/FoCAttaque.png"><img class="imageG" src="img/projets/FoC/FoCApercuUnite.png"><img class="imageG" src="img/projets/FoC/FoCDiagrammeDeClasse.png"></div>
           <a href="https://github.com/Atio3f/FightOfCities2D">Lien Github vers le projet</a> <a href="https://atio3f.itch.io/fight-of-cities-2d"> Lien pour tester le projet </a>
        
         `,
