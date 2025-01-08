@@ -77,6 +77,7 @@ let projets = {
           afin d'organiser des activités exclusives redonnant vie à ces bâtiments historiques. Les visiteurs pourront prendre leurs places depuis notre billeterie.
           J'ai été chargé de réaliser la partie front en React avec un autre camarade. Je me suis occupé de toute la gestion des évènements pour les prestataires.
         </p>
+        <div class="groupeImages"><img class="imageG" src="img/projets/Mona/MonaPageAccueil.png"><img class="imageG" src="img/projets/Mona/MonaPageConnexion.png"></div>
         `,
     "TRI_DEPECHES" : `
         <h2 id="TitreProjet">Trieur de dépêches en Java --> novembre 2024</h2>
@@ -107,12 +108,34 @@ let projets = {
           </div>
           <p> Création d'un jeu vidéo avec 3 amis à partir d'un jeu de plateau créé au collège. Etant le seul programmeur, mon rôle est de réaliser le prototype sur Godot et en GDScript(qui est le langage utilisé sur Godot). Pour le moment, on peut faire apparaître des unités, les faire bouger, attaquer et utiliser leurs capacités passives et actives.</p>
           <br>
-          <div class="groupeImages"><img class="imageG" src="img/projets/FoC/FocAttaque.png"><img class="imageG" src="img/projets/FoC/FocApercuUnite.png"><img class="imageG" src="img/projets/FoC/FoCDiagrammeDeClasse.png"></div>
+          <div class="groupeImages"><img class="imageG" src="img/projets/FoC/FoCAttaque.png"><img class="imageG" src="img/projets/FoC/FoCApercuUnite.png"><img class="imageG" src="img/projets/FoC/FoCDiagrammeDeClasse.png"></div>
           <a href="https://github.com/Atio3f/FightOfCities2D">Lien Github vers le projet</a> <a href="https://atio3f.itch.io/fight-of-cities-2d"> Lien pour tester le projet </a>
        
         `,
     "NUTRISCORE" : `
-        <h2 id="TitreProjet">Analyse du naufrage du Titanic --> avril 2024</h2>
+        <h2 id="TitreProjet">Etude du nutriscore pour les produits à base de volailles françaises  --> avril 2024</h2>
+        <div id="langagesUtilises">
+                <h4> Langages utilisées : </h4> 
+              
+                <div class="langage">
+                  <img src="img/PostgreSQLogo.png" alt="PostgreSQL Logo">
+                  <div class="overlay-text">PostgreSQL</div>
+                </div>
+                <div class="langage">
+                  <img src="img/RLogo.png" alt="R Logo">
+                  <div class="overlay-text">R</div>
+                </div>
+                <p>
+                
+          </div>
+          <p>Notre objectif était d'étudier comment est évalué le nutriscore des produits à base de volailles françaises à partir des données open source d'OpenFoodFacts sur une BDD PostgreSQl. 
+           Pour cela, il nous a fallu tout d'abord faire du tri dans les données obtenues à partir d'OpenFoodFacts pour retirer
+           toutes les données qui ne contenaient pas de volailles ou dont l'origine n'est pas française(tout en incluant les îles françaises) avec. Ensuite, nous avons exporté en csv les données restantes pour éliminer 
+           les données aberrantes en les examinant sur Rstudio avec des graphiques. 
+           Pour finir, nous avons utilisé R pour réaliser notre analyse des valeurs ayant une corrélation probable avec le score nutriscore par chaque produit.</p>
+           <br>
+           <p>Nos requêtes SQL : <p>
+           <p>Notre compte-rendu final en anglais : </p>
         `,
     "SITE_FICTIF_CGI" : `
         <h2 id="TitreProjet">Site web fictif pour une ESN(CGI) --> décembre 2023</h2>
