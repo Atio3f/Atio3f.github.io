@@ -68,7 +68,7 @@ let projets = {
                 <div class="overlay-text">PHP</div>
               </div>
               <div class="langage">
-                <img src="img/PostgreSQLLogo.png" alt="PostgreSQL Logo">
+                <img src="img/PostgreSQLogo.png" alt="PostgreSQL Logo">
                 <div class="overlay-text">PostgreSQL</div>
               </div>
         </div>
@@ -125,7 +125,11 @@ let projets = {
                   <img src="img/RLogo.png" alt="R Logo">
                   <div class="overlay-text">R</div>
                 </div>
-                <p>
+                <div class="langage">
+                <img src="img/DataAnalysisLogo.png" alt="Data Analyse Logo">
+                <div class="overlay-text">Analyse données</div>
+                </div>
+                
                 
           </div>
           <p>Notre objectif était d'étudier comment est évalué le nutriscore des produits à base de volailles françaises à partir des données open source d'OpenFoodFacts sur une BDD PostgreSQl. 
@@ -139,8 +143,41 @@ let projets = {
         `,
     "SITE_FICTIF_CGI" : `
         <h2 id="TitreProjet">Site web fictif pour une ESN(CGI) --> décembre 2023</h2>
+        <div id="langagesUtilises">
+                <h4> Langages utilisées : </h4> 
+              
+                <div class="langage">
+                  <img src="img/HTMLogo.png" alt="HTML Logo">
+                  <div class="overlay-text">HTML</div>
+                </div>
+                <div class="langage">
+                  <img src="img/CSSLogo.png" alt="CSS Logo">
+                  <div class="overlay-text">CSS</div>
+                </div>
+                <div class="langage">
+                <img src="img/JavascriptLogo.png" alt="Javascript Logo">
+                <div class="overlay-text">Javascript</div>
+                </div>
+                
+                
+          </div>
         <p> Le but de ce projet à 3 était de réaliser un site web fictif à destination de collégiens en recherche de stage pour leur présenter CGI en simplifiant ainsi leurs activités en tant qu'ESN</p>
 
+        `,
+      "SAE1.03" : `
+        <h2 id="TitreProjet">Site web fictif pour une ESN(CGI) --> octobre 2023</h2>
+        <div id="langagesUtilises">
+                <h4> Langages utilisées : </h4> 
+              
+                <div class="langage">
+                  <img src="img/ShellLogo.png" alt="Shell LINUX Logo">
+                  <div class="overlay-text">Shell LINUX</div>
+                </div>
+                
+         
+          </div>
+          <p> Le but de ce projet était, en 4 jours, d'installer tout seul une machine virtuelle LINUX et de la configurer puis de réaliser une carte mentale des étapes à suivre.'
+          <p>Carte mentale réalisée : <p>
         `
 
 }
