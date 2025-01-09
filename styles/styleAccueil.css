@@ -192,7 +192,12 @@ div.Accueil{
 
   }
 
- 
+ @media (max-width : 1000px) {
+    main.Accueil{
+        overflow-x: hidden; /* Hide horizontal scrollbar */
+        overflow-y: scroll; /* Add vertical scrollbar */
+    }
+ }
  /*
 @keyframes flashing {
     from {

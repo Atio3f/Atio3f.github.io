@@ -44,7 +44,7 @@ let projets = {
         <a href="https://github.com/Thomas-381/CircusPlanner">Lien vers le code source sur Github</a>
         `,
     "MONA" : `
-        <h2 id="TitreProjet"> Application web d'évènements --> 11/2024-01/2025</h2>
+        <h2 id="TitreProjet"> Application web d'évènements : Mona --> 11/2024-01/2025</h2>
         <div id="langagesUtilises">
               <h4> Langages utilisées : </h4> 
               <div class="langage">
@@ -176,8 +176,8 @@ let projets = {
                 
          
           </div>
-          <p> Le but de ce projet était, en 4 jours, d'installer tout seul une machine virtuelle LINUX et de la configurer puis de réaliser une carte mentale des étapes à suivre.'
-          <p>Carte mentale réalisée : <p>
+          <p> Le but de ce projet était, en 4 jours, d'installer tout seul une machine virtuelle LINUX et de la configurer puis de réaliser une carte mentale des étapes à suivre.
+          <!-- <p>Carte mentale réalisée : <p> ->
         `
 
 }
