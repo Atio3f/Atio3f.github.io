@@ -138,8 +138,8 @@ let projets = {
            les données aberrantes en les examinant sur Rstudio avec des graphiques. 
            Pour finir, nous avons utilisé R pour réaliser notre analyse des valeurs ayant une corrélation probable avec le score nutriscore par chaque produit.</p>
            <br>
-           <p>Nos requêtes SQL : <p>
-           <p>Notre compte-rendu final en anglais : </p>
+           <p>Nos requêtes SQL : </p>
+           <p>Notre compte-rendu final en anglais : </p> <iframe src="img/projets/Nutriscore/team_e08-gibellog-fermathi.pdf"></iframe>
         `,
     "SITE_FICTIF_CGI" : `
         <h2 id="TitreProjet">Site web fictif pour une ESN(CGI) --> décembre 2023</h2>
