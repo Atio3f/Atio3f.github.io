@@ -97,7 +97,6 @@ h4 {
     transform: translate(-50%, -50%);
     color: white;
     font-size: 0.9em;
-    font-weight: bold;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); /* Texte lisible sur fond flouté */
     opacity: 0; /* Caché par défaut */
     transition: opacity 0.5s ease; /* Animation pour l'apparition du texte */

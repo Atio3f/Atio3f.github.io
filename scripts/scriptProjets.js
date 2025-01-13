@@ -78,6 +78,7 @@ let projets = {
           J'ai été chargé de réaliser la partie front en React avec un autre camarade. Je me suis occupé de toute la gestion des évènements pour les prestataires.
         </p>
         <div class="groupeImages"><img class="imageG" src="img/projets/Mona/MonaPageAccueil.png"><img class="imageG" src="img/projets/Mona/MonaPageConnexion.png"></div>
+        <p>Compte-rendu gestion de projet avant de le coder : <iframe src="img/projets/Mona/PHASE2_Gestion_de_projet-Manodev-Groupe14.pdf"></iframe>
         `,
     "TRI_DEPECHES" : `
         <h2 id="TitreProjet">Trieur de dépêches en Java --> novembre 2024</h2>
@@ -138,8 +139,10 @@ let projets = {
            les données aberrantes en les examinant sur Rstudio avec des graphiques. 
            Pour finir, nous avons utilisé R pour réaliser notre analyse des valeurs ayant une corrélation probable avec le score nutriscore par chaque produit.</p>
            <br>
-           <p>Nos requêtes SQL : </p>
+           <p>Nos requêtes SQL : </p> 
            <p>Notre compte-rendu final en anglais : </p> <iframe src="img/projets/Nutriscore/team_e08-gibellog-fermathi.pdf"></iframe>
+
+           
         `,
     "SITE_FICTIF_CGI" : `
         <h2 id="TitreProjet">Site web fictif pour une ESN(CGI) --> décembre 2023</h2>
@@ -162,7 +165,8 @@ let projets = {
                 
           </div>
         <p> Le but de ce projet à 3 était de réaliser un site web fictif à destination de collégiens en recherche de stage pour leur présenter CGI en simplifiant ainsi leurs activités en tant qu'ESN</p>
-
+        <div class="groupeImages"><img class="imageG" src="img/projets/CGI/CGIPageAccueil.png"><img class="imageG" src="img/projets/CGI/CGIPageService.png"><img class="imageG" src="img/projets/CGI/CGIPageValeurs.png"></div>
+        <a href="https://github.com/IUT-INFO-UGA/IUT-INFO-UGA.github.io">Lien vers le code source sur Github</a>
         `,
       "SAE1.03" : `
         <h2 id="TitreProjet">Site web fictif pour une ESN(CGI) --> octobre 2023</h2>
@@ -201,6 +205,12 @@ function updateText() {
     const contenuProjet = document.createElement("div");
     contenuProjet.innerHTML = projets[selectElement.value] ?? "<p> Le projet n'a pas encore été ajouté au site !. </p>";
     outputElement.appendChild(contenuProjet);
+    /*fetch('img/projets/Nutriscore/team_e08-gibellog-fermathi.sql')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('sql-content').textContent = data;
+            })
+            .catch(error => console.error('Erreur de chargement du fichier SQL:', error));*/
 
 }
 
