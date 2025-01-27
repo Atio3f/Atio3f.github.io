@@ -76,8 +76,27 @@ let projets = {
           Réalisation d'une application web, à 7, mettant en valeur le patrimoine français en mettant en relation des propriétaires de monuments avec des prestataires d'évènements
           afin d'organiser des activités exclusives redonnant vie à ces bâtiments historiques. Les visiteurs pourront prendre leurs places depuis notre billeterie.
           J'ai été chargé de réaliser la partie front en React avec un autre camarade. Je me suis occupé de toute la gestion des évènements pour les prestataires.
+          J'ai également réalisé la liaison avec notre API REST pour la récupération des informations des évènements ainsi que certaines informations des monuments.
         </p>
-        <div class="groupeImages"><img class="imageG" src="img/projets/Mona/MonaPageAccueil.png"><img class="imageG" src="img/projets/Mona/MonaPageConnexion.png"></div>
+        <div class="groupeImages">
+          <figure>
+            <img class="imageG" src="img/projets/Mona/MonaPageAccueil.png" alt="Page d'accueil">
+            <figcaption>Landing page du site</figcaption>
+          </figure>
+          <figure>
+            <img class="imageG" src="img/projets/Mona/MonaPageGestionEvent.png" alt="Page de gestion des événements">
+            <figcaption>Page de gestion des événements pour les prestataires</figcaption>
+          </figure>
+          <figure>
+            <img class="imageG" src="img/projets/Mona/MonaPagePanier.png" alt="Page du panier">
+            <figcaption>Page du panier</figcaption>
+          </figure>
+          <!--<figure>
+            <img class="imageG" src="img/projets/Mona/MonaPageConnexion.png" alt="Page de connexion">
+            <figcaption>Page de connexion</figcaption>
+          </figure> -!>
+          
+        </div>
         <p>Compte-rendu gestion de projet avant de le coder : <iframe src="img/projets/Mona/PHASE2_Gestion_de_projet-Manodev-Groupe14.pdf"></iframe>
         `,
     "TRI_DEPECHES" : `

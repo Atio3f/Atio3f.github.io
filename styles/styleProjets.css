@@ -117,6 +117,20 @@ h4{
 .groupeImages{
     display: flex;
     flex-direction: row;
+    gap: 5px;
+}
+
+.groupeImages figure {
+    margin : auto;
+}
+
+.groupeImages img {
+    width: 100%;
+}
+
+.groupeImages figcaption {
+    font-size: 0.6em;
+    color: var(--red-color);
 }
 
 .imageG{
