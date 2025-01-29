@@ -7,7 +7,7 @@ let selection2 = Splitting({ target: target2, by: 'words' });
 
 
 document.addEventListener("DOMContentLoaded", (event) => {
-    if (window.outerWidth >= 800 || window.outerHeight >= 1000) {
+    if (window.outerWidth >= 800 || window.outerHeight >= 1000 || window.outerHeight < window.outerWidth) {
         gsap.registerPlugin(ScrollTrigger)
         /*gsap.from('.encadreLangage', {
             scrollTrigger: {trigger : '.container', 
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         gsap.from('.g', {
             scrollTrigger: {trigger : '.container', 
             start : "top center",
-            end : "top 800px",
+            end : "top 45%",        //800px avant
             scrub : 2
         },
         xPercent: -200,
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         gsap.from('.m', {
             scrollTrigger: {trigger : '.container',
             start : "top center",
-            end : "top 200px",
+            end : "top 20%",    //200px avant
             scrub : 2
         },
         yPercent: 150,
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         gsap.from('.d', {
             scrollTrigger: {trigger : '.container',
             start : "top center",
-            end : "top 800px",
+            end : "top 45%",
             scrub : 2,
             //markers : true
         },
