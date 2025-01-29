@@ -106,7 +106,7 @@ div.Accueil{
     flex-wrap: wrap; 
     gap: 5em; /* Espacement entre les éléments */
     justify-content: space-around; /* Espacement équilibré entre les colonnes */
-    width: 60em;
+    width: 70%;
 }
 .hidden{
     display : none;
@@ -193,9 +193,12 @@ div.Accueil{
   }
 
  @media (max-width : 1000px) {
-    main.Accueil{
+    main.Accueil {
         overflow-x: hidden; /* Hide horizontal scrollbar */
         overflow-y: scroll; /* Add vertical scrollbar */
+    }
+    .container3 {
+        width: auto;
     }
  }
  /*
