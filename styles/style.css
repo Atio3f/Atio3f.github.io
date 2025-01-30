@@ -319,6 +319,20 @@ li.pageActive>a:hover {
     
 }
 
+#Accueil-HautPage > p {
+    animation:  apparition 0.8s ease forwards;
+}
+
+@keyframes apparition {
+    0% {
+        opacity: 0.2;
+        transform: translateY(5vh) rotateX(-50deg);
+      }
+      100% {
+        opacity: 1;
+        transform: rotateX(25deg);
+      }
+}
 /*Ancien flashing
 @keyframes flashing {
     0%{

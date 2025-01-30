@@ -56,10 +56,6 @@ let projets = {
                 <div class="overlay-text">Javascript</div>
               </div>
               <div class="langage">
-                <img src="img/TypescriptLogo.png" alt="Typescript Logo">
-                <div class="overlay-text">Typescript</div>
-              </div>
-              <div class="langage">
                 <img src="img/ReactLogo.png" alt="React Logo">
                 <div class="overlay-text">React</div>
               </div>
@@ -71,12 +67,19 @@ let projets = {
                 <img src="img/PostgreSQLogo.png" alt="PostgreSQL Logo">
                 <div class="overlay-text">PostgreSQL</div>
               </div>
+              <div class="langage">
+                <img src="img/GitlabLogo.png" alt="Gitlab Logo">
+                <div class="overlay-text">Responsable Gitlab</div>
+              </div>
         </div>
         <p> 
           Réalisation d'une application web, à 7, mettant en valeur le patrimoine français en mettant en relation des propriétaires de monuments avec des prestataires d'évènements
           afin d'organiser des activités exclusives redonnant vie à ces bâtiments historiques. Les visiteurs pourront prendre leurs places depuis notre billeterie.
           J'ai été chargé de réaliser la partie front en React avec un autre camarade. Je me suis occupé de toute la gestion des évènements pour les prestataires.
           J'ai également réalisé la liaison avec notre API REST pour la récupération des informations des évènements ainsi que certaines informations des monuments.
+          J'avais également eu la charge en tant que responsable Gitlab de devoir m'occuper de tous les problèmes liés à Gitlab lorsqu'on réalisait des plusieurs commits en simultané
+          et de les résoudre. Pour cela, j'ai mis en place un bot discord prévenant lorsqu'un commit est effectué et écrit une liste d'instructions pour l'utilisation de Gitlab.
+          
         </p>
         <div class="groupeImages">
           <figure>
@@ -209,7 +212,7 @@ let projets = {
 let projetsTags = {
     "TITANIC_BDD" : ["PostgreSQL", "DataAnalysis"],
     "CIRCUS_PLANNER" : ["Java", "JavaFX", "GestionProjet", "ApplicationBureautique"],
-    "MONA" : ["HTML", "CSS", "Javascript", "React", "PHP", "PostgreSQL", "GestionProjet", "ApplicationWeb"],
+    "MONA" : ["HTML", "CSS", "Javascript", "React", "PHP", "PostgreSQL", "Gitlab", "GestionProjet", "ApplicationWeb"],
     "TRI_DEPECHES" : ["Java", "CreationPattern"],
     "FOC" : ["GDScript", "Jeu"],
     "NUTRISCORE" : ["PostgreSQL", "R", "NettoyageDonnées", "DataAnalysis"],
