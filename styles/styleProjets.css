@@ -5,7 +5,7 @@ main.Projets{
     position: relative;
     margin-top: 5%;
     margin-left: 1%;
-    overflow-x: scroll;
+    overflow-x: hidden;
     overflow-y: hidden;
 }
 
