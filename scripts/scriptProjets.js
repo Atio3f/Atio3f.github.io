@@ -191,7 +191,7 @@ let projets = {
         <a href="https://github.com/IUT-INFO-UGA/IUT-INFO-UGA.github.io">Lien vers le code source sur Github</a>
         `,
       "SAE1.03" : `
-        <h2 id="TitreProjet">Site web fictif pour une ESN(CGI) --> octobre 2023</h2>
+        <h2 id="TitreProjet">Installation d'une machine virtuelle --> septembre 2023</h2>
         <div id="langagesUtilises">
                 <h4> Langages utilisées : </h4> 
               
@@ -233,7 +233,6 @@ function updateText() {
                 document.getElementById('sql-content').textContent = data;
             })
             .catch(error => console.error('Erreur de chargement du fichier SQL:', error));*/
-
 }
 
 
@@ -265,3 +264,39 @@ window.onload = function() {
   baseValue();
   updateText();
 };
+
+
+//Permet l'affichage dynamique des projets réalisés en fonction du langage sélectionné
+document.addEventListener("DOMContentLoaded", function() {
+ 
+  const projetsSelect = [
+    { nom: "CIRCUS_PLANNER", text: "Création d'une application en Java" },
+    { nom: "TRI_DEPECHES", text: "Trieur de dépêches Java" },
+    { nom: "MONA", text: "Application web React promotion du patrimoine fr" },
+    { nom: "SITE_FICTIF_CGI", text: "Création d'un site web" },
+    { nom: "TITANIC_BDD", text: "Création d'une Base de Données" },
+    { nom: "NUTRISCORE", text: "Exploitation d'une Base de Données" },
+    { nom: "FOC", text: "Développement d'un jeu vidéo de stratégie en 2D sur Godot" },
+    { nom: "SAE1.03", text: "Installation d'une machine virtuelle" }
+  ];
+
+  // Sélection de l'élément <select>
+  const selectElement = document.getElementById("Projets-list");
+
+  // Fonction pour ajouter dynamiquement les options
+  function populateSelect(langage="") {
+    projetsSelect.forEach((select, index) => {
+        if(langage=="" | (projetsTags[select.nom] && projetsTags[select.nom].includes(langage))){
+          let option = document.createElement("option");
+          option.value = select.nom;
+          option.textContent = select.text;
+          if (index === 0) {
+            option.selected = true;
+          }
+          selectElement.appendChild(option);
+        }
+    });
+  }
+  // Appel de la fonction pour peupler la liste déroulante
+  populateSelect();
+});
