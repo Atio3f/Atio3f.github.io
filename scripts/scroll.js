@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         lenis.raf(time * 800); // Convert time from seconds to milliseconds
         });
         // Disable lag smoothing in GSAP to prevent any delay in scroll animations
-        gsap.ticker.lagSmoothing(0);
+        //gsap.ticker.lagSmoothing(0);
     }
 });
 
