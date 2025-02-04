@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             stagger : 0.2,
             scrollTrigger: {
                 trigger : ".container",
-                start : "top 90%",
+                start : "top 86%",
                 end : "bottom 900px",
                 //markers : true,
                 scrub : 2,
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             stagger : 0.2,
             scrollTrigger: {
                 trigger : ".container",
-                start : "bottom 1000px",
+                start : "bottom 1050px",
                 end : "bottom 700px",
                 //markers : true,
                 scrub : 2,
