@@ -15,8 +15,8 @@ main.Accueil{
     display : flex;    
     justify-content: center;  
     width: 100%;
-    gap : 2em;
     flex-direction: column;
+    margin-bottom: 10vh;
 }
 
 #Accueil-HautPage>p {    /*Elements communs à l'affichage nom et recherche stage*/
@@ -30,19 +30,11 @@ main.Accueil{
 #Accueil-HautPage>p:first-child {    /*Affecte l'affichage de mon nom prénom */
     margin-left: 0%;
     padding-right: 8%;
-    padding-bottom: 1%;
+    margin-bottom: 2%;
     display : block;
     
 }
-#Accueil-HautPage>p:last-child {    /*Affecte l'affichage de ma recherche de stage */
-    
-    margin-left: auto;
-    margin-right: auto;
-    
-    text-align: center;
-    width: 60%;
 
-}
 
 #Accueil-BasPage{
     box-sizing: border-box;     
@@ -54,10 +46,39 @@ div.Accueil{
     display:flex;
     flex-direction: row;
     justify-content: space-evenly;
-    gap: 1.2em;
     width: 100%;
 }
 
+div>p.TitreMenu {    
+    color: #50C878;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 20;
+    font-size: 3.3rem;
+    text-shadow: 2.2px 2.2px 0 #000, -0.8px -0.8px 0 #000, 0.8px -0.8px 0 #000, -0.8px 0.8px 0 #000, 0.8px 0.8px 0 #000;
+     
+   
+}
+
+#Accueil-imgTitre{
+    display: flex;
+    align-items: center;
+    padding-bottom: 2%;
+    
+}
+
+.tete{
+    width: 13.6vw;
+    height: auto;
+    margin-left: 1.7vw;
+    border-radius: 500px;
+    border: #fff solid 1px;
+}
+.TitreMenu{
+    margin: auto 10% 0 auto;
+    text-align: start;
+    width: 60%;
+
+}
 
 /*Animation lorsque l'on survole un des 3 menus disponibles */
 .Menu>a {
