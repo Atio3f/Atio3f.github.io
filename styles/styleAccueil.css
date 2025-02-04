@@ -34,7 +34,9 @@ main.Accueil{
     display : block;
     
 }
-
+#Accueil-HautPage  p , #Accueil-HautPage img{
+    animation:  apparition 0.8s ease forwards;
+}
 
 #Accueil-BasPage{
     box-sizing: border-box;     
@@ -191,9 +193,6 @@ div>p.TitreMenu {
 }
 /* https://blog.dorianguilmain.com/comment-creer-un-effet-neon-en-css/ */
 .encadreLangage {
-    
-   
-    
     border-radius: 12px;
     /*box-shadow:
       0 0 0.5em #fff,

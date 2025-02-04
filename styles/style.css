@@ -309,9 +309,6 @@ li.pageActive>a:hover {
     
 }
 
-#Accueil-HautPage > p {
-    animation:  apparition 0.8s ease forwards;
-}
 
 @keyframes apparition {
     0% {
