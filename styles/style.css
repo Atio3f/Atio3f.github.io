@@ -170,7 +170,7 @@ header {
    
 }
 .navbar a {
-    color: #E63946;
+    color: white;
     text-shadow:  0.1em 0.1em 0 black, 0 0.1em 0 black; /*    text-shadow: 0.1em 0 0 black, 0.1em 0.1em 0 black, 0 0.1em 0 black, -0.1em 0.1em 0 black, -0.1em 0 0 black, -0.1em -0.1em 0 black, 0 -0.1em 0 black, 0.1em -0.1em 0 black;*/
     text-decoration: none;
     transition: color 0.3s;
