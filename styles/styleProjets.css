@@ -22,7 +22,7 @@ main.Projets{
 
 #Projets-Titre{
     display: flex;
-    color: #E63946;;
+    color: white;
     justify-content: center;
     align-items: center;
     font-size: 160%;
@@ -108,7 +108,8 @@ p {
     color : white;
 }
 h2{
-    color : var(--red-color);
+    color : white
+    /*color : var(--red-color);*/
 }
 h4{
     color : var(--red-color);
