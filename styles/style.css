@@ -107,8 +107,22 @@ footer > hr{
     min-width: 100%;
 }
 
-#RESEAUX{
+#RESEAUX {
     display: flex;
+}
+
+.Accueil #RESEAUX {
+    margin-left: 4.4vw;
+    padding-bottom: 2%;
+}
+
+.Accueil #RESEAUX a{
+    margin: 4px;
+    align-content: center;
+}
+
+#footer-content #RESEAUX{
+    
     justify-content: right;
 }
 

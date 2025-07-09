@@ -16,7 +16,7 @@ main.Accueil{
     justify-content: center;  
     width: 100%;
     flex-direction: column;
-    margin-bottom: 10vh;
+    margin-bottom: 1vh;
 }
 
 #Accueil-HautPage>p {    /*Elements communs à l'affichage nom et recherche stage*/
@@ -64,7 +64,6 @@ div>p.TitreMenu {
 #Accueil-imgTitre{
     display: flex;
     align-items: center;
-    padding-bottom: 2%;
     
 }
 
@@ -79,7 +78,7 @@ div>p.TitreMenu {
     margin: auto 10% 0 auto;
     text-align: start;
     width: 60%;
-
+    margin-bottom: auto;
 }
 
 /*Animation lorsque l'on survole un des 3 menus disponibles */
@@ -98,7 +97,7 @@ div>p.TitreMenu {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    padding-top: 8%;
+    padding-top: 6%;
 }
 
 .LangageCadre>div{

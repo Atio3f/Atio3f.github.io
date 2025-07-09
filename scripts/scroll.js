@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             scrollTrigger: {trigger : '.LangageCadre3', 
             start : "top 700px",
             end : "top 200px",
-            //markers : true,
+            markers : true,
         },
         yPercent: 80,
         opacity : 20,
