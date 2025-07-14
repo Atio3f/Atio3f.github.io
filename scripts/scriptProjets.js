@@ -169,20 +169,20 @@ let projets = {
     "SITE_FICTIF_CGI" : `
         <h2 id="TitreProjet">Site web fictif pour une ESN(CGI) --> décembre 2023</h2>
         <div id="langagesUtilises">
-                <h4> Langages utilisées : </h4> 
-              
-                <div class="langage">
-                  <img src="img/HTMLogo.png" alt="HTML Logo">
-                  <div class="overlay-text">HTML</div>
-                </div>
-                <div class="langage">
-                  <img src="img/CSSLogo.png" alt="CSS Logo">
-                  <div class="overlay-text">CSS</div>
-                </div>
-                <div class="langage">
+              <h4> Langages utilisées : </h4> 
+            
+              <div class="langage">
+                <img src="img/HTMLogo.png" alt="HTML Logo">
+                <div class="overlay-text">HTML</div>
+              </div>
+              <div class="langage">
+                <img src="img/CSSLogo.png" alt="CSS Logo">
+                <div class="overlay-text">CSS</div>
+              </div>
+              <div class="langage">
                 <img src="img/JavascriptLogo.png" alt="Javascript Logo">
                 <div class="overlay-text">Javascript</div>
-                </div>
+              </div>
                 
                 
           </div>
@@ -191,20 +191,49 @@ let projets = {
         <a href="https://github.com/IUT-INFO-UGA/IUT-INFO-UGA.github.io">Lien vers le code source sur Github</a>
         `,
       "SAE1.03" : `
-        <h2 id="TitreProjet">Installation d'une machine virtuelle --> septembre 2023</h2>
+        <h2 id="TitreProjet">Installation d'une machine virtuelle. Projet réalisé en septembre 2023</h2>
         <div id="langagesUtilises">
-                <h4> Langages utilisées : </h4> 
+              <h4> Langages utilisées : </h4> 
               
-                <div class="langage">
-                  <img src="img/ShellLogo.png" alt="Shell LINUX Logo">
-                  <div class="overlay-text">Shell LINUX</div>
-                </div>
+              <div class="langage">
+                <img src="img/ShellLogo.png" alt="Shell LINUX Logo">
+                <div class="overlay-text">Shell LINUX</div>
+              </div>
                 
          
           </div>
-          <p> Le but de ce projet était, en 4 jours, d'installer tout seul une machine virtuelle LINUX et de la configurer puis de réaliser une carte mentale des étapes à suivre.
+          <p> Le but de ce projet était, en 4 jours, d'installer tout seul une machine virtuelle LINUX et de la configurer puis de réaliser une carte mentale des étapes à suivre.</p>
           <!-- <p>Carte mentale réalisée : <p> ->
-        `
+        `,
+      "UBILINK_TESTS" : `
+        <h2 id="TitreProjet">Plateforme de tests d'interface automatisée et site pour enregistrer des tests. Stage d'avril à juin 2025.</h2>
+        <div id="langagesUtilises">
+              <h4> Langages utilisées : </h4> 
+              <div class="langage">
+                <img src="img/CSSLogo.png" alt="CSS Logo">
+                <div class="overlay-text">CSS</div>
+              </div>
+              <div class="langage">
+                <img src="img/BootstrapLogo.svg" alt="Bootstrap Logo">
+                <div class="overlay-text">Bootstrap</div>
+              </div>
+              <div class="langage">
+                <img src="img/JavascriptLogo.png" alt="Javascript Logo">
+                <div class="overlay-text">Javascript</div>
+              </div>
+              <div class="langage">
+                <img src="img/PlaywrightLogo.svg" alt="Playwright Logo">
+                <div class="overlay-text">Playwright</div>
+              </div>
+              <div class="langage">
+                <img src="img/PHPLogo.png" alt="PHP Logo">
+                <div class="overlay-text">PHP</div>
+              </div>
+          </div>
+          <p> Ce projet s'est déroulé durant mon stage chez Ubilink du 14 avril au 20 juin 2025. La mission était la réalisation d'une plateforme de test automatisée sur leur application web afin de régler les problèmes récurrents de régression de fonctionnalités sur la partie 3D de l'application.<br>
+           N'ayant aucune base, j'ai dû réaliser un benchmark des différentes librairies de tests disponibles et effectuer des tests pour m'assurer de pouvoir manipuler les éléments de la scène 3D avec, car il n'y a presque aucune source de test d'interface sur des applications 3D faites avec Three js et que les éléments 3D sont tous contenus dans un canvas et donc inacessibles depuis le DOM HTML.<br>
+           </p>
+        `//Mise en place d'une plateforme de tests d'interface utilisateur automatisée pour une application web 3D et réalisation d'une application web pour permettre d'enregistrer des tests d'interface utilisateur. Stage du 14 avril au 20 juin 2025
 
 }
 
@@ -217,7 +246,7 @@ let projetsTags = {
     "FOC" : ["GDScript", "Jeu"],
     "NUTRISCORE" : ["PostgreSQL", "R", "NettoyageDonnées", "DataAnalysis"],
     "SITE_FICTIF_CGI" : ["HTML", "CSS", "Javascript", "Frontend"],
-    "StageUbilink" : ["HTML", "CSS", "Javascript", "PHP", "Frontend", "Tests", "Playwright", "Resemblejs", "ApplicationWeb", "API", "Git", "Benchmark", "Bootstrap"]
+    "UBILINK_TESTS" : ["HTML", "CSS", "Javascript", "PHP", "Frontend", "Tests", "Playwright", "Resemblejs", "ApplicationWeb", "API", "Git", "Benchmark", "Bootstrap"]
 }
 
 
@@ -248,7 +277,9 @@ function updateText() {
 function baseValue(){
   //document.getElementById('Projets-list').value = "FoC" ;
   //console.log(document.getElementById('Projets-list').value);
-  document.getElementById('Projets-list').value = "CIRCUS_PLANNER";
+  var param = new URLSearchParams(window.location.search);
+  console.log(param.get("projet"))
+  document.getElementById('Projets-list').value = param.get("projet") != null ? param.get("projet") : "CIRCUS_PLANNER";
 
 }
 
@@ -272,6 +303,7 @@ document.addEventListener("DOMContentLoaded", function() {
  
   const projetsSelect = [
     { nom: "CIRCUS_PLANNER", text: "Création d'une application en Java" },
+    { nom: "UBILINK_TESTS", text: "Mise en place d'une plateforme de tests automatisée"},
     { nom: "TRI_DEPECHES", text: "Trieur de dépêches Java" },
     { nom: "MONA", text: "Application web React promotion du patrimoine fr" },
     { nom: "SITE_FICTIF_CGI", text: "Création d'un site web" },

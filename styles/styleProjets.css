@@ -33,7 +33,7 @@ select {
     font-size: 1.4rem;
     padding: 2px 5px;
     background-color: #0d1117;
-    color: #50C878;
+    color: white;
     border-color: white;
     border: none;
     box-shadow: 0 0 0.2em #fff, inset 0 0 0.1em #fff, 0 0 1em var(--light-blue-color), inset 0.1em 0 0.2em var(--light-blue-color), 0 0 0.2em var(--light-blue-color), inset 0 0 0.2em white;
@@ -52,7 +52,7 @@ select {
 
 label {
   font-size: 2.2em;
-  color: #98FF98;
+  color: var(--red-color);
 }
 
 #TitreProjet{
