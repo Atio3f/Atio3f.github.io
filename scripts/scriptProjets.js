@@ -216,7 +216,8 @@ let projetsTags = {
     "TRI_DEPECHES" : ["Java", "CreationPattern"],
     "FOC" : ["GDScript", "Jeu"],
     "NUTRISCORE" : ["PostgreSQL", "R", "NettoyageDonnées", "DataAnalysis"],
-    "SITE_FICTIF_CGI" : ["HTML", "CSS", "Javascript", "Frontend"]
+    "SITE_FICTIF_CGI" : ["HTML", "CSS", "Javascript", "Frontend"],
+    "StageUbilink" : ["HTML", "CSS", "Javascript", "PHP", "Frontend", "Tests", "Playwright", "Resemblejs", "ApplicationWeb", "API", "Git", "Benchmark", "Bootstrap"]
 }
 
 

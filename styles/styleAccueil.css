@@ -146,7 +146,28 @@ div>p.TitreMenu {
     margin-bottom: 1em;
 }
 
-.encadreLangage > img{
+#projets {
+    gap: 2em;
+}
+
+#projets > .encadreLangage > img {
+    width: 40%;
+    height: 100%;
+    border-radius: 12px 0px 0px 12px;
+    margin-left: 10px;
+}
+
+#projets > .encadreLangage > .sousEncadreLangage {
+    margin-bottom: 8px;
+}
+#projets > .encadreLangage > .sousEncadreLangage > a {
+    text-align: end;
+}
+
+#projets > .encadreLangage > .sousEncadreLangage > p{
+    margin-bottom: 5px;
+}
+.container .encadreLangage > img,.container3 .encadreLangage > img{
     width: 6em;
     height: 6em; 
     object-fit:contain; /*Evite que l'image déborde*/
