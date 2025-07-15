@@ -233,6 +233,7 @@ let projets = {
           <p> Ce projet s'est déroulé durant mon stage chez Ubilink du 14 avril au 20 juin 2025. La mission était la réalisation d'une plateforme de test automatisée sur leur application web afin de régler les problèmes récurrents de régression de fonctionnalités sur la partie 3D de l'application.<br>
            N'ayant aucune base, j'ai dû réaliser un benchmark des différentes librairies de tests disponibles et effectuer des tests pour m'assurer de pouvoir manipuler les éléments de la scène 3D avec, car il n'y a presque aucune source de test d'interface sur des applications 3D faites avec Three js et que les éléments 3D sont tous contenus dans un canvas et donc inacessibles depuis le DOM HTML.<br>
            </p>
+           <iframe src="https://www.youtube.com/embed/KXIpAiuivSw"></iframe>
         `//Mise en place d'une plateforme de tests d'interface utilisateur automatisée pour une application web 3D et réalisation d'une application web pour permettre d'enregistrer des tests d'interface utilisateur. Stage du 14 avril au 20 juin 2025
 
 }
