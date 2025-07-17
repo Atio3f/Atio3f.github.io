@@ -231,9 +231,14 @@ let projets = {
               </div>
           </div>
           <p> Ce projet s'est déroulé durant mon stage chez Ubilink du 14 avril au 20 juin 2025. La mission était la réalisation d'une plateforme de test automatisée sur leur application web afin de régler les problèmes récurrents de régression de fonctionnalités sur la partie 3D de l'application.<br>
-           N'ayant aucune base, j'ai dû réaliser un benchmark des différentes librairies de tests disponibles et effectuer des tests pour m'assurer de pouvoir manipuler les éléments de la scène 3D avec, car il n'y a presque aucune source de test d'interface sur des applications 3D faites avec Three js et que les éléments 3D sont tous contenus dans un canvas et donc inacessibles depuis le DOM HTML.<br>
+           N'ayant aucune base existante sur les tests, j'ai dû réaliser un benchmark des différentes librairies de tests disponibles et effectuer des tests pour m'assurer de pouvoir manipuler les éléments de la scène 3D avec, car il n'y a presque aucune source de test d'interface sur des applications 3D faites avec Three js et que les éléments 3D sont tous contenus dans un canvas et donc inacessibles depuis le DOM HTML.<br>
+           J'ai finalement choisi Playwright pour réaliser le prototype afin de voir les limites de ce qui était testable de manière fiable, sans faux positif ou négatif.<br>
+           Après cela, j'ai démarré la réalisation d'un site web avec un tableau avec tous les tests et leurs résultats d'exécution ainsi qu'un . Ce site m'a permis d'apprendre Bootstrap et l'utilisation d'iframe, qui servait à afficher l'application et récupérer les informations sur l'enregistrement pour les envoyer en base de données avant d'être exécutés avec Playwright.<br>
+           J'ai ensuite peaufiné mon code Playwright pour permettre de réaliser des 
+           Durant mon stage, j'ai rencontré plusieurs problèmes notamment avec l'iframe pour l'enregistrement des actions car mon site n'était pas situé sur le même domaine que l'application. Pour remédier à ça, nous avons utilisé un système de messages avec PostMessage, l'application m'envoie ainsi des messages sur les touches pressés par l'utilisateur, les délais entre les actions, certains checks comme le moment où on rentre sur la scène 3D mais aussi les captures d'écran de la scène 3D sous chaîne de caractères afin d'effectuer des comparaisons durant les exécutions. 
+           Pour conclure, ce stage m'a permis de découvrir un environnement de travail professionnel, acquérir des bases de concept de programmation 3D et la structure de la 3D en web, d'apprendre Playwright pour les tests utilisateurs et Bootstrap pour la forme de mes sites et aussi d'avoir un aperçu sur le travail demandé aux développeurs testeurs.
            </p>
-           <iframe src="https://www.youtube.com/embed/KXIpAiuivSw"></iframe>
+           <iframe src="https://www.youtube.com/embed/KXIpAiuivSw">Présentation de la partie exécution des tests</iframe>
         `//Mise en place d'une plateforme de tests d'interface utilisateur automatisée pour une application web 3D et réalisation d'une application web pour permettre d'enregistrer des tests d'interface utilisateur. Stage du 14 avril au 20 juin 2025
 
 }
@@ -281,7 +286,7 @@ function baseValue(){
   var param = new URLSearchParams(window.location.search);
   console.log(param.get("projet"))
   document.getElementById('Projets-list').value = param.get("projet") != null ? param.get("projet") : "CIRCUS_PLANNER";
-
+  updateText()
 }
 
 
