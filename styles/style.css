@@ -161,6 +161,7 @@ header {
     grid-auto-flow : column; */ /* Aligne les éléments en ligne horizontale */ 
     position: fixed;
     z-index: 1000;
+    background-color: black;
 }
 
 .navbar {
