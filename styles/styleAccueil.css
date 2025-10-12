@@ -137,6 +137,8 @@ div>p.TitreMenu {
 .encadreLangage{
     display: flex;
     height: 9em;
+    min-height: 200px;
+    min-width: 255px;
     justify-content:space-around;
     align-items: center;
     padding-top: 0.3em;

@@ -6,24 +6,13 @@
     <link rel="stylesheet" href="styles/style.css" media="screen" />
     <link rel="stylesheet" href="styles/styleCompetences.css" media="screen" />
     <style>body{background-color: black;}</style>
+      <script type="module" src="components/nav-bar.js"></script>
+    <script type="module" src="components/footer.js"></script>
   </head>
 
   <body>
     <header>
-      <nav class="navbar">
-
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <ul class="nav-links">
-            <li><a  href="index.html">Accueil</a></li>
-            <li><a href="PortFolioParcours.html">Parcours</a></li>
-            <li class="pageActive"><a href="PortFolioCompetences.html">Compétences</a></li>
-            <li><a href="PortFolioProjets.html">Projets</a></li>
-        </ul>
-      </nav>
+      <nav-bar></nav-bar>
     </header>
     <main id="Competences">
       
@@ -83,24 +72,7 @@
     </section>
     </main>
     <footer>
-      <hr>
-      <div id="Footer-Global">
-        <div id="Footer-Mail">
-          <p>mathias.fernandes@etu.univ-grenoble-alpes.fr</p>
-        </div>
-        <div id="Footer-Content">
-          <p>Mes réseaux : </p>
-            <div id="RESEAUX">
-              <a href="https://github.com/Atio3f" target="_blank" rel="noopener noreferrer">
-              <img src="img/github-mark-white.png" alt="Lien github">
-            </a>
-            <a href="https://www.linkedin.com/in/mathias-fernandes" target="_blank" rel="noopener noreferrer">
-              <img src="img/iconLinkedin.png" alt="Lien Linkedin">
-            </a>
-            </div>
-          
-        </div>
-      </div>
+      <custom-footer></custom-footer>
     </footer>
   </body>
   <script type="module" src="scripts/scriptCompetences.js"></script>

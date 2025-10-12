@@ -9,7 +9,7 @@ let passionsVideos = {
 
 
 function playVideo(passion){
-    
+    return
     setTimeout(playAVideo('img/videos/' + passionsVideos[passion][1]), 5000);
     
     setTimeout(() => {
@@ -22,11 +22,13 @@ function playVideo(passion){
 }
 
 document.getElementById('JeuxVideos').addEventListener('click', () => {
+    return
     playVideo('JeuxVideos');
   });
 
 
 function playAVideo(lien){
+    return
     const selectElement = document.getElementById('fondVideo');
     selectElement.querySelector('source').setAttribute('src', lien);
     selectElement.load();
