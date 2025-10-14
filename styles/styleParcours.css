@@ -66,11 +66,17 @@ strong {
 
 .softSkill{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 20px;
 }
 
-.softSkill > p {
+.softSkill > div{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.softSkill > div > p {
     
     align-self: end;
 }
