@@ -150,6 +150,7 @@ div>p.TitreMenu {
 
 #projets {
     gap: 2em;
+    flex-wrap: wrap;
 }
 
 #projets > .encadreAnime > img {
