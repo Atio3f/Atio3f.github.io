@@ -9,7 +9,7 @@ let selection2 = Splitting({ target: target2, by: 'words' });
 document.addEventListener("DOMContentLoaded", (event) => {
     if (window.outerWidth >= 1000 && window.outerHeight >= 800) {
         gsap.registerPlugin(ScrollTrigger)
-        /*gsap.from('.encadreLangage', {
+        /*gsap.from('.encadreAnime', {
             scrollTrigger: {trigger : '.container', 
             
             end : "top 100px",
