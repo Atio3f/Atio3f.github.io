@@ -13,12 +13,43 @@ class NavBar extends HTMLElement {
             <div></div>
         </div>
         <ul class="nav-links">
-            <li class="pageActive"><a href="index.html">Accueil</a></li>
-            <li><a href="PortFolioParcours.html">Parcours</a></li>
-            <li><a href="PortFolioProjets.html">Projets</a></li>
+            <li id="/"><a href="index.html">Accueil</a></li>
+            <li id="/parcours"><a href="parcours.html">Parcours</a></li>
+            <li id="/projets"><a href="projets.html">Projets</a></li>
         </ul>
       </nav>
     `;
+  }
+
+  connectedCallback() {
+      this.highlightCurrentPage();
+    }
+
+  highlightCurrentPage() {
+    let path = window.location.pathname;
+
+    // Simplifie le chemin (enlève les répertoires)
+    let currentPage = path.split('/').pop();
+
+    // Si on est sur la racine "/" => considère que c’est "index.html"
+    if (currentPage === '' || currentPage === '/') {
+      currentPage = 'index.html';
+    }
+    console.log(currentPage)
+    switch (currentPage) {
+      case '' : 
+        this.shadowRoot.getElementById('/').classList.add('pageActive');
+        break;
+      case 'index.html' : 
+        this.shadowRoot.getElementById('/').classList.add('pageActive');
+        break;
+      case 'parcours.html' : 
+        this.shadowRoot.getElementById('/parcours').classList.add('pageActive');
+        break;
+      case 'projets.html' :
+        this.shadowRoot.getElementById('/projets').classList.add('pageActive');
+        break;
+    }
   }
 }
 
