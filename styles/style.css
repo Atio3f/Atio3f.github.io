@@ -369,3 +369,11 @@ li.pageActive>a:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   animation-duration: 2000ms;
 }
+
+.projectCard img {
+  transition: transform 0.2s ease;
+}
+
+.projectCard:hover img {
+  transform: scale(1.03);
+}
