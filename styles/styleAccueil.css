@@ -52,7 +52,7 @@ div.Accueil{
 }
 
 div>p.TitreMenu {    
-    color: #BED3C3;
+    color: white;
     font-family: 'Times New Roman', Times, serif;
     font-weight: 20;
     font-size: 3.3rem;
@@ -154,8 +154,8 @@ div>p.TitreMenu {
 }
 
 #projets > .encadreAnime > img {
-    width: 40%;
-    height: 100%;
+    width: 30%;
+    height: auto;
     border-radius: 12px 0px 0px 12px;
     margin-left: 10px;
 }
@@ -195,6 +195,7 @@ div>p.TitreMenu {
 .sousencadreAnime {
     flex-grow: 4;
     text-align: start; 
+    min-width: 55%;
 }
 
 .sousencadreAnime > p{

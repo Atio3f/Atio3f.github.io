@@ -114,3 +114,9 @@ window.addEventListener('DOMContentLoaded', () => {
     container.classList.remove('hidden');
     });
 });
+
+
+function goToProject(projectName){
+    window.location.href = `projets.html?projet=${encodeURIComponent(projectName)}`;
+}
+window.goToProject = goToProject;
