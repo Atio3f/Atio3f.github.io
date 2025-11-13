@@ -158,6 +158,7 @@ div>p.TitreMenu {
     height: auto;
     border-radius: 12px 0px 0px 12px;
     margin-left: 10px;
+    
 }
 
 #projets > .encadreAnime > .sousencadreAnime {
@@ -196,6 +197,8 @@ div>p.TitreMenu {
     flex-grow: 4;
     text-align: start; 
     min-width: 55%;
+    margin-right: 7px;
+    width: 10.8em;
 }
 
 .sousencadreAnime > p{
