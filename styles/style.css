@@ -147,7 +147,7 @@ footer > hr{
     font-family: 'Times New Roman', Times, serif;
     
     font-size: 1.2em;
-    margin: 0%;
+    margin: 0 0 6px 0;
     min-width: 100%;
 }
 
@@ -195,8 +195,8 @@ header {
     width: 100%;
     padding: 1rem;
     -moz-user-select: none; /* Firefox */
-    -webkit-user-select: none; /* Chrome, Safari, Opéra depuis la version 15 */
-    -ms-user-select: none; /* Internet explorer depuis la version 10 et Edge */
+    -webkit-user-select: none; /* Chrome, Safari, Opéra*/
+    -ms-user-select: none; /* Internet explorer et Edge */
     user-select: none; 
 }
 .navbar a:hover {

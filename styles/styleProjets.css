@@ -37,6 +37,7 @@ select {
     border-color: white;
     border: none;
     box-shadow: 0 0 0.2em #fff, inset 0 0 0.1em #fff, 0 0 1em var(--light-blue-color), inset 0.1em 0 0.2em var(--light-blue-color), 0 0 0.2em var(--light-blue-color), inset 0 0 0.2em white;
+    cursor: pointer;
 }
   
 #outputProjet{

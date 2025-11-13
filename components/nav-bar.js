@@ -14,7 +14,6 @@ class NavBar extends HTMLElement {
         </div>
         <ul class="nav-links">
             <li id="/"><a href="index.html">Accueil</a></li>
-            <li id="/parcours"><a href="parcours.html">Parcours</a></li>
             <li id="/projets"><a href="projets.html">Projets</a></li>
         </ul>
       </nav>
@@ -43,9 +42,9 @@ class NavBar extends HTMLElement {
       case 'index.html' : 
         this.shadowRoot.getElementById('/').classList.add('pageActive');
         break;
-      case 'parcours.html' : 
+      /*case 'parcours.html' : 
         this.shadowRoot.getElementById('/parcours').classList.add('pageActive');
-        break;
+        break;*/
       case 'projets.html' :
         this.shadowRoot.getElementById('/projets').classList.add('pageActive');
         break;
