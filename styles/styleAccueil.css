@@ -270,7 +270,8 @@ div>p.TitreMenu {
 
 .encadreBonus img {
     max-width: 110px;
-    width: 7em;
+    height: 3em;
+    width: 5em;
 }
 
 .encadreBonus h3 {
