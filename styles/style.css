@@ -229,13 +229,21 @@ li.pageActive>a:hover {
     
 }
 @media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
+    .menu-toggle, .tete {
+        
         display: none;
     }
     .navbar.active .nav-links {
         display: flex;
     }
+    #Accueil-HautPage > p:first-child {
+        padding-right: 0% !important;
+        padding-top: 6%;
+    }
+    .TitreMenu {
+        margin: 2% 0 auto 12%;
+    }
+    
 }
 .menu-toggle {
     display: none;
@@ -249,12 +257,6 @@ li.pageActive>a:hover {
     margin: 0.3rem 0;
 }
 
-
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: flex;
-    }
-}
 
 
 
