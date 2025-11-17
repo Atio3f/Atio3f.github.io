@@ -155,7 +155,7 @@ footer > hr{
 
 /* POUR LA BARRE DE NAVIGATION */
 header {
-    
+    margin-top: 10px;
     width: 94%;
     /* display: inline-grid;
     grid-auto-flow : column; */ /* Aligne les éléments en ligne horizontale */ 
@@ -173,6 +173,7 @@ header {
     background-clip: padding-box;
     /*background-color: #e8824f; A VOIR SI ON CONSERVE*/
     backdrop-filter: blur(1px);
+    border-radius: 30px;
 }
 
 
@@ -218,8 +219,16 @@ header {
 
 li.pageActive{
     box-shadow: inset 0em 0em 5em aqua;
-    
 }
+.nav-links li.pageActive:first-child {
+    border-radius: 28px 0 0 28px;
+}
+
+/* Si l'élément actif est le dernier <li> */
+.nav-links li.pageActive:last-child {
+    border-radius: 0 28px 28px 0;
+}
+
 li.pageActive > a{
     text-shadow: none;
 }
