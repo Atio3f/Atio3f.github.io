@@ -104,6 +104,7 @@ div>p.TitreMenu {
     display: flex;
     flex-direction: wrap;
     box-sizing: border-box;
+    justify-content: center;
 }
 .container {
     

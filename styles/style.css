@@ -247,12 +247,15 @@ li.pageActive>a:hover {
     }
     #Accueil-HautPage > p:first-child {
         padding-right: 0% !important;
-        padding-top: 6%;
+        padding-top: 9%;
     }
     .TitreMenu {
-        margin: 2% 0 auto 12%;
+        margin: 2% 0 auto 12% !important;
+        width: 100% !important;
     }
-    
+    #projets {
+        justify-content: start;
+    }
 }
 .menu-toggle {
     display: none;
