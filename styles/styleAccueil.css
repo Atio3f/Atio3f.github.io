@@ -72,7 +72,7 @@ div>p.TitreMenu {
     height: auto;
     margin-left: 1.7vw;
     border-radius: 500px;
-    border: #fff solid 1px;
+    background-color : var(--light-green-color);
 }
 .TitreMenu{
     margin: auto 10% 0 auto;
