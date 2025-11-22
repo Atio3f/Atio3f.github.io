@@ -2,6 +2,7 @@
 /* Contiendra toutes les couleurs utilisées */
 :root {
     --red-color: #ff035b;
+    --light-red-color: rgba(242, 30, 30, 0.9);
     --light-blue-color: #04d9ff;
     --dark-blue-color : rgba(30,132,242,0.92);
     --green-color: #37f713;
@@ -156,7 +157,7 @@ footer > hr{
 /* POUR LA BARRE DE NAVIGATION */
 header {
     margin-top: 10px;
-    width: 94%;
+    width: 60%;
     /* display: inline-grid;
     grid-auto-flow : column; */ /* Aligne les éléments en ligne horizontale */ 
     position: fixed;
@@ -202,7 +203,6 @@ header {
 }
 .navbar a:hover {
     color: #ddd;        /* mettre une animation plutôt */
-    
 }
 
 
@@ -218,7 +218,7 @@ header {
 }
 
 li.pageActive{
-    box-shadow: inset 0em 0em 5em aqua;
+    box-shadow: inset 0em 0em 3em rgba(150, 120, 255, 0.3);
 }
 .nav-links li.pageActive:first-child {
     border-radius: 28px 0 0 28px;
@@ -255,6 +255,13 @@ li.pageActive>a:hover {
     }
     #projets {
         justify-content: start;
+    }
+    .container3 {
+        gap: 0.3em !important;
+    }
+
+    header {
+        width: 94%;
     }
 }
 .menu-toggle {

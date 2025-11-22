@@ -93,7 +93,7 @@ div>p.TitreMenu {
 }
 
 .LangageCadre{
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -102,9 +102,10 @@ div>p.TitreMenu {
 
 .LangageCadre>div{
     display: flex;
-    flex-direction: wrap;
     box-sizing: border-box;
     justify-content: center;
+    width: 80%;
+    margin: 0 auto;
 }
 .container {
     
@@ -183,7 +184,7 @@ div>p.TitreMenu {
     text-shadow:
     0 0 0.3em rgba(202,228,225,0.92),
     0 0 1.9em rgba(202,228,225,0.34),
-    0 0 0.7em rgba(30,132,242,0.52),
+    0 0 0.7em var(--light-red-color),
     0 0 1.4em var(--dark-blue-color),
     0 0 2.1em rgba(30,132,242,0.78),
     0 0 3.7em var(--dark-blue-color);
@@ -194,6 +195,7 @@ div>p.TitreMenu {
     text-align: start; 
     min-width: 55%;
     margin-right: 7px;
+    margin-left: 3px;
     width: 10.8em;
 }
 
@@ -289,8 +291,8 @@ div>p.TitreMenu {
   left: 0;
   bottom: -3px;
   width: 0;
-  height: 3px;
-  background-color: var(--dark-blue-color);
+  height: 2px;
+  background-color: whitesmoke;
   border-radius: 3px;
   opacity: 35%;
   transition: width 0.3s ease, opacity 0.3s ease;

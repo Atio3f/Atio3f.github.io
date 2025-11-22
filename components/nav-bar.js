@@ -6,12 +6,6 @@ class NavBar extends HTMLElement {
     shadow.innerHTML = `
         <link rel="stylesheet"  href="../styles/style.css" media="screen" />
       <nav class="navbar">
-
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
         <ul class="nav-links">
             <li id="/"><a href="index.html">Accueil</a></li>
             <li id="/projets"><a href="projets.html">Projets</a></li>
