@@ -233,7 +233,7 @@ div>p.TitreMenu {
       0 0 2em #37f713,
       inset 0 0 2em #37f713; 
       animation: flashing 9s infinite alternate; */
-      box-shadow: 0 1.8px 8px rgba(255, 255, 255, 0.1);
+      box-shadow: 0 1.8px 8px rgba(255, 255, 255, 0.15);
   }
 
  @media (max-width : 1000px) {
