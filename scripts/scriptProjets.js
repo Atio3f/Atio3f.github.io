@@ -1,6 +1,6 @@
 let projets = {
     "TITANIC_BDD" : `
-        <h2 id="TitreProjet">Analyse du naufrage du Titanic --> décembre 2023</h2>
+        <h2 id="TitreProjet">Analyse du naufrage du Titanic - décembre 2023</h2>
               
             <div id="langagesUtilises">
               <h4> Langages utilisées : </h4> 
@@ -20,7 +20,7 @@ let projets = {
             <p>Notre compte-rendu : </p>
         `,
     "CIRCUS_PLANNER" : `
-        <h2 id="TitreProjet">Application lourde pour la gestion des cirques --> mars 2024</h2>
+        <h2 id="TitreProjet">Application lourde pour la gestion des cirques - mars 2024</h2>
         <div id="langagesUtilises">
             <h4> Langages utilisées : </h4> 
           
@@ -44,7 +44,7 @@ let projets = {
         <a href="https://github.com/Thomas-381/CircusPlanner">Lien vers le code source sur Github</a>
         `,
     "MONA" : `
-        <h2 id="TitreProjet"> Application web d'évènements : Mona --> 11/2024-01/2025</h2>
+        <h2 id="TitreProjet"> Application web d'évènements : Mona - 11/2024-01/2025</h2>
         <div id="langagesUtilises">
               <h4> Langages utilisées : </h4> 
               <div class="langage">
@@ -103,7 +103,7 @@ let projets = {
         <p>Compte-rendu gestion de projet avant de le coder : <iframe src="img/projets/Mona/PHASE2_Gestion_de_projet-Manodev-Groupe14.pdf"></iframe>
         `,
     "TRI_DEPECHES" : `
-        <h2 id="TitreProjet">Trieur de dépêches en Java --> novembre 2024</h2>
+        <h2 id="TitreProjet">Trieur de dépêches en Java - novembre 2024</h2>
         <div id="langagesUtilises">
             <h4> Langages utilisées : </h4>
             <div class="langage">
@@ -118,7 +118,7 @@ let projets = {
         <a href="https://github.com/Atio3f/">Lien Github vers le code source du projet</a>
         `,
     "FOC" : `
-        <h2 id="TitreProjet"> Jeu 2d de stratégie tour par tour sur Godot --> 2024-...</h2>
+        <h2 id="TitreProjet"> Jeu 2d de stratégie tour par tour sur Godot - 2024-...</h2>
           <div id="langagesUtilises">
                 <h4> Langages utilisées : </h4> 
               
@@ -137,7 +137,7 @@ let projets = {
        
         `,
     "NUTRISCORE" : `
-        <h2 id="TitreProjet">Etude du nutriscore pour les produits à base de volailles françaises  --> avril 2024</h2>
+        <h2 id="TitreProjet">Etude du nutriscore pour les produits à base de volailles françaises  - avril 2024</h2>
         <div id="langagesUtilises">
                 <h4> Langages utilisées : </h4> 
               
@@ -168,7 +168,7 @@ let projets = {
            
         `,
     "SITE_FICTIF_CGI" : `
-        <h2 id="TitreProjet">Site web fictif pour une ESN(CGI) --> décembre 2023</h2>
+        <h2 id="TitreProjet">Site web fictif pour une ESN(CGI) - décembre 2023</h2>
         <div id="langagesUtilises">
               <h4> Langages utilisées : </h4> 
             
