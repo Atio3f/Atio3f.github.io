@@ -16,7 +16,7 @@
         // Load the star texture
         const starTexture = await PIXI.Assets.load('https://pixijs.com/assets/star.png');
     
-        const starAmount = 1000;
+        const starAmount = (window.innerWidth  + window.innerHeight) / 2.8 + 15;
         let cameraZ = 0;
         const fov = 20;
         const baseSpeed = 0.025;    //Petite valeur comme 0.025 pour faire bouger les étoiles
