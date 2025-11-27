@@ -169,8 +169,8 @@ header {
     display: flex;
     align-items: center;
    
-    animation: flashing 8s infinite alternate; 
-      
+    /* animation: flashing 8s infinite alternate; A voir comment replacer l'anim modifiée quelque part*/
+    box-shadow: 0 1px 2px rgba(255, 255, 255, 0.2);
     background-clip: padding-box;
     /*background-color: #e8824f; A VOIR SI ON CONSERVE*/
     backdrop-filter: blur(1px);
@@ -218,7 +218,7 @@ header {
 }
 
 li.pageActive{
-    box-shadow: inset 0em 0em 3em rgba(150, 120, 255, 0.3);
+    border-bottom: 4px solid white;
 }
 .nav-links li.pageActive:first-child {
     border-radius: 28px 0 0 28px;
