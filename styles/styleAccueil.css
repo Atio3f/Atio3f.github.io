@@ -72,7 +72,7 @@ div>p.TitreMenu {
     height: auto;
     margin-left: 1.7vw;
     border-radius: 500px;
-    background-color : var(--light-green-color);
+    box-shadow: 0 1px 3px rgba(255, 255, 255, 0.2);
 }
 .TitreMenu{
     margin: auto 10% 0 auto;
@@ -217,6 +217,7 @@ div>p.TitreMenu {
 .LangageCadre3>h2{
     color : white;
 }
+
 /* https://blog.dorianguilmain.com/comment-creer-un-effet-neon-en-css/ */
 .encadreAnime {
     border-radius: 12px;
@@ -226,15 +227,9 @@ div>p.TitreMenu {
       0 0 1em #37f713,
       inset 0 0 1em #37f713,
       0 0 2em #37f713,
-      inset 0 0 2em #37f713; */
-      animation: flashing 9s infinite alternate; 
-      box-shadow:
-        0 0 0.2em #fff,
-        inset 0 0 0.1em #fff,
-        0 0 1em var(--light-blue-color),
-        inset 0.1em 0 0.2em var(--light-blue-color),
-        0 0 0.2em var(--light-blue-color),
-        inset 0 0 0.2em white;
+      inset 0 0 2em #37f713; 
+      animation: flashing 9s infinite alternate; */
+      box-shadow: 0 1.8px 8px rgba(255, 255, 255, 0.1);
   }
 
  @media (max-width : 1000px) {
