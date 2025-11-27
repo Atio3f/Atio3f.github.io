@@ -1,5 +1,9 @@
 /* Contient toutes les modifications qui ne s'appliquent qu'à la page d'accueil */
 
+html {
+    background: none !important; /* Need if we want to see stars created with pixijs*/
+}
+
 /* PARTIE PAGE ACCUEIL */
 main.Accueil{
     width: 90%;
