@@ -38,9 +38,6 @@ main.Accueil{
     display : block;
     
 }
-#Accueil-HautPage  p , #Accueil-HautPage img{
-    animation:  apparition 0.8s ease forwards;
-}
 
 #Accueil-BasPage{
     box-sizing: border-box;     

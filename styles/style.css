@@ -108,50 +108,59 @@ footer > hr{
     min-width: 100%;
 }
 
-#RESEAUX {
+.reseaux {
     display: flex;
 }
 
-.Accueil #RESEAUX {
+.Accueil .reseaux {
     margin-left: 4.4vw;
     padding-bottom: 2%;
 }
 
-.Accueil #RESEAUX a{
+.Accueil .reseaux a{
     margin: 4px;
     align-content: center;
 }
 
-#footer-content #RESEAUX{
+#footer-content .reseaux{
     
     justify-content: right;
 }
 
-#RESEAUX > a {
-    width: 2.2em;
+.reseaux > a {
+    width: 40px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
 }
 
-#RESEAUX > a > img{
-    margin-top: 1%;
-    width: 99%;
-    transition: 50ms;
-    margin-left: 1%;
+.reseaux > a > img {
+    width: 40px;
+    height: 40px;
+    margin: 0; 
+    transition: transform 0.4s ease-out, filter 0.3s ease-in;
 }
-#RESEAUX > a > img:hover{
-    margin-top: 0%;
-    width: 100%;
-    margin-left: 0%;
+.reseaux > a:hover > img{
+    transform: translateY(-5px);
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
 }
 
 #Footer-Mail > p{
     color: white;
     font-family: 'Times New Roman', Times, serif;
-    
     font-size: 1.2em;
     margin: 0 0 6px 0;
     min-width: 100%;
 }
 
+/* Affect .reseaux on footer */
+#Footer-Content:last-child > div{
+    margin-top: 12px;
+    padding-bottom: 5px;
+}
 
 
 /* POUR LA BARRE DE NAVIGATION */
@@ -345,17 +354,6 @@ li.pageActive>a:hover {
     
 }
 
-
-@keyframes apparition {
-    0% {
-        opacity: 0.2;
-        transform: translateY(5vh) rotateX(-50deg);
-      }
-      100% {
-        opacity: 1;
-        transform: rotateX(25deg);
-      }
-}
 /*Ancien flashing
 @keyframes flashing {
     0%{

@@ -12,7 +12,7 @@ class Footer extends HTMLElement {
         </div>
         <div id="Footer-Content">
           <p>Mes réseaux : </p>
-            <div id="RESEAUX">
+            <div class="reseaux">
               <a href="https://github.com/Atio3f" target="_blank" rel="noopener noreferrer">
                 <img src="img/github-mark-white.png" alt="Lien github">
               </a>
