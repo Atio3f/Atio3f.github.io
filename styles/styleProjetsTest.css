@@ -1,0 +1,182 @@
+main.Projets{
+    width: 94%;
+    position: relative;
+    margin-top: 5%;
+    margin-left: 1%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.project-cards {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 30px; 
+    padding: 20px 20px;
+    align-items: flex-start;
+}
+
+.project-card {
+    position: relative;
+    width: 14em;
+    height: 11em;
+    min-width: 258px;
+    min-height: 140px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 3px 7px rgba(90, 90, 90, 0.4);
+    cursor: pointer;
+    background-color: oklch(20.5% 0 0);
+
+}
+
+@media (max-width: 555px) {
+    .project-card {
+        width: 90%;
+        height: 160px;
+    }
+}
+
+.card-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform 0.5s ease, opacity 0.4s ease-in-out;
+    opacity: 80%;
+    background-size: contain;
+}
+
+
+.card-info, .card-description {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.card-info {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+
+.card-description {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; 
+}
+
+.project-card:hover .card-background {
+    transform: scale(1.05);
+    opacity: 50%;
+}
+
+.project-card:hover .card-info {
+    opacity: 0;
+    transform: translateY(-20px); 
+}
+
+.project-card:hover .card-description {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Output style */
+#TitreProjet{
+    margin-bottom: 0px
+}
+
+#langagesUtilises{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+}
+
+#langagesUtilises>h4{
+    padding-right: 1.2em;
+}
+
+.langage {
+    position: relative; 
+    width: 3em;     
+    height: 2.5em;      
+    margin-right: 1em;
+    overflow: hidden; 
+}
+
+.langage img {
+    width: 100%;
+    height: 100%;
+    transition: filter 1s ease; /* Animation pour le floutage */
+}
+
+.langage .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 0.5em;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); /* Texte lisible sur fond flouté */
+    opacity: 0; /* Caché par défaut */
+    transition: opacity 0.5s ease; /* Animation pour l'apparition du texte */
+    pointer-events: none; /* Évite d'intercepter les événements de la souris */
+}
+
+.langage:hover img {
+    filter: blur(2px); /* Floute l'image */
+}
+
+.langage:hover .overlay-text {
+    opacity: 1; /* Rend le texte visible */
+}
+
+
+/*Groupe d'images affichées sur la même ligne*/
+.groupeImages{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.groupeImages figure {
+    margin : auto;
+}
+
+.groupeImages img {
+    width: 100%;
+}
+
+.groupeImages figcaption {
+    font-size: 0.6em;
+    color: var(--red-color);
+}
+
+.imageG{
+    width: 28%;
+    margin: auto;
+}
+
+/* Pour toutes les images pas visibles à cause du fond noir */
+.imgPasNette {
+    filter: contrast(40%);
+}
+
+iframe {
+    width : 100%;
+    height : 68vh;
+}

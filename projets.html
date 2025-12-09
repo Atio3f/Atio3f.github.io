@@ -9,7 +9,7 @@
     <meta name="color-scheme" content="dark">
     <title>Portfolio Projets</title>
     <link rel="stylesheet" href="styles/style.css" media="screen"/>
-    <link rel="stylesheet" href="styles/styleProjets.css" media="screen"/>
+    <link rel="stylesheet" href="styles/styleProjetsTest.css" media="screen"/>
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
     <style>body{background-color: black;}</style>
     <script src="styles/script.js"></script>
@@ -22,22 +22,172 @@
     <header>
       <nav-bar></nav-bar>
     </header>
-  
     <main class="Projets">
-           
       <section id="Projets-Titre">
         <h1>PROJETS</h1>
       </section>
-      
 
-      <div id="Projets-listProjets">
-        <label for="Projets-list">Sélection du projet affiché : </label> 
-        <select name="Projets" id="Projets-list"  onchange="updateText()"> 
-        </select>
+      <section class="project-cards">
+        <div class="project-card" onclick="updateText('MONA')">
+          <div class="card-background" style="background-image: url('img/projets/Mona/LogoCentré.svg');"></div>
+          
+          <div class="card-info visible-layer">
+              <h3>Mona - Plateforme SaaS Événementielle</h3>
+              <p class="roles">Développeur frontend, Responsable Git, Intégrateur API</p>
+          </div>
+          
+          <div class="card-description hidden-layer">
+              <p class="description">Application web de gestion d'évènements</p>
+              <p class="languages">React, PostgreSQL, Gitlab, API REST</p>
+          </div>
+        </div>
+
+        <div class="project-card" onclick="updateText('232')">
+          <div class="card-background" style="background-image: url('img/projets/ton_projet.jpg');"></div>
+          
+          <div class="card-info visible-layer">
+              <h3>232 App</h3>
+              <p class="roles">Responsable front-end</p>
+          </div>
+          
+          <div class="card-description hidden-layer">
+              <p class="description">Application web de gestion et de communication pour des projets</p>
+              <p class="languages">Angular, Typescript, PrimeNG, CSS</p>
+          </div>
+        </div>
+
+        <div class="project-card" onclick="updateText('UBILINK_TESTS')">
+          <div class="card-background" style="background-image: url('img/projets/UBILINKSTAGE/iBIM.png');"></div>
+          
+          <div class="card-info visible-layer">
+              <h3>Framework d'Automatisation QA & 3D Engine</h3>
+              <p class="roles">Développeur Test & Automation, Développeur frontend</p>
+          </div>
+          
+          <div class="card-description hidden-layer">
+              <p class="description">Conception d'une infrastructure de tests E2E critique pour un moteur 3D web. Innovation technique via Playwright</p>
+              <p class="languages">Playwright, Javascript, Bootstrap</p>
+          </div>
+        </div>
+
+        <div class="project-card" onclick="updateText('MONCARNETDESTAGE')">
+          <div class="card-background" style="background-image: url('img/projets/MonCarnetStage/logo.png');"></div>
+          
+          <div class="card-info visible-layer">
+              <h3>Amélioration de l'existant Application offre stage</h3>
+              <p class="roles">Développeur mobile, Chef d'équipe</p>
+          </div>
+          
+          <div class="card-description hidden-layer">
+              <p class="description">Amélioration de l'application mobile Mon Carnet de Stage</p>
+              <p class="languages">Java, Android Studio</p>
+          </div>
+        </div>
+
+        <div class="project-card" onclick="updateText('CIRCUS_PLANNER')">
+          <div class="card-background" style="background-image: url('img/projets/CIRCUSPLANNER/logo.png');"></div>
+          
+          <div class="card-info visible-layer">
+              <h3>Circus Planner</h3>
+              <p class="roles">Développeur logiciel, UI Designer</p>
+          </div>
+          
+          <div class="card-description hidden-layer">
+              <p class="description">Développement d'une application mobile pour gérer les plannings de cirque</p>
+              <p class="languages">Java, JavaFX</p>
+          </div>
+        </div>
+
+        <div class="project-card" onclick="updateText('TITANIC_BDD')">
+          <div class="card-background" style="background-image: url('img/projets/ton_projet.jpg');"></div>
+          
+          <div class="card-info visible-layer">
+              <h3>Titanic BDD</h3>
+              <p class="roles">Architecture, Analyse Backend</p>
+          </div>
+          
+          <div class="card-description hidden-layer">
+              <p class="description"></p>
+              <p class="languages">PostgreSQL, Analyse données</p>
+          </div>
+        </div>
+
+        <div class="project-card" onclick="updateText('TRI_DEPECHES')">
+          <div class="card-background" style="background-image: url('img/projets/ton_projet.jpg');"></div>
+          
+          <div class="card-info visible-layer">
+              <h3>Algorithme NLP de Classification</h3>
+              <p class="roles">Développeur logiciel</p>
+          </div>
+          
+          <div class="card-description hidden-layer">
+              <p class="description">Tri de dépêches à l'aide d'une analyse de la fréquence d'apparition des mots</p>
+              <p class="languages">Java, Algorithmie</p>
+          </div>
+        </div>
+
+        <div class="project-card" onclick="updateText('NUTRISCORE')">
+          <div class="card-background" style="background-image: url('img/projets/ton_projet.jpg');"></div>
+          
+          <div class="card-info visible-layer">
+              <h3>Data Science & Audit Agroalimentaire</h3>
+              <p class="roles">Data Analyst</p>
+          </div>
+          
+          <div class="card-description hidden-layer">
+              <p class="description">Traitement statistique avancé sur datasets OpenData. Nettoyage de données (ETL) et visualisation analytique</p>
+              <p class="languages">R, PostgreSQL, SQL</p>
+          </div>
+        </div>
+        <div class="project-card" onclick="updateText('FOC')">
+          <div class="card-background" style="background-image: url('img/projets/FoC/monkey1.png');"></div>
+          
+          <div class="card-info visible-layer">
+              <h3>Fight Of Cities</h3>
+              <p class="roles">Développeur jeu vidéo</p>
+          </div>
+          
+          <div class="card-description hidden-layer">
+              <p class="description">Développement d'un jeu 2D de stratégie. Gestion de l'IA, pathfinding (Dijkstra) et systèmes de combat</p>
+              <p class="languages">Godot, Gdscript</p>
+          </div>
+        </div>
+
+        <div class="project-card" onclick="updateText('OVERGROWNFOREST')">
+          <div class="card-background" style="background-image: url('img/projets/OvergrownForest/Cover.png');"></div>
+          
+          <div class="card-info visible-layer">
+              <h3>Overgrown Forest</h3>
+              <p class="roles">Développeur jeu vidéo, Responsable Git</p>
+          </div>
+          
+          <div class="card-description hidden-layer">
+              <p class="description">Participation en équipe à l'édition d'août de la Gamejame B1tjam 2025</p>
+              <p class="languages">Godot, Gdscript</p>
+          </div>
+        </div>
+
+        <!--
+        <div class="project-card">
+          <div class="card-background" style="background-image: url('img/projets/CGI/CGIPageAccueil.png');"></div>
+          
+          <div class="card-info visible-layer">
+              <h3>Landing page CGI</h3>
+              <p class="roles">Développeur front-end</p>
+          </div>
+          
+          <div class="card-description hidden-layer">
+              <p class="description">Réalisation d'une landing page pour vulgariser le travail d'une ESN</p>
+              <p class="languages">CSS, Javascript</p>
+          </div>
+        </div>
+        -->
+      </section>
         
-        <div class="output" id="outputProjet">Description Projet sélectionné</div>
-        
-      </div> 
+
+        <div class="output" id="outputProjet"></div>
+
+    </main>
     <footer>
       <custom-footer></custom-footer>
     </footer>

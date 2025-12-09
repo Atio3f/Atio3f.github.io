@@ -145,7 +145,7 @@ footer > hr{
 }
 .reseaux > a:hover > img{
     transform: translateY(-5px);
-    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.5));
 }
 
 #Footer-Mail > p{

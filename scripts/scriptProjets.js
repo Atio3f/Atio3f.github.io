@@ -1,5 +1,7 @@
 let projets = {
-    "TITANIC_BDD" : `
+    "TITANIC_BDD" : {
+      "short_desc": "A faire",
+      "html": `
         <h2 id="TitreProjet">Analyse du naufrage du Titanic - décembre 2023</h2>
               
             <div id="langagesUtilises">
@@ -18,8 +20,10 @@ let projets = {
             Pour cela, nous devions extraire les données sur le Titanic en les insérant dans une BDD correspondante à nos besoins.</p>
             <img src="img/projets/Titanic/TitanicSEA.png" alt="Schéma entité association pour la récupération des données">
             <p>Notre compte-rendu : </p>
-        `,
-    "CIRCUS_PLANNER" : `
+        `},
+    "CIRCUS_PLANNER" : {
+      "short_desc": "A faire",
+      "html": `
         <h2 id="TitreProjet">Application lourde pour la gestion des cirques - mars 2024</h2>
         <div id="langagesUtilises">
             <h4> Langages utilisées : </h4> 
@@ -42,8 +46,10 @@ let projets = {
         <img class="imgPasNette" src="img/projets/CIRCUSPLANNER/CIRCUSPLANNERdiagrammeClasse.svg" alt="Image 1 du rendu final">
         <br>
         <a href="https://github.com/Thomas-381/CircusPlanner">Lien vers le code source sur Github</a>
-        `,
-    "MONA" : `
+        `},
+    "MONA" : {
+      "short_desc": "A faire",
+      "html": `
         <h2 id="TitreProjet"> Application web d'évènements : Mona - 11/2024-01/2025</h2>
         <div id="langagesUtilises">
               <h4> Langages utilisées : </h4> 
@@ -101,8 +107,10 @@ let projets = {
           
         </div>
         <p>Compte-rendu gestion de projet avant de le coder : <iframe src="img/projets/Mona/PHASE2_Gestion_de_projet-Manodev-Groupe14.pdf"></iframe>
-        `,
-    "TRI_DEPECHES" : `
+        `},
+    "TRI_DEPECHES" : {
+      "short_desc": "A remplir",
+      "html": `
         <h2 id="TitreProjet">Trieur de dépêches en Java - novembre 2024</h2>
         <div id="langagesUtilises">
             <h4> Langages utilisées : </h4>
@@ -116,8 +124,10 @@ let projets = {
         Ce projet m'a permis d'en apprendre davantage dans l'automatisation de réponse à des problèmes complexes et de développer mes compétences en Java, la lecture/écriture d'un fichier et dans la gestion des délais pour un projet informatique en groupe.
         </p>
         <a href="https://github.com/Atio3f/">Lien Github vers le code source du projet</a>
-        `,
-    "FOC" : `
+        `},
+    "FOC" : {
+      "short_desc": "Développement d'un jeu vidéo 2D de stratégie tour par tour",
+      "html": `
         <h2 id="TitreProjet"> Jeu 2d de stratégie tour par tour sur Godot - 2024-...</h2>
           <div id="langagesUtilises">
                 <h4> Langages utilisées : </h4> 
@@ -135,8 +145,10 @@ let projets = {
           <div class="groupeImages"><img class="imageG" src="img/projets/FoC/FoCAttaque.png"><img class="imageG" src="img/projets/FoC/FoCApercuUnite.png"><img class="imageG" src="img/projets/FoC/FoCDiagrammeDeClasse.png"></div>
           <a href="https://github.com/Atio3f/FightOfCities2D">Lien Github vers le projet</a> <a href="https://atio3f.itch.io/fight-of-cities-2d"> Lien pour tester le projet </a>
        
-        `,
-    "NUTRISCORE" : `
+        `},
+    "NUTRISCORE" : {
+      "short_desc": "Traitement statistique avancé sur datasets OpenData. Nettoyage de données (ETL) et visualisation analytique",
+      "html": `
         <h2 id="TitreProjet">Etude du nutriscore pour les produits à base de volailles françaises  - avril 2024</h2>
         <div id="langagesUtilises">
                 <h4> Langages utilisées : </h4> 
@@ -166,8 +178,10 @@ let projets = {
            <p>Notre compte-rendu final en anglais : </p> <iframe src="img/projets/Nutriscore/team_e08-gibellog-fermathi.pdf"></iframe>
 
            
-        `,
-    "SITE_FICTIF_CGI" : `
+        `},
+    "SITE_FICTIF_CGI" : {
+      "short_desc": "Pas fait",
+      "html":`
         <h2 id="TitreProjet">Site web fictif pour une ESN(CGI) - décembre 2023</h2>
         <div id="langagesUtilises">
               <h4> Langages utilisées : </h4> 
@@ -190,8 +204,10 @@ let projets = {
         <p> Le but de ce projet à 3 était de réaliser un site web fictif à destination de collégiens en recherche de stage pour leur présenter CGI en simplifiant ainsi leurs activités en tant qu'ESN</p>
         <div class="groupeImages"><img class="imageG" src="img/projets/CGI/CGIPageAccueil.png"><img class="imageG" src="img/projets/CGI/CGIPageService.png"><img class="imageG" src="img/projets/CGI/CGIPageValeurs.png"></div>
         <a href="https://github.com/IUT-INFO-UGA/IUT-INFO-UGA.github.io">Lien vers le code source sur Github</a>
-        `,
-      "SAE1.03" : `
+        `},
+      "SAE1.03" : {
+        "short_desc": "Pas fait",
+        "html": `
         <h2 id="TitreProjet">Installation d'une machine virtuelle. Projet réalisé en septembre 2023</h2>
         <div id="langagesUtilises">
               <h4> Langages utilisées : </h4> 
@@ -205,8 +221,10 @@ let projets = {
           </div>
           <p> Le but de ce projet était, en 4 jours, d'installer tout seul une machine virtuelle LINUX et de la configurer puis de réaliser une carte mentale des étapes à suivre.</p>
           <!-- <p>Carte mentale réalisée : <p> ->
-        `,
-      "UBILINK_TESTS" : `
+        `},
+      "UBILINK_TESTS" : {
+        "short_desc": "Conception d'une infrastructure de tests E2E critique pour un moteur 3D web. Innovation technique via Playwright.",
+        "html": `
         <h2 id="TitreProjet">Plateforme de tests d'interface automatisée et site pour enregistrer des tests. Stage d'avril à juin 2025.</h2>
         <div id="langagesUtilises">
               <h4> Langages utilisées : </h4> 
@@ -240,7 +258,7 @@ let projets = {
            Pour conclure, ce stage m'a permis de découvrir un environnement de travail professionnel, acquérir des bases de concept de programmation 3D et la structure de la 3D en web, d'apprendre Playwright pour les tests utilisateurs et Bootstrap pour la forme de mes sites et aussi d'avoir un aperçu sur le travail demandé aux développeurs testeurs.
            </p>
            <iframe src="https://www.youtube.com/embed/KXIpAiuivSw">Présentation de la partie exécution des tests</iframe>
-        `//Mise en place d'une plateforme de tests d'interface utilisateur automatisée pour une application web 3D et réalisation d'une application web pour permettre d'enregistrer des tests d'interface utilisateur. Stage du 14 avril au 20 juin 2025
+        `}//Mise en place d'une plateforme de tests d'interface utilisateur automatisée pour une application web 3D et réalisation d'une application web pour permettre d'enregistrer des tests d'interface utilisateur. Stage du 14 avril au 20 juin 2025
 
 }
 
@@ -251,18 +269,20 @@ let projetsTags = {
     "MONA" : ["HTML", "CSS", "Javascript", "React", "PHP", "PostgreSQL", "Gitlab", "GestionProjet", "ApplicationWeb"],
     "TRI_DEPECHES" : ["Java", "CreationPattern"],
     "FOC" : ["GDScript", "Jeu"],
+    "OVERGROWNFOREST" : ["GDScript", "Jeu"],
     "NUTRISCORE" : ["PostgreSQL", "R", "NettoyageDonnées", "DataAnalysis"],
     "SITE_FICTIF_CGI" : ["HTML", "CSS", "Javascript", "Frontend"],
-    "UBILINK_TESTS" : ["HTML", "CSS", "Javascript", "PHP", "Frontend", "Tests", "Playwright", "Resemblejs", "ApplicationWeb", "API", "Git", "Benchmark", "Bootstrap"]
+    "MONCARNETDESTAGE" : ["Android Studio", "Java", "Chef de projet", "Tests", "GestionProjet"],
+    "UBILINK_TESTS" : ["HTML", "CSS", "Javascript", "PHP", "Frontend", "Tests", "Playwright", "Resemblejs", "ApplicationWeb", "API", "Git", "Benchmark", "Bootstrap"],
+    "232": ["CSS", "Javascript", "Angular", "PrimeNG", "Frontend", "Tests", "Playwright", "API"]
 }
 
 
-function updateText() {
-    const selectElement = document.getElementById('Projets-list');
+function updateText(project) {
     const outputElement = document.getElementById('outputProjet');
     outputElement.innerHTML = "";   //On vide le contenu qui était affiché
     const contenuProjet = document.createElement("div");
-    contenuProjet.innerHTML = projets[selectElement.value] ?? "<p> Le projet n'a pas encore été ajouté au site !. </p>";
+    contenuProjet.innerHTML = projets[project]["html"] ?? "<p> Le projet n'a pas encore été ajouté au site !. </p>";
     outputElement.appendChild(contenuProjet);
     /*fetch('img/projets/Nutriscore/team_e08-gibellog-fermathi.sql')
             .then(response => response.text())
@@ -270,6 +290,16 @@ function updateText() {
                 document.getElementById('sql-content').textContent = data;
             })
             .catch(error => console.error('Erreur de chargement du fichier SQL:', error));*/
+
+    // Place user on project desc, useful on mobile
+    const elementCible = document.getElementById('outputProjet'); 
+    
+    if (elementCible) {
+        elementCible.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
 }
 
 
