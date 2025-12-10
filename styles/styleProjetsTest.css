@@ -70,6 +70,11 @@ main.Projets{
     opacity: 1;
 }
 
+.visible-layer > * {
+    background: rgba(30, 30, 30, 0.7);
+    padding: 2px;
+}
+
 .card-description {
     color: white;
     display: flex;
