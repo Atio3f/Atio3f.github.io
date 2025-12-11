@@ -41,11 +41,11 @@ let projets = {
               <div class="overlay-text">CSS</div>
             </div>
         </div>
+        <a href="https://github.com/Thomas-381/CircusPlanner">Lien vers le code source sur Github</a>
         <p>Ce projet, en groupe de 5, portait sur la création d'une application pour aider les gérants de cirques à organiser leurs futurs évènements.
         Nous avons utilisé JavaFX et CSS pour réaliser l'interface et Java pour faire le modèle de données.</p>
         <img class="imgPasNette" src="img/projets/CIRCUSPLANNER/CIRCUSPLANNERdiagrammeClasse.svg" alt="Image 1 du rendu final">
         <br>
-        <a href="https://github.com/Thomas-381/CircusPlanner">Lien vers le code source sur Github</a>
         `},
     "MONA" : {
       "short_desc": "A faire",
@@ -78,6 +78,7 @@ let projets = {
                 <div class="overlay-text">Responsable Gitlab</div>
               </div>
         </div>
+        <a href="https://github.com/Atio3f/Mona">Lien Github vers le code source</a>
         <p> 
           Réalisation d'une application web, à 7, mettant en valeur le patrimoine français en mettant en relation des propriétaires de monuments avec des prestataires d'évènements
           afin d'organiser des activités exclusives redonnant vie à ces bâtiments historiques. Les visiteurs pourront prendre leurs places depuis notre billeterie.
@@ -119,31 +120,30 @@ let projets = {
               <div class="overlay-text">Java</div>
             </div>
         </div>
+        <a href="https://github.com/Atio3f/">Lien Github vers le code source du projet</a>
         <p>
         Réalisation d'un trieur de dépêches en fonction de leur catégorie(sport/politique/économie/environnement/culture) en analysant la fréquence d'apparition des mots qu'ils contiennent dans les articles de ces catégories par rapport à leur présence dans les autres catégories. Le tout avec 85% de succès.<br>
         Ce projet m'a permis d'en apprendre davantage dans l'automatisation de réponse à des problèmes complexes et de développer mes compétences en Java, la lecture/écriture d'un fichier et dans la gestion des délais pour un projet informatique en groupe.
         </p>
-        <a href="https://github.com/Atio3f/">Lien Github vers le code source du projet</a>
         `},
     "FOC" : {
       "short_desc": "Développement d'un jeu vidéo 2D de stratégie tour par tour",
       "html": `
         <h2 id="TitreProjet"> Jeu 2d de stratégie tour par tour sur Godot - 2024-...</h2>
           <div id="langagesUtilises">
-                <h4> Langages utilisées : </h4> 
-              
-                <div class="langage">
-                  <img src="img/GodotLogo.png" alt="Godot Logo">
-                  <div class="overlay-text">Godot/Gdscript</div>
-                </div>
-                
-                
+            <h4> Langages utilisées : </h4> 
+          
+            <div class="langage">
+              <img src="img/GodotLogo.png" alt="Godot Logo">
+              <div class="overlay-text">Godot/Gdscript</div>
+            </div>
           </div>
+          <a href="https://github.com/Atio3f/FightOfCities2D">Lien Github vers le projet</a> <a href="https://atio3f.itch.io/fight-of-cities-2d"> Lien pour tester le projet </a>
           <p> Création d'un jeu vidéo avec 3 amis à partir d'un jeu de plateau créé au collège. Etant le seul programmeur, mon rôle est de réaliser le prototype sur Godot et en GDScript(qui est le langage utilisé sur Godot). Pour le moment, on peut faire apparaître des unités, les faire bouger, attaquer et utiliser leurs capacités passives et actives.</p>
           <p>Update septembre 2025 : Le jeu a eu de grosses améliorations notamment sur la structure du code et l'ajout de campagnes jouables. Tout est trouvable dans ce <a href="https://atio3f.itch.io/fight-of-cities-2d/devlog/1045457/major-alpha-version-a-lot-of-logic-sprites-resizing">devlog</a>.</p>
           <br>
           <div class="groupeImages"><img class="imageG" src="img/projets/FoC/FoCAttaque.png"><img class="imageG" src="img/projets/FoC/FoCApercuUnite.png"><img class="imageG" src="img/projets/FoC/FoCDiagrammeDeClasse.png"></div>
-          <a href="https://github.com/Atio3f/FightOfCities2D">Lien Github vers le projet</a> <a href="https://atio3f.itch.io/fight-of-cities-2d"> Lien pour tester le projet </a>
+          
        
         `},
     "NUTRISCORE" : {
@@ -292,7 +292,8 @@ let projets = {
           <p>Mon rôle dans ce projet est de servir de référent technique pour la réalisation du frontend Angular avec PrimeNG et Bulma. Je m'occupe également de la réalisation de tests interfaces et d'appels d'API avec Playwright.
           Avec ces tests, je m'occupe de créer une pipeline gitlab capable de . De plus, j'ai pu participer au choix de la stratégie git (features), de la rédaction des besoins fonctionnels et de la répartition des tâches avec notre chef d'équipe (Jira).</p>
           <div class="groupeImages"><img class="imageG" src="img/projets/232App/pageRessources-Liens.png"></div>
-           `}
+           `},
+           
 }
 
 
