@@ -43,11 +43,44 @@ main.Projets{
     left: 0;
     width: 100%;
     height: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
     transition: transform 0.5s ease, opacity 0.4s ease-in-out;
     opacity: 80%;
+    overflow: hidden;
+    background-size: 0 0; /* Bg img just served for the after and before bg */
+    background-repeat: no-repeat;
+}
+
+/* Fond flouté */
+.card-background::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background-image: inherit; /* get .card-background img */
+    background-size: 100% 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(10px) brightness(0.7);
+    z-index: 1;
+}
+
+/* Image nette par-dessus */
+.card-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit; /* get .card-background img */
     background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    filter: drop-shadow(0 0 5px rgba(0,0,0,0.5));
 }
 
 
