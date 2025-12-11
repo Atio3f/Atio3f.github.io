@@ -5,6 +5,7 @@ main.Projets{
     margin-left: 1%;
     overflow-x: hidden;
     overflow-y: hidden;
+    min-height: 70vh;
 }
 
 .project-cards {
