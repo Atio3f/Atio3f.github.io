@@ -2,7 +2,7 @@ let projets = {
     "TITANIC_BDD" : {
       "short_desc": "A faire",
       "html": `
-        <h2 id="TitreProjet">Analyse du naufrage du Titanic - décembre 2023</h2>
+        <h2 id="TitreProjet">Analyse du naufrage du Titanic - déc 2023</h2>
               
             <div id="langagesUtilises">
               <h4> Langages utilisées : </h4> 
@@ -50,7 +50,7 @@ let projets = {
     "MONA" : {
       "short_desc": "A faire",
       "html": `
-        <h2 id="TitreProjet"> Application web d'évènements : Mona - 11/2024-01/2025</h2>
+        <h2 id="TitreProjet"> Application web d'évènements : Mona -  nov 2024 - janv 2025</h2>
         <div id="langagesUtilises">
               <h4> Langages utilisées : </h4> 
               <div class="langage">
@@ -149,7 +149,7 @@ let projets = {
     "NUTRISCORE" : {
       "short_desc": "Traitement statistique avancé sur datasets OpenData. Nettoyage de données (ETL) et visualisation analytique",
       "html": `
-        <h2 id="TitreProjet">Etude du nutriscore pour les produits à base de volailles françaises  - avril 2024</h2>
+        <h2 id="TitreProjet">Etude du nutriscore pour les produits à base de volailles françaises  - avr 2024</h2>
         <div id="langagesUtilises">
                 <h4> Langages utilisées : </h4> 
               
@@ -182,7 +182,7 @@ let projets = {
     "SITE_FICTIF_CGI" : {
       "short_desc": "Pas fait",
       "html":`
-        <h2 id="TitreProjet">Site web fictif pour une ESN(CGI) - décembre 2023</h2>
+        <h2 id="TitreProjet">Site web fictif pour une ESN(CGI) - déc 2023</h2>
         <div id="langagesUtilises">
               <h4> Langages utilisées : </h4> 
             
@@ -208,7 +208,7 @@ let projets = {
       "SAE1.03" : {
         "short_desc": "Pas fait",
         "html": `
-        <h2 id="TitreProjet">Installation d'une machine virtuelle. Projet réalisé en septembre 2023</h2>
+        <h2 id="TitreProjet">Installation d'une machine virtuelle. Projet réalisé en sept 2023</h2>
         <div id="langagesUtilises">
               <h4> Langages utilisées : </h4> 
               
@@ -258,8 +258,41 @@ let projets = {
            Pour conclure, ce stage m'a permis de découvrir un environnement de travail professionnel, acquérir des bases de concept de programmation 3D et la structure de la 3D en web, d'apprendre Playwright pour les tests utilisateurs et Bootstrap pour la forme de mes sites et aussi d'avoir un aperçu sur le travail demandé aux développeurs testeurs.
            </p>
            <iframe src="https://www.youtube.com/embed/KXIpAiuivSw">Présentation de la partie exécution des tests</iframe>
-        `}//Mise en place d'une plateforme de tests d'interface utilisateur automatisée pour une application web 3D et réalisation d'une application web pour permettre d'enregistrer des tests d'interface utilisateur. Stage du 14 avril au 20 juin 2025
-
+        `},//Mise en place d'une plateforme de tests d'interface utilisateur automatisée pour une application web 3D et réalisation d'une application web pour permettre d'enregistrer des tests d'interface utilisateur. Stage du 14 avril au 20 juin 2025
+        "232_APP" : {
+        "short_desc": "Conception d'une infrastructure de tests E2E critique pour un moteur 3D web. Innovation technique via Playwright.",
+        "html": `
+        
+        <h2 id="TitreProjet">SaaS de Pilotage de Projets Universitaires - sept 2025 - mars 2026</h2>
+        <div id="langagesUtilises">
+              <h4> Langages utilisées : </h4> 
+              <div class="langage">
+                <img src="img/CSSLogo.png" alt="CSS Logo">
+                <div class="overlay-text">CSS</div>
+              </div>
+              <div class="langage">
+                <img src="img/TypescriptLogo.png" alt="Typescript Logo">
+                <div class="overlay-text">Typescript</div>
+              </div>
+              <div class="langage">
+                <img src="img/AngularLogo.png" alt="Angular Logo">
+                <div class="overlay-text">Angular</div>
+              </div>
+              <div class="langage">
+                <img src="img/PlaywrightLogo.svg" alt="Playwright Logo">
+                <div class="overlay-text">Playwright</div>
+              </div>
+              <div class="langage">
+                <img src="img/PrimeNG.png" alt="PrimeNG Logo">
+                <div class="overlay-text">PrimeNG</div>
+              </div>
+          </div>
+          <p>Conception et développement d'une application web métier destinée aux enseignants et élèves du département info de l'IUT2. Cette solution vise à centraliser l'intégralité du cycle de vie
+           des projets étudiants, de la constitution des équipes à l'évaluation finale par les jurys et par ses pairs. Les élèves peuvent ainsi rentrer leurs documents et liens tout en indiquant leur salle pour demander de l'aide à un enseignant à partir d'un système de tickets et de messagerie.</p>
+          <p>Mon rôle dans ce projet est de servir de référent technique pour la réalisation du frontend Angular avec PrimeNG et Bulma. Je m'occupe également de la réalisation de tests interfaces et d'appels d'API avec Playwright.
+          Avec ces tests, je m'occupe de créer une pipeline gitlab capable de . De plus, j'ai pu participer au choix de la stratégie git (features), de la rédaction des besoins fonctionnels et de la répartition des tâches avec notre chef d'équipe (Jira).</p>
+          <div class="groupeImages"><img class="imageG" src="img/projets/232App/pageRessources-Liens.png"></div>
+           `}
 }
 
 
