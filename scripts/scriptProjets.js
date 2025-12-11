@@ -293,7 +293,29 @@ let projets = {
           Avec ces tests, je m'occupe de créer une pipeline gitlab capable de . De plus, j'ai pu participer au choix de la stratégie git (features), de la rédaction des besoins fonctionnels et de la répartition des tâches avec notre chef d'équipe (Jira).</p>
           <div class="groupeImages"><img class="imageG" src="img/projets/232App/pageRessources-Liens.png"></div>
            `},
-           
+        "MONCARNETDESTAGE" : {
+        "short_desc": "Amélioration de l'application mobile Mon Carnet de Stage. Gestion d'équipe",
+        "html": `
+        
+        <h2 id="TitreProjet">SaaS de Pilotage de Projets Universitaires - févr 2025</h2>
+        <div id="langagesUtilises">
+              <h4> Langages utilisées : </h4> 
+              <div class="langage">
+                <img src="img/JavaLogo.png" alt="Java Logo">
+                <div class="overlay-text">Java</div>
+              </div>
+              <div class="langage">
+                <img src="img/AndroidStudioLogo.png" alt="Android Studio Logo">
+                <div class="overlay-text">Android Studio</div>
+              </div>
+          </div>
+          <p> L'objectif est l'amélioration d'une application . Pour atteindre nos objectifs, nous avons défini les axes d'améliorations par rapport aux critères de Bastien Scapin :  l'exactitude (capacité fonctionnelle), la facilité d'analyse (maintenabilité), et la facilité d'exploitation (facilité d'usage).
+          Concrètement la capacité fonctionnelle correspond à la correction des résultats erronés renvoyés par le backend. Tandis que la facilité d'usage revient à améliorer le guidage et l'ergonomie de l'application et à se tenir à une unique charte graphique et d'usage pour toutes les pages de l'application.
+          Pour l'application mobile, l'ajout de documentation et commentaires permet de renforcer le cycle de vie de l'application et les tests servent à la maintenabilité future.
+          </p>
+          <p>Mon rôle dans ce projet en tant que chef de projet est la gestion du travail de chaque membre d'équipe et la répartition des tâches pour effectuer efficacement le travail.
+           L'équipe était très compétente techniquement, me permettant de me concentrer sur l'amélioration de l'interface de l'application mobile et l'ajout de tests d'interfaces et unitaires en vérifiant régulièrement l'avancée de la partie application web et conteneurisation de la BDD.</p>
+           `}   
 }
 
 
