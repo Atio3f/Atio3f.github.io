@@ -294,7 +294,7 @@ let projets = {
           <div class="groupeImages"><img class="imageG" src="img/projets/232App/pageRessources-Liens.png"></div>
            `},
         "MONCARNETDESTAGE" : {
-        "short_desc": "Amélioration de l'application mobile Mon Carnet de Stage. Gestion d'équipe",
+        "short_desc": "Amélioration de l'application mobile Mon Carnet de Stage.",
         "html": `
         
         <h2 id="TitreProjet">SaaS de Pilotage de Projets Universitaires - févr 2025</h2>
@@ -315,7 +315,33 @@ let projets = {
           </p>
           <p>Mon rôle dans ce projet en tant que chef de projet est la gestion du travail de chaque membre d'équipe et la répartition des tâches pour effectuer efficacement le travail.
            L'équipe était très compétente techniquement, me permettant de me concentrer sur l'amélioration de l'interface de l'application mobile et l'ajout de tests d'interfaces et unitaires en vérifiant régulièrement l'avancée de la partie application web et conteneurisation de la BDD.</p>
-           `}   
+           `},
+        "OVERGROWNKINGDOM" : {
+        "short_desc": "Développement d'un jeu pour une jam",
+        "html": `
+        <h2 id="TitreProjet">Développement d'un jeu 2D pour une jam (B1tjam) - août 2025</h2>
+        <a href="https://github.com/Atio3f/OvergrownKingdom">Lien Github vers le projet</a> <a href="https://atio3f.itch.io/b1tjam2025"> Lien pour tester le projet en ligne ou télécharger la version mobile</a>
+        
+        <div id="langagesUtilises">
+              <h4> Langages utilisées : </h4> 
+              <div class="langage">
+                <img src="img/GodotLogo.png" alt="Godot Logo">
+                <div class="overlay-text">Godot</div>
+              </div>
+              <div class="langage">
+                <img src="img/GitLogo.png" alt="Git Logo">
+                <div class="overlay-text">Git</div>
+              </div>
+          </div>
+          <p> L'objectif de la B1tjam est de réaliser un jeu vidéo en 7 jours avec une limite de 2 couleurs à l'écran et le thème 'bloom' qu'on peut traduire par floraison. Nous sommes partis sur un jeu 2D avec un processus de jeu exploration -> checkpoint -> boss -> pouvoir semblable à un metroidvania avec des plusieurs passages dans la même zone avec différentes capacités. 
+          Overgrown Kingdom est l'histoire d'un bourgeon dans une forêt rongée par les ronces qui tente de fleurir malgré l'obscurité.
+          </p>
+          <p>Mon rôle dans ce projet est principalement le développement du système de progression, de checkpoints et l'animation de certains monstres. Je m'assure aussi de la gestion du git.
+          J'ai conçu certains des sprites (champignon) ou des variantes du décor en plus de mes tâches de développeur. Par la suite, j'ai élaboré le système de sauvegarde et ajouté des joysticks et boutons pour la création d'une version mobile (téléchargeable sur itch.io).
+          </p>
+          <div class="groupeImages"><img class="imageG" src="img/projets/OvergrownKingdom/startPoint.png"><img class="imageG" src="img/projets/OvergrownKingdom/firstCheckpoint.png"><img class="imageG" src="img/projets/OvergrownKingdom/centralHub.png"></div>
+          
+          `}  
 }
 
 
@@ -325,7 +351,7 @@ let projetsTags = {
     "MONA" : ["HTML", "CSS", "Javascript", "React", "PHP", "PostgreSQL", "Gitlab", "GestionProjet", "ApplicationWeb"],
     "TRI_DEPECHES" : ["Java", "CreationPattern"],
     "FOC" : ["GDScript", "Jeu"],
-    "OVERGROWNFOREST" : ["GDScript", "Jeu"],
+    "OVERGROWNKINGDOM" : ["GDScript", "Jeu"],
     "NUTRISCORE" : ["PostgreSQL", "R", "NettoyageDonnées", "DataAnalysis"],
     "SITE_FICTIF_CGI" : ["HTML", "CSS", "Javascript", "Frontend"],
     "MONCARNETDESTAGE" : ["Android Studio", "Java", "Chef de projet", "Tests", "GestionProjet"],
@@ -335,6 +361,7 @@ let projetsTags = {
 
 
 function updateText(project) {
+    console.log(project)
     const outputElement = document.getElementById('outputProjet');
     outputElement.innerHTML = "";   //On vide le contenu qui était affiché
     const contenuProjet = document.createElement("div");
@@ -371,9 +398,9 @@ function baseValue(){
   //document.getElementById('Projets-list').value = "FoC" ;
   //console.log(document.getElementById('Projets-list').value);
   var param = new URLSearchParams(window.location.search);
-  console.log(param.get("projet"))
-  document.getElementById('Projets-list').value = param.get("projet") != null ? param.get("projet") : "CIRCUS_PLANNER";
-  updateText()
+  console.log(param.get("projet"));
+  const projectUrl = param.get("projet") != null ? param.get("projet").toString() : "CIRCUS_PLANNER";
+  updateText(projectUrl)
 }
 
 
@@ -382,12 +409,10 @@ function baseValue(){
 
 document.addEventListener("DOMContentLoaded", function() {
     baseValue();
-    updateText();
 });
 
 window.onload = function() {
   baseValue();
-  updateText();
 };
 
 
@@ -406,23 +431,26 @@ document.addEventListener("DOMContentLoaded", function() {
     { nom: "SAE1.03", text: "Installation d'une machine virtuelle" }
   ];
 
-  // Sélection de l'élément <select>
-  const selectElement = document.getElementById("Projets-list");
+  /*
+  IF WE NEED ONE DAY TO MAKE AN API WITH THE PROJECTS
+    // Select
+    const selectElement = document.getElementById("project-cards");
 
-  // Fonction pour ajouter dynamiquement les options
-  function populateSelect(langage="") {
-    projetsSelect.forEach((select, index) => {
-        if(langage=="" | (projetsTags[select.nom] && projetsTags[select.nom].includes(langage))){
-          let option = document.createElement("option");
-          option.value = select.nom;
-          option.textContent = select.text;
-          if (index === 0) {
-            option.selected = true;
+    // Fonction pour ajouter dynamiquement les options - A REFAIRE EN CAS D'API
+    function populateSelect(langage="") {
+      projetsSelect.forEach((select, index) => {
+          if(langage=="" | (projetsTags[select.nom] && projetsTags[select.nom].includes(langage))){
+            let option = document.createElement("option");
+            option.value = select.nom;
+            option.textContent = select.text;
+            if (index === 0) {
+              option.selected = true;
+            }
+            selectElement.appendChild(option);
           }
-          selectElement.appendChild(option);
-        }
-    });
-  }
-  // Appel de la fonction pour peupler la liste déroulante
-  populateSelect();
+      });
+    }
+    // Appel de la fonction pour peupler la liste déroulante
+    populateSelect();
+  */
 });

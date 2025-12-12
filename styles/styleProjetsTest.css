@@ -8,7 +8,7 @@ main.Projets{
     min-height: 70vh;
 }
 
-.project-cards {
+#project-cards {
     display: flex; 
     flex-wrap: wrap; 
     justify-content: center; 
