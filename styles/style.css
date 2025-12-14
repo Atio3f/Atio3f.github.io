@@ -261,6 +261,7 @@ li.pageActive > a{
     .TitreMenu {
         margin: 2% 0 auto 12% !important;
         width: 100% !important;
+        text-wrap: balance;
     }
     #projets {
         justify-content: start;

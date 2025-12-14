@@ -32,11 +32,27 @@ main.Projets{
 
 }
 
+
 @media (max-width: 555px) {
     .project-card {
         width: 90%;
         height: 160px;
     }
+}
+
+@media (max-width : 1000px) {
+    #TitreProjet{
+        margin-left: 4vw !important;
+    }
+
+    #langagesUtilises{
+        margin-left: 10vw !important;
+    }
+
+    .firstLink {
+        margin-left: 10vw !important;
+    }
+
 }
 
 .card-background {
@@ -137,13 +153,14 @@ main.Projets{
 
 /* Output style */
 #TitreProjet{
-    margin-bottom: 0px
+    margin: 6px 0px 0px 24vw;
 }
 
 #langagesUtilises{
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin: 6px 0px 6px 16vw;
 }
 
 #langagesUtilises>h4{
@@ -184,6 +201,18 @@ main.Projets{
     opacity: 1; /* Rend le texte visible */
 }
 
+
+.firstLink {
+    margin: 6px 10px 6px 16vw;
+}
+
+
+#outputProjet p{
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    text-align: justify;
+}
 
 /*Groupe d'images affichées sur la même ligne*/
 .groupeImages{

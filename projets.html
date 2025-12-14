@@ -100,6 +100,20 @@
           </div>
         </div>
 
+        <div class="project-card" onclick="updateText('API_FOOTBALL')">
+          <div class="card-background" style="background-image: url('img/projets/ApiFootball/mercato.jpg');"></div>
+          
+          <div class="card-info visible-layer">
+              <h3>Architecture API REST & Spécification OpenAPI</h3>
+              <p class="roles">Développeur backend</p>
+          </div>
+          
+          <div class="card-description hidden-layer">
+              <p class="description">Conception d'un serveur REST pour le suivi des transferts du football européen</p>
+              <p class="languages">OpenAPI, Express, Nodejs</p>
+          </div>
+        </div>
+
         <div class="project-card" onclick="updateText('TRI_DEPECHES')">
           <div class="card-background" style="background-image: url('img/projets/TriDepeches/NLP.png');"></div>
           
@@ -114,19 +128,6 @@
           </div>
         </div>
 
-        <div class="project-card" onclick="updateText('NUTRISCORE')">
-          <div class="card-background" style="background-image: url('img/projets/Nutriscore/OpenFoodFactsLogo.png');"></div>
-          
-          <div class="card-info visible-layer">
-              <h3>Data Science & Audit Agroalimentaire</h3>
-              <p class="roles">Data Analyst</p>
-          </div>
-          
-          <div class="card-description hidden-layer">
-              <p class="description">Traitement statistique avancé sur datasets OpenData. Nettoyage de données (ETL) et visualisation analytique</p>
-              <p class="languages">R, PostgreSQL, SQL</p>
-          </div>
-        </div>
         <div class="project-card" onclick="updateText('FOC')">
           <div class="card-background" style="background-image: url('img/projets/FoC/Monkey_p.png');"></div>
           
@@ -155,6 +156,20 @@
           </div>
         </div>
         
+        <div class="project-card" onclick="updateText('NUTRISCORE')">
+          <div class="card-background" style="background-image: url('img/projets/Nutriscore/OpenFoodFactsLogo.png');"></div>
+          
+          <div class="card-info visible-layer">
+              <h3>Data Science & Audit Agroalimentaire</h3>
+              <p class="roles">Data Analyst</p>
+          </div>
+          
+          <div class="card-description hidden-layer">
+              <p class="description">Traitement statistique avancé sur datasets OpenData. Nettoyage de données (ETL) et visualisation analytique</p>
+              <p class="languages">R, PostgreSQL, SQL</p>
+          </div>
+        </div>
+
         <div class="project-card" onclick="updateText('TITANIC_BDD')">
           <div class="card-background" style="background-image: url('img/projets/Titanic/Titanic.jpg');"></div>
           
@@ -187,8 +202,12 @@
         
 
         <div class="output" id="outputProjet">
-          <div id="short_desc"></div>
-          <div id="html_content"></div>
+          <div id="short_desc">
+            
+          </div>
+          <div id="html_content">
+
+          </div>
         </div>
 
     </main>
