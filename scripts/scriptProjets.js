@@ -283,7 +283,7 @@ let projets = {
                 <div class="overlay-text">Playwright</div>
               </div>
               <div class="langage">
-                <img src="img/PrimeNG.png" alt="PrimeNG Logo">
+                <img src="img/PrimeNG.webp" alt="PrimeNG Logo">
                 <div class="overlay-text">PrimeNG</div>
               </div>
           </div>
@@ -361,31 +361,33 @@ let projetsTags = {
 
 
 function updateText(project) {
-    console.log(project)
-    const outputElement = document.getElementById('outputProjet');
-    outputElement.innerHTML = "";   //On vide le contenu qui était affiché
-    const contenuProjet = document.createElement("div");
-    contenuProjet.innerHTML = projets[project]["html"] ?? "<p> Le projet n'a pas encore été ajouté au site !. </p>";
-    outputElement.appendChild(contenuProjet);
-    /*fetch('img/projets/Nutriscore/team_e08-gibellog-fermathi.sql')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('sql-content').textContent = data;
-            })
-            .catch(error => console.error('Erreur de chargement du fichier SQL:', error));*/
-
-    // Place user on project desc, useful on mobile
-    const elementCible = document.getElementById('outputProjet'); 
-    
-    if (elementCible) {
-        elementCible.scrollIntoView({ 
-            behavior: 'smooth',
-            block: 'start'
-        });
-    }
+  updateOutput(project)
+  // Place user on project desc, useful on mobile
+  const elementCible = document.getElementById('outputProjet'); 
+  
+  if (elementCible) {
+      elementCible.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start'
+      });
+  }
 }
 
 
+function updateOutput(project) {
+  console.log(project)
+  const outputElement = document.getElementById('outputProjet');
+  outputElement.innerHTML = "";   //On vide le contenu qui était affiché
+  const contenuProjet = document.createElement("div");
+  contenuProjet.innerHTML = projets[project]["html"] ?? "<p> Le projet n'a pas encore été ajouté au site !. </p>";
+  outputElement.appendChild(contenuProjet);
+  /*fetch('img/projets/Nutriscore/team_e08-gibellog-fermathi.sql')
+          .then(response => response.text())
+          .then(data => {
+              document.getElementById('sql-content').textContent = data;
+          })
+          .catch(error => console.error('Erreur de chargement du fichier SQL:', error));*/
+}
 
 
 
@@ -400,7 +402,7 @@ function baseValue(){
   var param = new URLSearchParams(window.location.search);
   console.log(param.get("projet"));
   const projectUrl = param.get("projet") != null ? param.get("projet").toString() : "CIRCUS_PLANNER";
-  updateText(projectUrl)
+  updateOutput(projectUrl)
 }
 
 
