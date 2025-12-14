@@ -53,7 +53,7 @@ div.Accueil{
 }
 
 div>p.TitreMenu {    
-    color: white;
+    color: var(--pinky-white);
     font-family: 'Times New Roman', Times, serif;
     font-weight: 20;
     font-size: 3.3rem;
@@ -90,7 +90,7 @@ div>p.TitreMenu {
 .Menu>a:hover {
     color: transparent;
     -webkit-text-stroke-width: 0.05em;
-    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-color: var(--pinky-white);
 }
 
 .LangageCadre{
@@ -171,7 +171,7 @@ div>p.TitreMenu {
 }
 .container .encadreAnime > img,.container3 .encadreAnime > img{
     width: 6em;
-    height: 6em; 
+    height: inherit; 
     object-fit:contain; /*Evite que l'image déborde*/
     flex-grow: 3;
     padding-left: 8px;
@@ -180,7 +180,7 @@ div>p.TitreMenu {
 
 
 .sousencadreAnime > h4, .sousencadreBonus > h3{
-    color : white;
+    color : var(--pinky-white);
     
     text-shadow:
     0 0 0.3em rgba(202,228,225,0.92),
@@ -201,7 +201,7 @@ div>p.TitreMenu {
 }
 
 .sousencadreAnime > p{
-    color : white;
+    color : var(--pinky-white);
     text-shadow:
     0 0 6px rgba(202,228,225,0.92),
     0 0 30px rgba(202,228,225,0.34),
@@ -213,10 +213,10 @@ div>p.TitreMenu {
 }
 
 .LangageCadre>h2{
-    color : white;
+    color : var(--pinky-white);
 }
 .LangageCadre3>h2{
-    color : white;
+    color : var(--pinky-white);
 }
 
 /* https://blog.dorianguilmain.com/comment-creer-un-effet-neon-en-css/ */
@@ -302,7 +302,7 @@ div>p.TitreMenu {
     flex-grow: 4;
     text-align: start; 
     margin-right: 7px;
-    color: white;
+    color: var(--pinky-white);
     width: 100%;
 }
 

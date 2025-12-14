@@ -8,6 +8,8 @@
     --green-color: #37f713;
     --gold-color : #FFD700;
     --light-green-color: #BED3C3;
+    --white: oklch(96.7% 0.001 286.375);
+    --pinky-white: oklch(97.1% 0.013 17.38);
   }
 
 canvas {
@@ -30,7 +32,7 @@ body{
     
 
 div>p.Menu {    
-    color: white;
+    color: var(--pinky-white);
     font-family: 'Times New Roman', Times, serif;
     font-weight: 100;
     font-size: 2.2rem;
@@ -46,7 +48,7 @@ div>p.Menu {
 
 
 a{
-    color: #E63946;
+    color: oklch(80.8% 0.114 19.571);
     
     font-size: 1.2em;
     transition: font-size 0.2s ease ;
@@ -54,8 +56,13 @@ a{
     overflow: hidden;
 }
 
+p, h4, h3, h2, h1 {
+    color: var(--pinky-white);
+}
+
+
 div>a:hover{
-    color: #ddd;
+    color: oklch(70.4% 0.191 22.216);
     
 }
 
@@ -100,7 +107,7 @@ footer > hr{
 }
 
 #Footer-Content > p{
-    color: white;
+    color: var(--pinky-white);
     font-family: 'Times New Roman', Times, serif;
     font-weight: 100;
     font-size: 1.2em;
@@ -149,7 +156,7 @@ footer > hr{
 }
 
 #Footer-Mail > p{
-    color: white;
+    color: var(--pinky-white);
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.2em;
     margin: 0 0 6px 0;
@@ -183,7 +190,7 @@ header {
     /*background-color: #e8824f; A VOIR SI ON CONSERVE*/
     backdrop-filter: blur(1px);
     border-radius: 30px;
-    background-color: black;
+    background-color: oklch(14.7% 0.004 49.25);
 }
 
 
@@ -196,7 +203,7 @@ header {
    
 }
 .navbar a {
-    color: white;
+    color: var(--pinky-white);
     text-shadow:  0.1em 0.1em 0 black, 0 0.1em 0 black; /*    text-shadow: 0.1em 0 0 black, 0.1em 0.1em 0 black, 0 0.1em 0 black, -0.1em 0.1em 0 black, -0.1em 0 0 black, -0.1em -0.1em 0 black, 0 -0.1em 0 black, 0.1em -0.1em 0 black;*/
     text-decoration: none;
     transition: color 0.3s;
@@ -211,7 +218,7 @@ header {
     user-select: none; 
 }
 .navbar a:hover {
-    color: #ddd;        /* mettre une animation plutôt */
+    color: oklch(88.5% 0.062 18.334);        /* mettre une animation plutôt */
 }
 
 
@@ -227,7 +234,7 @@ header {
 }
 
 li.pageActive{
-    border-bottom: 4px solid white;
+    border-bottom: 4px solid var(--pinky-white);
 }
 .nav-links li.pageActive:first-child {
     border-radius: 28px 0 0 28px;
@@ -242,10 +249,6 @@ li.pageActive > a{
     text-shadow: none;
 }
 
-li.pageActive>a:hover {      
-    color: #ddd;        /* mettre une animation plutôt avec GSAP*/
-    
-}
 @media (max-width: 768px) {
     .menu-toggle, .tete {
         
@@ -281,7 +284,7 @@ li.pageActive>a:hover {
 .menu-toggle div {
     width: 1.5rem;
     height: 0.3rem;
-    background-color: white;
+    background-color: var(--pinky-white);
     margin: 0.3rem 0;
 }
 

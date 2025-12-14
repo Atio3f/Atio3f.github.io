@@ -15,6 +15,7 @@ main.Projets{
     gap: 30px; 
     padding: 20px 20px;
     align-items: flex-start;
+    margin-top: 5em;
 }
 
 .project-card {
@@ -72,10 +73,10 @@ main.Projets{
 .card-background::after {
     content: '';
     position: absolute;
-    top: 0;
+    top: 10%;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 80%;
     background-image: inherit; /* get .card-background img */
     background-size: contain;
     background-position: center;
@@ -96,7 +97,7 @@ main.Projets{
 }
 
 .card-info {
-    color: white;
+    color: var(--pinky-white);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -110,7 +111,7 @@ main.Projets{
 }
 
 .card-description {
-    color: white;
+    color: var(--pinky-white);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -142,7 +143,7 @@ main.Projets{
 #langagesUtilises{
     display: flex;
     flex-direction: row;
-    align-items: end;
+    align-items: center;
 }
 
 #langagesUtilises>h4{
@@ -150,8 +151,7 @@ main.Projets{
 }
 
 .langage {
-    position: relative; 
-    width: 3em;     
+    position: relative;    
     height: 2.5em;      
     margin-right: 1em;
     overflow: hidden; 
@@ -168,7 +168,7 @@ main.Projets{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: var(--pinky-white);
     font-size: 0.5em;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); /* Texte lisible sur fond flouté */
     opacity: 0; /* Caché par défaut */
@@ -212,7 +212,7 @@ main.Projets{
 
 /* Pour toutes les images pas visibles à cause du fond noir */
 .imgPasNette {
-    filter: contrast(40%);
+    filter: contrast(45%);
 }
 
 iframe {
