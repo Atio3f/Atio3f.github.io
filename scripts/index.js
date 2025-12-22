@@ -1,11 +1,22 @@
 //PIXI JS Fond étoilé 
 (async () =>
     {
+        
+        const colors = [
+            255, 200, 210, // light pink
+            200, 240, 255, // Blue
+            255, 248, 231,// Cosmic Latte Star (White) https://www.shutterstock.com/fr/blog/le-code-couleur-de-univers?dd_referrer=https%3A%2F%2Fwww.google.com%2F
+            255, 219, 205, // Sun color (Ecart doublé avec 255 ex : 237 devient 219)
+            163, 207, 207,
+            255, 130, 255, // Violet
+            230, 100, 100 // Orange
+            
+        ]
         // Create a new application
         const app = new PIXI.Application({
             width: window.innerWidth,
             height: window.innerHeight,
-            backgroundAlpha: 50,  // Rendre le fond transparent
+            backgroundAlpha: 0.5,  // Rendre le fond transparent
         });
     
         // Initialize the application
@@ -21,7 +32,7 @@
         const fov = 20;
         const baseSpeed = 0.025;    //Petite valeur comme 0.025 pour faire bouger les étoiles
         let speed = 0;
-        let warpSpeed = 0;
+        //let warpSpeed = 0;
         const starStretch = 1;  //Allonge les étoiles
         const starBaseSize = 0.05;
     
@@ -35,11 +46,17 @@
                 z: 0,
                 x: 0,
                 y: 0,
+                red: 255,
+                green: 255,
+                blue: 255,
+                scaleFactor: 1, // Used to scale up stars on hover
+                glowingEffect: 0 // Used on hover anim, 0 -> default = white, 1 -> hover = max glowing
             };
     
             star.sprite.anchor.x = 0.5;
             star.sprite.anchor.y = 0.7;
             randomizeStar(star, true);
+            animateStar(star);
             app.stage.addChild(star.sprite);
             stars.push(star);
         }
@@ -54,6 +71,13 @@
     
             star.x = Math.cos(deg) * distance;
             star.y = Math.sin(deg) * distance;
+
+
+            // Randomize color on hover for each star
+            const random = Math.floor(Math.random() * colors.length / 3); // Get random color row
+            star.red = colors.at(3 * random) ?? 255;
+            star.green = colors.at(3 * random + 1) ?? 255;
+            star.blue = colors.at(3 * random + 2) ?? 255;
         }
     
         // Change flight speed every 5 seconds 
@@ -75,19 +99,28 @@
     
                 if (star.z < cameraZ) randomizeStar(star);
     
+                // Change color depending of glowing value
+                star.glowingEffect -= 0.003;
+                if (star.glowingEffect < 0.01) star.glowingEffect = 0;
+                const red = Math.floor(255 + (star.red - 255) * star.glowingEffect);
+                const green = Math.floor(255 + (star.green - 255) * star.glowingEffect);
+                const blue = Math.floor(255 + (star.blue - 255) * star.glowingEffect);
+                star.sprite.tint = (red << 16) + (green << 8) + blue; // Manage star color by generating a hexa color
+
                 // Map star 3d position to 2d with really simple projection
                 const z = star.z - cameraZ;
     
                 star.sprite.x = star.x * (fov / z) * app.renderer.screen.width + app.renderer.screen.width / 2;
                 star.sprite.y = star.y * (fov / z) * app.renderer.screen.width + app.renderer.screen.height / 2;
-    
+
                 // Calculate star scale & rotation.
                 const dxCenter = star.sprite.x - app.renderer.screen.width / 2;
                 const dyCenter = star.sprite.y - app.renderer.screen.height / 2;
                 const distanceCenter = Math.sqrt(dxCenter * dxCenter + dyCenter * dyCenter);
                 const distanceScale = Math.max(0, (2000 - z) / 2000);
     
-                star.sprite.scale.x = distanceScale * starBaseSize;
+                star.scaleFactor += (1 - star.scaleFactor) * 0.005;
+                star.sprite.scale.x = distanceScale * starBaseSize * star.scaleFactor;
                 // Star is looking towards center so that y axis is towards center.
                 // Scale the star depending on how fast we are moving, what the stretchfactor is
                 // and depending on how far away it is from the center.
@@ -103,7 +136,15 @@
 
     })();
 
-
+    // Change la couleur de l'étoile lorsque le curseur passe à côté
+    function animateStar(star) {
+        star.sprite.eventMode = 'static';
+        star.sprite.hitArea = new PIXI.Circle(0, 0, 500);
+        star.sprite.on('pointerover', () => {
+            star.glowingEffect = 1;
+            star.scaleFactor = 1.2;
+        });
+    }
 
 //Permet de cacher tous les éléments qui ne doivent pas être affichés au chargement de la page
 window.addEventListener('DOMContentLoaded', () => {
