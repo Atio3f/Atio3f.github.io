@@ -265,7 +265,14 @@ li.pageActive > a{
     }
     #projets {
         justify-content: start;
+        margin: 0 10%;
     }
+
+    .LangageCadre > div {
+        margin: 0 10% !important;
+
+    }
+    
     .container3 {
         gap: 0.3em !important;
     }

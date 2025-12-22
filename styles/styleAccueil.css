@@ -98,7 +98,6 @@ div>p.TitreMenu {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    padding-top: 6%;
 }
 
 .LangageCadre>div{
@@ -214,6 +213,7 @@ div>p.TitreMenu {
 
 .LangageCadre>h2{
     color : var(--pinky-white);
+    padding-top: 6%;
 }
 .LangageCadre3>h2{
     color : var(--pinky-white);
