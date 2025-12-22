@@ -54,9 +54,8 @@ div.Accueil{
 
 div>p.TitreMenu {    
     color: var(--pinky-white);
-    font-family: 'Times New Roman', Times, serif;
     font-weight: 20;
-    font-size: 3.3rem;
+    font-size: 3.1rem;
     text-shadow: 2.2px 2.2px 0 #000, -0.8px -0.8px 0 #000, 0.8px -0.8px 0 #000, -0.8px 0.8px 0 #000, 0.8px 0.8px 0 #000;
      
    
@@ -214,6 +213,7 @@ div>p.TitreMenu {
 .LangageCadre>h2{
     color : var(--pinky-white);
     padding-top: 6%;
+    width: 95%;
 }
 .LangageCadre3>h2{
     color : var(--pinky-white);
@@ -240,6 +240,7 @@ div>p.TitreMenu {
     }
     .container3 {
         width: auto;
+        margin-left: 0% !important;
     }
  }
 
