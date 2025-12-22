@@ -114,6 +114,7 @@ footer > hr{
 
 .reseaux {
     display: flex;
+    gap: 5px;
 }
 
 .Accueil .reseaux {
@@ -152,9 +153,9 @@ footer > hr{
     filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.5));
 }
 
-#Footer-Mail > p{
+#Footer-Mail > p {
     color: var(--pinky-white);
-    font-size: 1.2em;
+    font-size: large;
     margin: 0 0 6px 0;
     min-width: 100%;
 }
@@ -284,6 +285,13 @@ li.pageActive > a{
 
     header {
         width: 94%;
+    }
+
+    #Footer-Mail > p {
+        font-size: medium !important;
+    }
+    #Footer-Content > p {
+        display: none;
     }
 }
 .menu-toggle {

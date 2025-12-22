@@ -8,7 +8,7 @@ class Footer extends HTMLElement {
       <hr>
       <div id="Footer-Global">
         <div id="Footer-Mail">
-          <p>mathias.fernandes@etu.univ-grenoble-alpes.fr</p>
+          <p>mathias.fernandes<wbr>@etu.univ-grenoble-alpes.fr</p>
         </div>
         <div id="Footer-Content">
           <p>Mes réseaux : </p>

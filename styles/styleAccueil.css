@@ -242,6 +242,9 @@ div>p.TitreMenu {
         width: auto;
         margin-left: 0% !important;
     }
+    #Accueil-HautPage {
+        margin-top: 30px;
+    }
  }
 
 .bonusCadre {
