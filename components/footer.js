@@ -46,12 +46,12 @@ class Footer extends HTMLElement {
             <textarea name="message" id="message" required placeholder="Votre Message"></textarea>
           </div>
 
+          <p id="feedback-msg"></p>
           <div class="form-group">
             <button type="submit" id="btn-submit">
               <span id="btn-text">Envoyer</span>
             </button>
           </div>
-          <p id="feedback-msg"></p>
         </form>
       </div>
     `;
@@ -91,7 +91,6 @@ class Footer extends HTMLElement {
       // Envoi du formulaire
       emailjs.sendForm(serviceID, templateID, this)
         .then(() => {
-          // SUCCÈS
           btn.disabled = false;
           feedback.innerText = "Le message a bien pu être envoyé, vous devriez recevoir une confirmation d'ici peu.";
 
