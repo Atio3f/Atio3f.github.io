@@ -10,6 +10,8 @@
     --light-green-color: #BED3C3;
     --white: oklch(96.7% 0.001 286.375);
     --pinky-white: oklch(97.1% 0.013 17.38);
+    --light-orange: oklch(80.8% 0.114 19.571);
+    --orange-link-hover: oklch(70.4% 0.191 22.216);
   }
 
 canvas {
@@ -44,7 +46,7 @@ div>p.Menu {
 
 
 a{
-    color: oklch(80.8% 0.114 19.571);
+    color: var(--light-orange);
     
     font-size: 1.2em;
     transition: font-size 0.2s ease ;
@@ -60,8 +62,7 @@ p, h4, h3, h2, h1 {
 
 
 div>a:hover{
-    color: oklch(70.4% 0.191 22.216);
-    
+    color: var(--orange-link-hover);
 }
 
 
@@ -166,6 +167,58 @@ footer > hr{
     padding-bottom: 5px;
 }
 
+/* FOOTER CONTACT PART */
+
+#ContactPart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    text-align: center;
+}
+
+.form-group > input,  .form-group > textarea  {
+    background-color: #1f1e1e;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    padding: 5px;
+    width: 15vw;
+    min-width: 220px;
+    min-height: 20px;
+    transition: border 50ms;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group > input:focus,  .form-group > textarea:focus {
+    outline: none;
+    border: 1px solid white;
+}
+
+#ContactPart button[type="submit"] {
+    color: var(--light-orange);
+    cursor: pointer;
+    padding: 15px 20px;
+    margin-top: 3px;
+    background-color: #1f1e1e;
+    border: 1px solid black;
+    border-radius: 10px;
+    transition: color 160ms ease-in-out, background-color 160ms ease-out;
+}
+
+#ContactPart button[type="submit"]:hover {
+    color: var(--orange-link-hover);
+    background-color: #1a1a1a;
+}
+
+#feedback-msg {
+    color: var(--white);
+}
 
 /* POUR LA BARRE DE NAVIGATION */
 header {
