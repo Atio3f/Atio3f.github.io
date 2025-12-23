@@ -96,11 +96,14 @@ class Footer extends HTMLElement {
 
           this.shadowRoot.getElementById('contact-form').reset();
         }, (err) => {
-            
+          
           btn.disabled = false;
           
-          feedback.innerText = "Erreur lors de l'envoi du formulaire.";
-          console.error('Erreur EmailJS:', err);
+          if (err.status === 412) {
+              feedback.innerText = "Limite mensuelle atteinte. Vous pouvez m'écrire un mail en cas de besoin.";
+          } else {
+              feedback.innerText = "Une erreur est survenue. Veuillez réessayer.";
+          }
         });
     });
   }
