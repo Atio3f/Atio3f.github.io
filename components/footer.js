@@ -29,7 +29,7 @@ class Footer extends HTMLElement {
           
         </div>
       </div>
-      <hr>
+      
       <div id="ContactPart">
         <h2>Me contacter</h2>
         
