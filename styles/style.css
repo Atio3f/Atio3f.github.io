@@ -312,7 +312,7 @@ li.pageActive > a{
         padding-top: 9%;
     }
     .TitreMenu {
-        margin: 2% 0 auto 12% !important;
+        margin: 2% 0 auto 4% !important;
         width: 100% !important;
         text-wrap: balance;
         font-size: 2.5rem !important;
