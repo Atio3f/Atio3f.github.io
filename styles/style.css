@@ -173,6 +173,7 @@ footer > hr{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 15px;
 }
 
 .form-group {
