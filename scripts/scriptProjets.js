@@ -330,7 +330,7 @@ let projets = {
           <h2 id="TitreProjet">API Rest : Mercato Européen</h2>
           <div id="langagesUtilises">
               <div class="langage"><img src="img/SwaggerLogo.png"><div class="overlay-text">OpenAPI 3.0</div></div>
-              <div class="langage"><img src="img/NodeJSLogo.png"><div class="overlay-text">Express.js</div></div>
+              <div class="langage"><img src="img/ExpressLogo.svg"><div class="overlay-text">Express.js</div></div>
               <div class="langage"><img src="img/JavascriptLogo.png"><div class="overlay-text">JavaScript</div></div>
           </div>
           
