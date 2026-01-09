@@ -245,10 +245,10 @@ let projets = {
           <iframe src="https://www.youtube.com/embed/KXIpAiuivSw">Présentation de la partie exécution des tests</iframe>
       `},//Mise en place d'une plateforme de tests d'interface utilisateur automatisée pour une application web 3D et réalisation d'une application web pour permettre d'enregistrer des tests d'interface utilisateur. Stage du 14 avril au 20 juin 2025
     "232_APP" : {
-      "short_desc": "Conception d'une infrastructure de tests E2E critique pour un moteur 3D web. Innovation technique via Playwright.",
+      "short_desc": "",
       "html": `
       
-      <h2 id="TitreProjet">SaaS de Pilotage de Projets Universitaires - sept 2025 - mars 2026</h2>
+      <h2 id="TitreProjet">GestFourmi : SaaS de Pilotage de Projets Universitaires - sept 2025 - mars 2026</h2>
       <div id="langagesUtilises">
             <div class="langage">
               <img src="img/CSSLogo.png" alt="CSS Logo">
