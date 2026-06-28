@@ -344,7 +344,43 @@ let projets = {
           - <strong>Intégration Serveur :</strong> Développement du serveur backend avec le framework <strong>Express.js</strong>. Mise en place de la liaison technique entre la spécification YAML/JSON et les routes de l'API.<br>
           - <strong>Documentation Interactive :</strong> Déploiement de Swagger UI pour permettre la visualisation et le test des endpoints en temps réel par les développeurs tiers.</p>
       `
-    },  
+    },
+    "BRANCHET_ADOC" : {
+      "short_desc": "Conception et réalisation d'une application monopage d'archivage de documents de sinistres",
+      "html": `
+        <h2 id="TitreProjet">Conception et réalisation d'une application monopage d'archivage de documents de sinistres - mars 2026 - juin 2026</h2>
+              
+        <div id="langagesUtilises">
+            <div class="langage">
+              <img src="img/AngularLogo.png" alt="Angular Logo">
+              <div class="overlay-text">Angular</div>
+            </div>
+            <div class="langage">
+              <img src="img/DaisyUILogo.png" alt="Daisy UI Logo">
+              <div class="overlay-text">Daisy UI</div>
+            </div>
+            <div class="langage">
+              <img src="img/DjangoLogo.png" alt="Django Logo">
+              <div class="overlay-text">Django</div>
+            </div>
+            <div class="langage">
+              <img src="img/PlaywrightLogo.svg" alt="Playwright Logo">
+              <div class="overlay-text">Playwright</div>
+            </div>
+            <div class="langage">
+              <img src="img/GitlabLogo.png" alt="Gitlab Logo">
+              <div class="overlay-text">Gitlab</div>
+            </div>
+            
+        </div>
+        <p>Ce projet s'est déroulé durant mon stage chez Branchet, courtier spécialisé dans les professionnels de la santé, se chargeant aussi des procédures juridiciaires 
+        lors de sinistres comparé à un courtier traditionnel.
+        L'application a comme objectif d'aider les gestionnaires de sinistres à mieux trouver les informations d'un sinistre ou d'une personne en les stockant dans une GED centrale tout en archivant les mails à cet effet.... PARLER DU PROJET
+        Durant j'ai appris à exploiter concrètement des connexions API avec différents protocoles : SOAP pour Zimbra, REST avec. Ci-dessous vous retrouverez un diagramme de l'architecture : </p>
+        <img src="img/projets/Adoc/DiagrammeArchitectureSystème.png" alt="Architecture application">
+        <p>Captures d'écran de l'application : </p>
+        <img src="img/projets/Adoc/screen1.png" alt="Capture d'écran principal de l'application">
+    `},  
 }
 
 
@@ -359,7 +395,8 @@ let projetsTags = {
     "SITE_FICTIF_CGI" : ["HTML", "CSS", "Javascript", "Frontend"],
     "MONCARNETDESTAGE" : ["Android Studio", "Java", "Chef de projet", "Tests", "GestionProjet"],
     "UBILINK_TESTS" : ["HTML", "CSS", "Javascript", "PHP", "Frontend", "Tests", "Playwright", "Resemblejs", "ApplicationWeb", "API", "Git", "Benchmark", "Bootstrap"],
-    "232": ["CSS", "Javascript", "Angular", "PrimeNG", "Frontend", "Tests", "Playwright", "API"]
+    "232": ["CSS", "Javascript", "Angular", "PrimeNG", "Frontend", "Tests", "Playwright", "API"],
+    "BRANCHET_ADOC": ["CSS", "Javascript", "Angular", "DaisyUI", "Django", "Fullstack", "Tests", "Playwright", "API"]
 }
 
 
